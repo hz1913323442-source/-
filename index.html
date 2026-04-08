@@ -13,7 +13,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
         body { font-family: 'Inter', "Microsoft YaHei", sans-serif; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
-        /* 优化滚动条样式 */
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
@@ -26,18 +25,15 @@
         const { useState, useEffect, useRef } = React;
 
         // ==========================================
-        // ⚙️ 全局配置区 (专为 GitHub Pages 部署优化)
+        // ⚙️ 终极配置区：AI Studio 密钥 + 1.5 Flash 模型
         // ==========================================
         const CONFIG = {
-            // 这是您当前的 Key。如果依然报错 not found，请务必去 AI Studio 重新申请一个替换！
+            // 👇 请把您在 Google AI Studio 新生成的密钥粘贴在下面双引号里 👇
             GEMINI_API_KEY: "AIzaSyCEYaNwfE-0EfriveWg4FpCq3jLFzXN3Y4", 
-            // 锁定使用谷歌最新一代、支持性最好的大模型
+            // 务必保持使用这个模型，它支持系统指令且速度最快
             MODEL_NAME: "gemini-1.5-flash" 
         };
 
-        // ==========================================
-        // 📊 数据模型：思维导图数据
-        // ==========================================
         const mindMapData = {
             name: "中国高考多元升学",
             color: "bg-blue-600",
@@ -89,10 +85,6 @@
                 }
             ]
         };
-
-        // ==========================================
-        // 🧩 UI 组件区
-        // ==========================================
 
         const FormattedText = ({ text }) => {
             if (!text) return null;
@@ -170,9 +162,6 @@
             </div>
         );
 
-        // ==========================================
-        // 🚀 主应用组件
-        // ==========================================
         const App = () => {
             const [zoom, setZoom] = useState(0.8);
             const [isAIChatOpen, setIsAIChatOpen] = useState(false);
@@ -195,10 +184,10 @@
                 setInput('');
                 setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
                 
-                if (!CONFIG.GEMINI_API_KEY) {
+                if (!CONFIG.GEMINI_API_KEY || CONFIG.GEMINI_API_KEY.includes("请在这里填入")) {
                     setMessages(prev => [...prev, { 
                         role: 'assistant', 
-                        content: "⚠️ **系统提示**：API Key 未配置。" 
+                        content: "⚠️ **系统提示**：您还没有填入真实的 API Key。" 
                     }]);
                     return;
                 }
@@ -233,7 +222,7 @@
                     console.error("API 报错详情:", e);
                     setMessages(prev => [...prev, { 
                         role: 'assistant', 
-                        content: `❌ **请求失败**\n\n原因：${e.message}\n\n*关键提示：如果错误信息包含 "not found"，说明您当前的 Google Cloud 密钥无权访问此模型。**请务必前往 Google AI Studio 重新生成一个新密钥并替换！***` 
+                        content: `❌ **请求失败**\n\n原因：${e.message}` 
                     }]);
                 } finally {
                     setLoading(false);
