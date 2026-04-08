@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高考多元升学路径全解析</title>
+    <!-- 引入前端依赖 -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -26,13 +27,13 @@
         const { useState, useEffect, useRef } = React;
 
         // ==========================================
-        // ⚙️ 全局配置区 (API Key 已更新为您提供的 Google Cloud 密钥)
+        // ⚙️ 全局配置区 (模型已更换为稳定的 1.5 版本)
         // ==========================================
         const CONFIG = {
-            // 您专属的 Gemini API Key
+            // 您的 API Key
             GEMINI_API_KEY: "AIzaSyCtLoZVc-42AsO2ZCTUaHfOMBooHpqaag0", 
-            // 默认使用的模型
-            MODEL_NAME: "gemini-2.5-flash" 
+            // 请使用稳定版模型
+            MODEL_NAME: "gemini-1.5-flash" 
         };
 
         // ==========================================
@@ -196,12 +197,10 @@
                 setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
                 
                 if (!CONFIG.GEMINI_API_KEY) {
-                    setTimeout(() => {
-                        setMessages(prev => [...prev, { 
-                            role: 'assistant', 
-                            content: "⚠️ **系统提示**：API Key 未配置。\n\n请在 `index.html` 的 `CONFIG` 对象中填入您的 `GEMINI_API_KEY` 以启用智能对话功能。" 
-                        }]);
-                    }, 500);
+                    setMessages(prev => [...prev, { 
+                        role: 'assistant', 
+                        content: "⚠️ **系统提示**：API Key 未配置。" 
+                    }]);
                     return;
                 }
 
@@ -217,14 +216,28 @@
                         })
                     });
                     
-                    if (!response.ok) throw new Error('API Request Failed');
+                    // 增强错误捕捉机制：直接抓取服务器返回的报错信息
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.error?.message || `HTTP 错误状态码: ${response.status}`);
+                    }
                     
                     const data = await response.json();
-                    const result = data.candidates?.[0]?.content?.parts?.[0]?.text || "抱歉，未能获取到有效建议，请重试。";
-                    setMessages(prev => [...prev, { role: 'assistant', content: result }]);
+                    
+                    if (data.candidates && data.candidates[0].content) {
+                        const result = data.candidates[0].content.parts[0].text;
+                        setMessages(prev => [...prev, { role: 'assistant', content: result }]);
+                    } else {
+                        throw new Error("AI 返回的数据格式异常");
+                    }
+                    
                 } catch (e) {
-                    console.error(e);
-                    setMessages(prev => [...prev, { role: 'assistant', content: "❌ 连接失败，请检查网络环境或确认 API Key 是否有效。" }]);
+                    console.error("API 报错详情:", e);
+                    // 将具体的错误原因打印在聊天框，方便排查
+                    setMessages(prev => [...prev, { 
+                        role: 'assistant', 
+                        content: `❌ **请求失败**\n\n原因：${e.message}\n\n*提示：如果显示 403 错误，说明您的密钥被限制了来源或者未启用 API。*` 
+                    }]);
                 } finally {
                     setLoading(false);
                 }
