@@ -25,13 +25,13 @@
         const { useState, useEffect, useRef } = React;
 
         // ==========================================
-        // ⚙️ 终极配置区：AI Studio 密钥 + 1.5 Flash 模型
+        // ⚙️ 终极配置区：带自动诊断功能
         // ==========================================
         const CONFIG = {
-            // 👇 请把您在 Google AI Studio 新生成的密钥粘贴在下面双引号里 👇
+            // 你的 AI Studio 密钥
             GEMINI_API_KEY: "AIzaSyATqJSFAJ-ypoo1IXNabV37lFTOdnKH7tM", 
-            // 务必保持使用这个模型，它支持系统指令且速度最快
-            MODEL_NAME: "gemini-1.5-flash-latest" 
+            // 默认测试模型
+            MODEL_NAME: "gemini-1.5-flash" 
         };
 
         const mindMapData = {
@@ -184,10 +184,10 @@
                 setInput('');
                 setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
                 
-                if (!CONFIG.GEMINI_API_KEY || CONFIG.GEMINI_API_KEY.includes("请在这里填入")) {
+                if (!CONFIG.GEMINI_API_KEY) {
                     setMessages(prev => [...prev, { 
                         role: 'assistant', 
-                        content: "⚠️ **系统提示**：您还没有填入真实的 API Key。" 
+                        content: "⚠️ **系统提示**：API Key 未配置。" 
                     }]);
                     return;
                 }
@@ -206,7 +206,7 @@
                     
                     if (!response.ok) {
                         const errorData = await response.json();
-                        throw new Error(errorData.error?.message || `HTTP 错误状态码: ${response.status}`);
+                        throw new Error(errorData.error?.message || `HTTP 状态码: ${response.status}`);
                     }
                     
                     const data = await response.json();
@@ -220,9 +220,29 @@
                     
                 } catch (e) {
                     console.error("API 报错详情:", e);
+                    
+                    let debugInfo = "";
+                    // 核心自动诊断逻辑：如果找不到模型，自动去拉取可用列表
+                    if (e.message.includes("not found")) {
+                        try {
+                            const debugRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${CONFIG.GEMINI_API_KEY}`);
+                            const debugData = await debugRes.json();
+                            if (debugData.models) {
+                                const modelNames = debugData.models
+                                    .map(m => m.name.replace('models/', ''))
+                                    .filter(name => name.includes('gemini'));
+                                debugInfo = `\n\n🔍 **系统已为您自动检测到您当前的 API Key 支持以下模型：**\n\n` + 
+                                            modelNames.map(n => `- **${n}**`).join('\n') + 
+                                            `\n\n👉 **操作指南**：请将代码第 30 行的 \`MODEL_NAME\` 替换为上面列表中的任意一个（建议选带有 flash 字样的）。`;
+                            }
+                        } catch (err) {
+                            debugInfo = "\n\n(尝试自动检测可用模型失败，请检查网络环境)";
+                        }
+                    }
+
                     setMessages(prev => [...prev, { 
                         role: 'assistant', 
-                        content: `❌ **请求失败**\n\n原因：${e.message}` 
+                        content: `❌ **请求失败**\n\n原因：${e.message}${debugInfo}` 
                     }]);
                 } finally {
                     setLoading(false);
