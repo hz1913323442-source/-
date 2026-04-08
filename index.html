@@ -27,13 +27,13 @@
         const { useState, useEffect, useRef } = React;
 
         // ==========================================
-        // ⚙️ 全局配置区 (模型已更换为稳定的 1.5 版本)
+        // ⚙️ 全局配置区
         // ==========================================
         const CONFIG = {
-            // 您的 API Key
+            // 已填入您用于上线 GitHub Pages 的专属密钥
             GEMINI_API_KEY: "AIzaSyCtLoZVc-42AsO2ZCTUaHfOMBooHpqaag0", 
-            // 请使用稳定版模型
-            MODEL_NAME: "gemini-1.5-flash" 
+            // 修复：更新为在 Canvas 预览环境和 GitHub 均受支持的通用模型名称
+            MODEL_NAME: "gemini-2.5-flash-preview-09-2025" 
         };
 
         // ==========================================
@@ -195,14 +195,6 @@
                 const userMsg = input.trim();
                 setInput('');
                 setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
-                
-                if (!CONFIG.GEMINI_API_KEY) {
-                    setMessages(prev => [...prev, { 
-                        role: 'assistant', 
-                        content: "⚠️ **系统提示**：API Key 未配置。" 
-                    }]);
-                    return;
-                }
 
                 setLoading(true);
 
