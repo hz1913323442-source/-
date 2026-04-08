@@ -11,11 +11,14 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-        body { font-family: 'Inter', "Microsoft YaHei", sans-serif; }
+        body { font-family: 'Inter', "Microsoft YaHei", sans-serif; overflow: hidden; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+        /* 画布拖拽时的样式 */
+        .cursor-grab { cursor: grab; }
+        .cursor-grabbing { cursor: grabbing; }
     </style>
 </head>
 <body class="bg-slate-50">
@@ -24,58 +27,97 @@
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
 
+        // ==========================================
+        // 📊 高密度交互式数据模型
+        // 增加了更深的层级和详尽的 keyPoints 供侧边栏展示
+        // ==========================================
         const mindMapData = {
-            name: "中国高考多元升学",
+            name: "高考多元升学",
             color: "bg-blue-600",
+            isOpenDefault: true,
             children: [
                 {
                     name: "拔尖与综合评价",
                     color: "bg-indigo-500",
-                    description: "针对学霸及综合素质优秀者",
+                    isOpenDefault: true,
+                    description: "学霸与综合素质优生专属",
+                    details: {
+                        title: "拔尖与综合评价赛道",
+                        tags: ["降分录取", "名校捷径", "重视素养"],
+                        content: "该赛道打破了'一考定终身'，重点考察学生的学科特长、创新潜质和综合素养。是冲击 985/211 高校最具性价比的路径。"
+                    },
                     children: [
-                        { name: "强基计划", detail: "85%高考 + 15%校测。基础学科拔尖人才，本硕博衔接培养。" },
-                        { name: "综合评价", detail: "631模式。综合素质高、课外实践丰富，专业选择面更广。" }
+                        { 
+                            name: "强基计划", 
+                            isOpenDefault: false,
+                            details: {
+                                title: "强基计划 (基础学科拔尖人才)",
+                                tags: ["39所985", "本硕博衔接", "免除考研"],
+                                content: "**录取公式**：85%高考成绩 + 15%校测成绩。\n\n**核心优势**：\n- 聚焦基础学科（数学、物理、化学、生物、历史、哲学等）。\n- 进校后单独编班，配备导师，实行本硕博衔接培养。\n- 不得转专业（通常限制转入非强基专业）。\n\n**适合人群**：高考成绩优异，或在五大学科竞赛中获得银牌及以上，且有志于国家重大战略领域的人才。"
+                            },
+                            children: [
+                                { name: "I类：凭借高考成绩入围" },
+                                { name: "II类：破格入围 (奥赛银牌+)" }
+                            ]
+                        },
+                        { 
+                            name: "综合评价",
+                            isOpenDefault: false,
+                            details: {
+                                title: "综合评价招生 (631模式)",
+                                tags: ["省属/部属高校", "专业面广", "降分幅度10-30分"],
+                                content: "**录取公式**：60%高考成绩 + 30%校测(面试/笔试) + 10%高中学业水平考试成绩。\n\n**核心优势**：\n- 相比强基计划，专业选择更加广泛（含热门工科、经管类）。\n- 更加看重学生的奖项、社会实践、研究性学习成果。\n\n**准备建议**：高一高二需注重期末成绩排名，积极参加白名单赛事获取奖项，丰富综合素质评价档案。"
+                            },
+                            children: [
+                                { name: "A类：面向全国招生院校 (如南科大)" },
+                                { name: "B类：面向省内招生院校 (省属重点)" }
+                            ]
+                        }
                     ]
                 },
                 {
                     name: "政策定向专项",
                     color: "bg-emerald-500",
+                    isOpenDefault: false,
                     description: "促进教育公平的政策照顾",
+                    details: {
+                        title: "三大专项计划",
+                        tags: ["农村户籍", "降分幅度大", "限制报考条件"],
+                        content: "国家为促进教育公平，针对贫困地区和农村户籍学生设立的专项扶持政策。符合条件的学生可享受低于统招线 10-50 分不等的录取优惠。"
+                    },
                     children: [
-                        { name: "国家专项", detail: "面向脱贫地区，部属/双一流高校承担。" },
-                        { name: "地方专项", detail: "面向本省农村学生，省属重点高校承担。" },
-                        { name: "高校专项", detail: "面向边远/农村勤奋生，独立申请，单独划线。" }
+                        { name: "国家专项", details: { title: "国家专项计划", content: "由中央部门所属高校和地方“双一流”建设高校承担。面向脱贫地区定向招生。" } },
+                        { name: "地方专项", details: { title: "地方专项计划", content: "由各省(区、市)所属重点高校承担。面向本省实施区域的农村学生。" } },
+                        { name: "高校专项", details: { title: "高校专项计划", content: "由教育部直属高校等自主招生，需要学生单独提交报名申请，通过初审和校测后方可享受降分。" } }
                     ]
                 },
                 {
                     name: "特长与免试类",
                     color: "bg-amber-500",
-                    description: "拥有特殊天赋或长期专业训练",
+                    isOpenDefault: false,
+                    description: "特殊天赋与长期专业训练",
                     children: [
-                        { name: "保送生", detail: "奥赛国家队、外国语学校优等生、优秀运动员。直接免试入读。" },
-                        { name: "艺术/体育类", detail: "专业课统考/校考 + 高考文化课。对文化课要求逐年提高。" }
+                        { name: "保送生", details: { title: "保送生政策", content: "目前仅限五大学科奥赛国家集训队成员、外语类保送生（指定16所外国语中学）以及公安英烈子女等极少数群体。直接免除高考。" } },
+                        { name: "高水平运动队", details: { title: "高水平运动队", content: "报考门槛大幅提高，通常要求国家一级运动员及以上，且文化课成绩要求逐步与普通统招线并轨。" } },
+                        { name: "艺术类/体育类", details: { title: "艺体类统招", content: "随着艺考改革，文化课门槛逐年提高。绝大多数专业取消校考，采用省统考成绩。" } }
                     ]
                 },
                 {
-                    name: "国际/港澳类",
+                    name: "国际/中外合作",
                     color: "bg-rose-500",
+                    isOpenDefault: false,
                     description: "跨境教育与国际化背景",
                     children: [
-                        { name: "中外合作办学", detail: "不出国的留学，获得两校学位。费用较高，英语环境。" },
-                        { name: "港澳高校", detail: "统招提前批或自主招生。部分学校需全英文面试。" }
-                    ]
-                },
-                {
-                    name: "职业与提前录取",
-                    color: "bg-slate-500",
-                    description: "实用技能与灵活路径",
-                    children: [
-                        { name: "高职单招", detail: "春季自主考试，录取后无需参加6月高考。侧重技能实操。" }
+                        { name: "中外合作办学", details: { title: "中外合作办学 (4+0 / 2+2)", content: "不出国的留学。优势是降分幅度极大，能以较低的分数拿到名校或海外合作大学的学位证。劣势是学费昂贵（通常 5-10 万/年）。" } },
+                        { name: "港澳高校内地招生", details: { title: "港澳高校", content: "分为两类：一类如港中大、港城大在提前批统招；另一类如港大、科大采用独立招生，需要全英文面试，不占用内地高考志愿名额。" } }
                     ]
                 }
             ]
         };
 
+        // ==========================================
+        // 🧩 UI 组件：简易 Markdown 解析器
+        // ==========================================
         const FormattedText = ({ text }) => {
             if (!text) return null;
             const lines = text.split('\n');
@@ -86,7 +128,10 @@
                         if (!content) return <div key={lineIdx} className="h-2" />;
                         
                         let className = "text-[13px] leading-relaxed text-slate-700";
-                        if (content.startsWith('#### ')) {
+                        if (content.startsWith('- ')) {
+                            content = content.substring(2);
+                            className = "text-[13px] leading-relaxed text-slate-700 pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-slate-400";
+                        } else if (content.startsWith('#### ')) {
                             content = content.replace('#### ', '');
                             className = "text-[13px] font-bold mt-2 text-slate-800 flex items-center gap-1.5 before:content-[''] before:w-1 before:h-3 before:bg-blue-400 before:rounded-full";
                         } else if (content.startsWith('### ')) {
@@ -102,7 +147,7 @@
                             <div key={lineIdx} className={className}>
                                 {parts.map((part, i) => {
                                     if (part.startsWith('**') && part.endsWith('**')) {
-                                        return <strong key={i} className="font-bold text-blue-800 px-0.5 bg-blue-50 rounded">{part.slice(2, -2)}</strong>;
+                                        return <strong key={i} className="font-bold text-slate-900 bg-blue-50/50 px-1 rounded">{part.slice(2, -2)}</strong>;
                                     }
                                     return part;
                                 })}
@@ -113,48 +158,94 @@
             );
         };
 
-        const Node = ({ node, isRoot = false, isChild = false }) => (
-            <div className="flex flex-col items-center">
-                <div className={`relative p-4 rounded-xl shadow-lg border-2 transition-all cursor-default group
-                    ${isRoot ? 'bg-blue-600 text-white border-blue-700 text-xl font-bold' : 
-                    isChild ? 'bg-white text-slate-800 border-slate-200 hover:border-blue-300 hover:-translate-y-1' : 
-                    `${node.color} text-white border-opacity-20 font-semibold`}
-                    min-w-[140px] max-w-[180px] text-center z-10`}>
-                    
-                    {node.name}
-                    {node.description && <div className="text-[10px] opacity-80 mt-1 font-normal leading-tight">{node.description}</div>}
-                    
-                    {node.detail && (
-                        <div className="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 bg-slate-900 text-white text-xs rounded-lg z-50 shadow-2xl transition-opacity">
-                            <div className="font-bold mb-1 border-b border-slate-700 pb-1">{node.name}</div>
-                            <div className="leading-relaxed">{node.detail}</div>
-                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-900 rotate-45"></div>
-                        </div>
-                    )}
-                </div>
-                
-                {node.children && (
-                    <div className="flex flex-col items-center">
-                        <div className="w-px h-8 bg-slate-300"></div>
-                        <div className="flex space-x-6 relative">
-                            {node.children.map((child, idx) => (
-                                <div key={idx} className="relative flex flex-col items-center">
-                                    <div className="absolute top-0 left-0 right-0 flex justify-center">
-                                        {idx !== 0 && <div className="absolute top-0 right-1/2 w-1/2 h-px bg-slate-300"></div>}
-                                        {idx !== node.children.length - 1 && <div className="absolute top-0 left-1/2 w-1/2 h-px bg-slate-300"></div>}
-                                    </div>
-                                    <Node node={child} isChild={!isRoot} />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-            </div>
-        );
+        // ==========================================
+        // 🧩 UI 组件：可交互的思维导图节点
+        // ==========================================
+        const Node = ({ node, isRoot = false, isChild = false, onNodeSelect, activeNodeName }) => {
+            // 控制子节点的展开与收起
+            const [isOpen, setIsOpen] = useState(node.isOpenDefault ?? true);
+            const hasChildren = node.children && node.children.length > 0;
+            const hasDetails = !!node.details;
+            const isActive = activeNodeName === node.name;
 
+            const handleNodeClick = (e) => {
+                e.stopPropagation();
+                if (hasDetails || hasChildren) {
+                    onNodeSelect(node);
+                }
+            };
+
+            const toggleOpen = (e) => {
+                e.stopPropagation();
+                setIsOpen(!isOpen);
+            };
+
+            return (
+                <div className="flex flex-col items-center">
+                    <div className="relative group">
+                        {/* 节点本体 */}
+                        <div 
+                            onClick={handleNodeClick}
+                            className={`relative p-3.5 rounded-xl shadow-sm border-2 transition-all cursor-pointer select-none
+                                ${isRoot ? 'bg-blue-600 text-white border-blue-700 text-lg font-bold shadow-blue-200/50' : 
+                                isChild ? `bg-white text-slate-800 border-slate-200 hover:border-blue-400 hover:shadow-md ${isActive ? 'ring-2 ring-blue-400 border-blue-400 shadow-md' : ''}` : 
+                                `${node.color} text-white border-transparent font-semibold shadow-md ${isActive ? 'ring-4 ring-blue-200' : 'hover:-translate-y-0.5'}`}
+                                min-w-[150px] max-w-[200px] text-center z-10 flex flex-col items-center justify-center`}
+                        >
+                            <span className="leading-snug">{node.name}</span>
+                            {node.description && <span className={`text-[10px] mt-1 font-normal leading-tight opacity-90 ${isChild ? 'text-slate-500' : 'text-white'}`}>{node.description}</span>}
+                        </div>
+
+                        {/* 展开/收起按钮 */}
+                        {hasChildren && (
+                            <div 
+                                onClick={toggleOpen}
+                                className={`absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-2 rounded-full flex items-center justify-center cursor-pointer shadow-sm z-20 hover:bg-slate-50 hover:scale-110 transition-transform ${isRoot ? 'border-blue-600 text-blue-600' : 'border-slate-300 text-slate-500'}`}
+                            >
+                                <i data-lucide={isOpen ? "minus" : "plus"} className="w-3 h-3"></i>
+                            </div>
+                        )}
+                        
+                        {/* 详情提示小红点 */}
+                        {hasDetails && !isRoot && (
+                            <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-red-400 rounded-full border-2 border-white shadow-sm" title="点击查看详情"></div>
+                        )}
+                    </div>
+                    
+                    {/* 子节点递归渲染 */}
+                    <div className={`transition-all duration-300 origin-top overflow-hidden ${isOpen ? 'opacity-100 max-h-[1000px]' : 'opacity-0 max-h-0'}`}>
+                        {hasChildren && (
+                            <div className="flex flex-col items-center">
+                                <div className="w-px h-8 bg-slate-300"></div>
+                                <div className="flex space-x-6 relative pt-4">
+                                    {node.children.map((child, idx) => (
+                                        <div key={idx} className="relative flex flex-col items-center">
+                                            {/* 水平连线 */}
+                                            <div className="absolute top-0 left-0 right-0 flex justify-center -mt-4">
+                                                {idx !== 0 && <div className="absolute top-0 right-1/2 w-1/2 h-px bg-slate-300"></div>}
+                                                {idx !== node.children.length - 1 && <div className="absolute top-0 left-1/2 w-1/2 h-px bg-slate-300"></div>}
+                                                <div className="absolute top-0 left-1/2 w-px h-4 bg-slate-300"></div>
+                                            </div>
+                                            <Node node={child} isChild={!isRoot} onNodeSelect={onNodeSelect} activeNodeName={activeNodeName} />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
+        // ==========================================
+        // 🚀 主应用组件
+        // ==========================================
         const App = () => {
-            const [zoom, setZoom] = useState(0.8);
+            const [zoom, setZoom] = useState(0.85);
             const [isAIChatOpen, setIsAIChatOpen] = useState(false);
+            const [selectedNode, setSelectedNode] = useState(null); // 控制详情侧边栏
+            
+            // 聊天状态
             const [input, setInput] = useState('');
             const [loading, setLoading] = useState(false);
             const [messages, setMessages] = useState([
@@ -162,12 +253,10 @@
             ]);
             const scrollRef = useRef(null);
 
-            useEffect(() => { 
-                if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; 
-            }, [messages]);
-            
-            useEffect(() => { lucide.createIcons(); }, [isAIChatOpen, messages]);
+            useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [messages]);
+            useEffect(() => { lucide.createIcons(); }, [isAIChatOpen, messages, selectedNode, zoom]);
 
+            // 发送消息到本地后端
             const handleSend = async () => {
                 if (!input.trim() || loading) return;
                 const userMsg = input.trim();
@@ -177,26 +266,21 @@
                 setLoading(true);
 
                 try {
-                    // 🌟 核心改变：把你的问题发给本地的 3000 端口（你的后端） 🌟
+                    // 🌟 保持请求你本地后端的配置不变 🌟
                     const response = await fetch('http://localhost:3000/api/chat', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ message: userMsg })
                     });
                     
-                    if (!response.ok) {
-                        throw new Error(`后端连接失败，状态码: ${response.status}`);
-                    }
+                    if (!response.ok) throw new Error(`后端连接失败，状态码: ${response.status}`);
                     
                     const data = await response.json();
-                    
-                    // 接收后端传回来的 reply
                     if (data.reply) {
                         setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
                     } else {
                         throw new Error("后端没有返回有效数据");
                     }
-                    
                 } catch (e) {
                     console.error("请求报错:", e);
                     setMessages(prev => [...prev, { 
@@ -208,62 +292,116 @@
                 }
             };
 
+            // 处理节点点击
+            const handleNodeSelect = (node) => {
+                if (node.details) {
+                    setSelectedNode(node);
+                }
+            };
+
             return (
-                <div className="min-h-screen flex flex-col font-sans">
-                    <header className="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center shadow-sm z-20 relative">
+                <div className="h-screen flex flex-col font-sans overflow-hidden bg-[#f8fafc]">
+                    {/* 顶部导航 */}
+                    <header className="bg-white border-b border-slate-200 px-6 py-3.5 flex justify-between items-center shadow-sm z-30 shrink-0">
                         <div className="flex items-center gap-3">
-                            <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
-                                <i data-lucide="brain-circuit"></i>
+                            <div className="p-2 bg-blue-50 rounded-lg text-blue-600 border border-blue-100">
+                                <i data-lucide="map" className="w-5 h-5"></i>
                             </div>
                             <div>
-                                <h1 className="text-xl font-bold text-slate-800 tracking-tight">高考多元升学路径全解析</h1>
-                                <p className="text-sm text-slate-500 hidden sm:block mt-0.5">💡 专注非统招赛道的逻辑规划与指导</p>
+                                <h1 className="text-lg font-bold text-slate-800 tracking-tight">高考多元升学路径全解析</h1>
+                                <p className="text-xs text-slate-500 hidden sm:block mt-0.5">点击带有红点标记的节点查看硬核资料</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
-                            <div className="hidden md:flex gap-1 bg-slate-100 p-1.5 rounded-xl border border-slate-200 shadow-inner">
-                                <button onClick={() => setZoom(z => Math.min(z + 0.1, 1.5))} className="p-1.5 hover:bg-white rounded-md transition-colors text-slate-600 hover:text-slate-900 shadow-sm" title="放大">
+                            {/* 缩放控制台 */}
+                            <div className="hidden md:flex gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 shadow-inner">
+                                <button onClick={() => setZoom(z => Math.min(z + 0.1, 1.5))} className="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600 hover:text-blue-600 hover:shadow-sm" title="放大">
                                     <i data-lucide="zoom-in" className="w-4 h-4"></i>
                                 </button>
-                                <button onClick={() => setZoom(z => Math.max(z - 0.1, 0.4))} className="p-1.5 hover:bg-white rounded-md transition-colors text-slate-600 hover:text-slate-900 shadow-sm" title="缩小">
+                                <div className="flex items-center px-1 text-xs font-mono text-slate-400">{Math.round(zoom * 100)}%</div>
+                                <button onClick={() => setZoom(z => Math.max(z - 0.1, 0.4))} className="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600 hover:text-blue-600 hover:shadow-sm" title="缩小">
                                     <i data-lucide="zoom-out" className="w-4 h-4"></i>
                                 </button>
-                                <button onClick={() => setZoom(0.8)} className="p-1.5 hover:bg-white rounded-md transition-colors text-slate-600 hover:text-slate-900 shadow-sm" title="重置">
-                                    <i data-lucide="rotate-ccw" className="w-4 h-4"></i>
-                                </button>
                             </div>
-                            <button onClick={() => setIsAIChatOpen(true)} className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold shadow-lg hover:shadow-xl active:scale-95 transition-all">
+                            {/* AI 呼出按钮 */}
+                            <button onClick={() => setIsAIChatOpen(true)} className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm font-semibold shadow-lg hover:shadow-xl active:scale-95 transition-all">
                                 <i data-lucide="sparkles" className="w-4 h-4"></i><span>AI 智能规划</span>
                             </button>
                         </div>
                     </header>
 
-                    <main className="flex-1 overflow-auto relative bg-[#f8fafc] flex custom-scrollbar">
-                        <div className="min-w-full min-h-full flex p-10 lg:p-20 justify-center items-center">
-                            <div className="transition-transform duration-300 origin-center" style={{ transform: `scale(${zoom})`, minWidth: 'max-content' }}>
-                                <Node node={mindMapData} isRoot={true} />
-                            </div>
+                    {/* 主体交互区 */}
+                    <div className="flex-1 relative flex overflow-hidden">
+                        
+                        {/* 左侧：路径详情信息面板 (Drawer) */}
+                        <div className={`absolute left-0 top-0 bottom-0 w-[380px] bg-white border-r border-slate-200 shadow-2xl z-20 transition-transform duration-300 ease-in-out flex flex-col ${selectedNode ? 'translate-x-0' : '-translate-x-full'}`}>
+                            {selectedNode && (
+                                <>
+                                    <div className="p-5 border-b border-slate-100 bg-slate-50 flex justify-between items-start">
+                                        <div>
+                                            <h2 className="text-xl font-bold text-slate-800 leading-tight mb-2">
+                                                {selectedNode.details.title || selectedNode.name}
+                                            </h2>
+                                            {/* 渲染标签 */}
+                                            {selectedNode.details.tags && (
+                                                <div className="flex flex-wrap gap-2">
+                                                    {selectedNode.details.tags.map((tag, i) => (
+                                                        <span key={i} className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs rounded border border-blue-200">
+                                                            {tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                        <button onClick={() => setSelectedNode(null)} className="p-1.5 hover:bg-slate-200 rounded-lg transition-colors text-slate-400 hover:text-slate-700">
+                                            <i data-lucide="x" className="w-5 h-5"></i>
+                                        </button>
+                                    </div>
+                                    <div className="flex-1 overflow-y-auto p-6 custom-scrollbar text-[14px]">
+                                        <FormattedText text={selectedNode.details.content} />
+                                    </div>
+                                    <div className="p-4 border-t border-slate-100 bg-slate-50 flex justify-center">
+                                        <button 
+                                            onClick={() => {
+                                                setIsAIChatOpen(true);
+                                                setInput(`我想详细了解关于“${selectedNode.name}”的政策，我适合报考吗？`);
+                                            }}
+                                            className="w-full py-2.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-xl font-medium text-sm transition-colors flex justify-center items-center gap-2 border border-indigo-200"
+                                        >
+                                            <i data-lucide="message-square" className="w-4 h-4"></i> 针对此路径向 AI 提问
+                                        </button>
+                                    </div>
+                                </>
+                            )}
                         </div>
-                    </main>
 
-                    {isAIChatOpen && (
-                        <div className="fixed inset-y-0 right-0 w-full sm:w-[420px] bg-white shadow-2xl z-[100] flex flex-col border-l border-slate-200 transition-transform duration-300">
-                            <div className="p-4 border-b flex justify-between items-center bg-blue-700 text-white shadow-md">
+                        {/* 中央：思维导图画布区 */}
+                        <main className="flex-1 overflow-auto relative custom-scrollbar w-full h-full cursor-grab active:cursor-grabbing">
+                            <div className="min-w-max min-h-max p-20 flex justify-center items-start pt-32">
+                                <div className="transition-transform duration-300 origin-top" style={{ transform: `scale(${zoom})` }}>
+                                    <Node 
+                                        node={mindMapData} 
+                                        isRoot={true} 
+                                        onNodeSelect={handleNodeSelect} 
+                                        activeNodeName={selectedNode?.name} 
+                                    />
+                                </div>
+                            </div>
+                        </main>
+
+                        {/* 右侧：AI 聊天面板 (Drawer) */}
+                        <div className={`absolute right-0 top-0 bottom-0 w-full sm:w-[420px] bg-white border-l border-slate-200 shadow-2xl z-30 flex flex-col transition-transform duration-300 ease-in-out ${isAIChatOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                            <div className="p-4 border-b flex justify-between items-center bg-blue-600 text-white shadow-sm shrink-0">
                                 <div className="flex items-center gap-2">
                                     <i data-lucide="bot" className="w-5 h-5"></i>
-                                    <span className="font-bold tracking-wide">升学规划 AI 助手</span>
+                                    <span className="font-bold tracking-wide">AI 升学规划师</span>
                                 </div>
                                 <button onClick={() => setIsAIChatOpen(false)} className="p-1.5 hover:bg-white/20 rounded-lg transition-colors">
                                     <i data-lucide="x" className="w-5 h-5"></i>
                                 </button>
                             </div>
                             
-                            <div className="bg-amber-50 p-3 px-4 text-[12px] text-amber-800 flex items-start gap-2 border-b border-amber-100">
-                                <i data-lucide="alert-circle" className="w-4 h-4 mt-0.5 shrink-0"></i>
-                                <p>AI 分析基于大模型生成，专注非统招路径逻辑梳理，具体政策请以所在省份考试院当年官方发布为准。</p>
-                            </div>
-                            
-                            <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-5 bg-slate-50 custom-scrollbar pb-20">
+                            <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-5 bg-slate-50 custom-scrollbar">
                                 {messages.map((m, i) => (
                                     <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                         <div className={`max-w-[88%] p-3.5 rounded-2xl text-[14px] leading-relaxed shadow-sm ${
@@ -283,7 +421,7 @@
                                 )}
                             </div>
                             
-                            <div className="p-4 border-t border-slate-200 bg-white absolute bottom-0 w-full shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.05)]">
+                            <div className="p-4 border-t border-slate-200 bg-white shrink-0">
                                 <div className="flex gap-2">
                                     <textarea 
                                         rows="2" 
@@ -295,7 +433,7 @@
                                                 handleSend();
                                             }
                                         }} 
-                                        placeholder="输入：年级/省份/专业组/位次/特长 (Shift+Enter换行)" 
+                                        placeholder="输入：年级/省份/成绩/特长 (Shift+Enter换行)" 
                                         className="flex-1 p-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none outline-none custom-scrollbar transition-all bg-slate-50 focus:bg-white" 
                                     />
                                     <button 
@@ -308,14 +446,7 @@
                                 </div>
                             </div>
                         </div>
-                    )}
-
-                    <footer className="bg-white border-t border-slate-200 p-4 flex gap-4 overflow-x-auto justify-center text-xs text-slate-600 z-10 custom-scrollbar">
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-full border border-slate-200 shadow-sm hover:bg-slate-100 transition-colors cursor-default"><div className="w-2.5 h-2.5 rounded-full bg-blue-600"></div><span className="font-medium">核心主干</span></div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-full border border-slate-200 shadow-sm hover:bg-slate-100 transition-colors cursor-default"><div className="w-2.5 h-2.5 rounded-full bg-indigo-500"></div><span className="font-medium">拔尖优选</span></div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-full border border-slate-200 shadow-sm hover:bg-slate-100 transition-colors cursor-default"><div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div><span className="font-medium">政策照顾</span></div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-full border border-slate-200 shadow-sm hover:bg-slate-100 transition-colors cursor-default"><div className="w-2.5 h-2.5 rounded-full bg-amber-500"></div><span className="font-medium">特长专才</span></div>
-                    </footer>
+                    </div>
                 </div>
             );
         };
