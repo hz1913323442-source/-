@@ -29,11 +29,14 @@
         // ==========================================
         // ⚙️ 全局配置区
         // ==========================================
+        // 自动检测运行环境 (解决 Canvas 和 GitHub Pages 的模型兼容问题)
+        const isCanvasEnv = window.location.hostname.includes('scf.usercontent.goog');
+
         const CONFIG = {
             // 已填入您用于上线 GitHub Pages 的专属密钥
             GEMINI_API_KEY: "AIzaSyCtLoZVc-42AsO2ZCTUaHfOMBooHpqaag0", 
-            // 修复：更新为在 Canvas 预览环境和 GitHub 均受支持的通用模型名称
-            MODEL_NAME: "gemini-2.5-flash-preview-09-2025" 
+            // 修复：针对不同环境自动切换模型。GitHub Pages 上使用最基础稳定的 gemini-pro
+            MODEL_NAME: isCanvasEnv ? "gemini-2.5-flash-preview-09-2025" : "gemini-pro" 
         };
 
         // ==========================================
