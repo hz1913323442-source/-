@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        @import url('https://fonts.loli.net/css2?family=Inter:wght@400;600;800&display=swap');
         body { font-family: 'Inter', "Microsoft YaHei", sans-serif; overflow: hidden; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
@@ -27,23 +27,7 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        // 添加全局错误处理
-        window.onerror = function(msg, url, line, col, error) {
-            console.error('JavaScript Error:', msg, 'at line:', line, 'column:', col);
-            alert('页面加载出错: ' + msg + '\n行号: ' + line + '\n请刷新页面重试或联系开发者');
-            return false;
-        };
-
-        // 添加 Babel 编译错误处理
-        window.addEventListener('error', function(e) {
-            if (e.error && e.error.name === 'SyntaxError') {
-                console.error('Babel Compilation Error:', e.error);
-                alert('代码编译出错，请检查语法错误');
-            }
-        });
-
-        console.log('Script loaded, starting React app...');
-
+        console.log('Babel script started...');
         const { useState, useEffect, useRef } = React;
 
         const mindMapData = {
@@ -335,7 +319,13 @@
             };
 
             useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [messages]);
-            useEffect(() => { lucide.createIcons(); }, [isAIChatOpen, messages, selectedNode, zoom]);
+            useEffect(() => { 
+                if (window.lucide) {
+                    window.lucide.createIcons(); 
+                } else {
+                    console.warn('Lucide icons not loaded yet');
+                }
+            }, [isAIChatOpen, messages, selectedNode, zoom]);
 
             // 🌟 拖拽平移画布功能
             const handleMouseDown = (e) => {
