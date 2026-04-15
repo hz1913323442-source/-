@@ -1,0 +1,4487 @@
+[
+  {
+    "name": "清华大学",
+    "aliases": ["清华", "THU"],
+    "region": "北京",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["顶尖名校", "强基", "高校专项"],
+    "pathways": ["强基计划", "高校专项", "保送生", "艺术类校考"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "聚焦基础学科与国家战略方向，适合学术潜质强的高分学生" },
+      { "name": "高校专项", "note": "面向农村和脱贫地区学生的定向支持通道" }
+    ],
+    "majors": ["计算机类", "电子信息类", "理科试验班", "建筑学"],
+    "specialNotes": ["院校综合要求极高，适合顶尖分数段与竞赛背景学生", "建议同步联查最新招生简章与校测安排"],
+    "advisorProfile": {
+      "fitStudents": ["顶尖分数段、学科基础极强、愿意接受高强度竞争与长期深造路径的学生"],
+      "cautionPoints": ["不要把名校光环当成唯一理由，清华更适合真正接受高压学习环境和顶尖同辈竞争的学生"],
+      "strategy": "把它作为顶层冲刺校来看，先判断自己是否真的匹配它的学术强度、专业兴趣和长期发展方式。"
+    },
+    "officialAdmissionUrl": "https://join-tsinghua.edu.cn/",
+    "officialSiteUrl": "https://www.tsinghua.edu.cn/",
+    "contactPhone": "010-62770334",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京大学",
+    "aliases": ["北大", "PKU"],
+    "region": "北京",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["顶尖名校", "强基", "高校专项"],
+    "pathways": ["强基计划", "高校专项", "医学部综合评价", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "基础学科培养规格高，适合长期学术发展方向明确的学生" },
+      { "name": "医学部综合评价", "note": "医学相关招生模式与本部略有差异，需单独查简章" }
+    ],
+    "majors": ["数学与应用数学", "物理学", "哲学", "基础医学"],
+    "specialNotes": ["学术导向强，建议结合学科特长和长期职业规划判断", "医学部与本部报考规则需分别确认"],
+    "advisorProfile": {
+      "fitStudents": ["综合素质非常强、思辨能力突出、愿意在人文社科或基础学科方向长期投入的学生"],
+      "cautionPoints": ["北大不是单纯的“高分学校”，它更适合真正对学术、人文或通识成长方式有认同感的学生"],
+      "strategy": "优先明确自己的学科兴趣和成长方式，再判断是把它作为顶层冲刺还是某一细分学科的目标校。"
+    },
+    "officialAdmissionUrl": "https://www.gotopku.cn/",
+    "officialSiteUrl": "https://www.pku.edu.cn/",
+    "contactPhone": "010-62751407",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "复旦大学",
+    "aliases": ["复旦", "FDU"],
+    "region": "上海",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["综合评价", "强基", "高校专项"],
+    "pathways": ["强基计划", "综合评价", "高校专项", "外语类保送"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "常见于拔尖与创新人才选拔，需关注校测与评价维度" }
+    ],
+    "majors": ["数学类", "经济学类", "新闻传播学类", "微电子科学与工程"],
+    "specialNotes": ["适合综合素质强、表达与学术能力兼备的学生"],
+    "advisorProfile": {
+      "fitStudents": ["表达能力、学术能力和综合素质都较强，愿意接受综合评价和高要求校测的学生"],
+      "cautionPoints": ["不要只看名校标签，复旦的综评和专业气质更适合综合能力全面、思维成熟的学生"],
+      "strategy": "把它放在“高平台+综合素质选拔”的目标校里评估，重点比较综评准备度、学科匹配和城市偏好。"
+    },
+    "officialAdmissionUrl": "https://www.ao.fudan.edu.cn/",
+    "officialSiteUrl": "https://www.fudan.edu.cn/",
+    "contactPhone": "021-55666668",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "上海交通大学",
+    "aliases": ["上交", "SJTU"],
+    "region": "上海",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["强基", "综合评价", "高校专项"],
+    "pathways": ["强基计划", "综合评价", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "需关注不同学院项目的招生细则与考核方式" }
+    ],
+    "majors": ["临床医学", "船舶与海洋工程", "人工智能", "电子信息类"],
+    "specialNotes": ["医工优势明显，不同专业群选拔要求差异较大"],
+    "advisorProfile": {
+      "fitStudents": ["理工和医学方向都很强、愿意在工程或医工复合平台长期发展的学生"],
+      "cautionPoints": ["上交不同院系风格差异很大，不能只按学校名气判断，专业群和培养路径更关键"],
+      "strategy": "先按专业群看匹配度，再比较综评、专项和统招路径，把它当作专业导向很强的高平台目标校。"
+    },
+    "officialAdmissionUrl": "https://zsb.sjtu.edu.cn/",
+    "officialSiteUrl": "https://www.sjtu.edu.cn/",
+    "contactPhone": "021-34200000",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "浙江大学",
+    "aliases": ["浙大", "ZJU"],
+    "region": "浙江",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["强基", "三位一体", "高校专项"],
+    "pathways": ["强基计划", "三位一体(浙江)", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "更适合浙江考生关注的综合评价型招生方式" }
+    ],
+    "majors": ["计算机科学与技术", "控制科学与工程", "能源与动力工程", "生物科学"],
+    "specialNotes": ["适合综合能力强且专业选择面较广的学生"],
+    "advisorProfile": {
+      "fitStudents": ["学科基础扎实、专业选择还想保留一定宽度、同时又能承受高平台竞争的学生"],
+      "cautionPoints": ["浙大平台大、专业广，但越是综合性强的学校，越要防止自己对专业认知过于模糊"],
+      "strategy": "把它当成“高平台+宽专业面”的目标校来评估，重点确认自己最想争取的学科群和未来发展方向。"
+    },
+    "officialAdmissionUrl": "https://zdzsc.zju.edu.cn/",
+    "officialSiteUrl": "https://www.zju.edu.cn/",
+    "contactPhone": "0571-87951006",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "中国科学技术大学",
+    "aliases": ["中科大", "USTC"],
+    "region": "安徽",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["强基", "少年班", "创新班"],
+    "pathways": ["强基计划", "少年班/创新班", "高校专项"],
+    "pathwayDetails": [
+      { "name": "少年班/创新班", "note": "非常适合学术天赋突出、学习进度领先的学生" }
+    ],
+    "majors": ["物理学", "量子信息", "数学类", "核工程与核技术"],
+    "specialNotes": ["理科氛围浓厚，适合强学术导向学生"],
+    "officialAdmissionUrl": "https://zsb.ustc.edu.cn/",
+    "officialSiteUrl": "https://www.ustc.edu.cn/",
+    "contactPhone": "0551-63602553",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "南京大学",
+    "aliases": ["南大", "NJU"],
+    "region": "江苏",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["强基", "综合评价"],
+    "pathways": ["强基计划", "综合评价", "高校专项"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "需重点关注面试与综合素质评价材料" }
+    ],
+    "majors": ["地质学", "天文学", "中国语言文学", "计算机科学与技术"],
+    "specialNotes": ["文理基础学科优势突出"],
+    "officialAdmissionUrl": "https://zb.nju.edu.cn/",
+    "officialSiteUrl": "https://www.nju.edu.cn/",
+    "contactPhone": "400-1859680",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "中国人民大学",
+    "aliases": ["人大", "RUC"],
+    "region": "北京",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "人文社科强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "社科与基础学科方向适合学术型发展路线" }
+    ],
+    "majors": ["法学", "经济学", "哲学", "中国语言文学"],
+    "specialNotes": ["适合人文社科优势明显的高分段学生"],
+    "officialAdmissionUrl": "https://rdzs.ruc.edu.cn/",
+    "officialSiteUrl": "https://www.ruc.edu.cn/",
+    "contactPhone": "010-62511340",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京航空航天大学",
+    "aliases": ["北航", "BUAA"],
+    "region": "北京",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "工科强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合条件且目标工科名校的学生" }
+    ],
+    "majors": ["航空航天类", "计算机类", "自动化类", "数学类"],
+    "specialNotes": ["工科导向鲜明，适合工程志向明确的学生"],
+    "officialAdmissionUrl": "https://zs.buaa.edu.cn/",
+    "officialSiteUrl": "https://www.buaa.edu.cn/",
+    "contactPhone": "010-82317695",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京理工大学",
+    "aliases": ["北理", "BIT"],
+    "region": "北京",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "工科强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合理工基础扎实、愿意走本硕博培养路线的学生" }
+    ],
+    "majors": ["兵器类", "信息工程", "智能制造", "数学类"],
+    "specialNotes": ["理工类培养实力强，校测与专业要求需分项目确认"],
+    "officialAdmissionUrl": "https://admission.bit.edu.cn/",
+    "officialSiteUrl": "https://www.bit.edu.cn/",
+    "contactPhone": "010-68913345",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京师范大学",
+    "aliases": ["北师大", "BNU"],
+    "region": "北京",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "师范强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合目标教育学、心理学、人文基础学科的学生" }
+    ],
+    "majors": ["教育学", "心理学", "汉语言文学", "数学类"],
+    "specialNotes": ["师范与人文社科优势明显"],
+    "officialAdmissionUrl": "https://admission.bnu.edu.cn/",
+    "officialSiteUrl": "https://www.bnu.edu.cn/",
+    "contactPhone": "010-58807962",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "同济大学",
+    "aliases": ["同济", "Tongji"],
+    "region": "上海",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "建筑土木强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合基础学科和工程交叉方向发展" }
+    ],
+    "majors": ["建筑学", "土木工程", "城乡规划", "智能交通"],
+    "specialNotes": ["建筑土木与德语类特色突出"],
+    "officialAdmissionUrl": "https://bkzs.tongji.edu.cn/",
+    "officialSiteUrl": "https://www.tongji.edu.cn/",
+    "contactPhone": "021-65982643",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "东南大学",
+    "aliases": ["东大", "SEU"],
+    "region": "江苏",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "综合评价", "工科强校"],
+    "pathways": ["强基计划", "综合评价", "高校专项"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "部分省份与项目需重点关注测试环节" }
+    ],
+    "majors": ["电子科学与技术", "建筑学", "信息工程", "自动化"],
+    "specialNotes": ["工科和建筑强势，适合理工导向学生"],
+    "officialAdmissionUrl": "https://zsb.seu.edu.cn/",
+    "officialSiteUrl": "https://www.seu.edu.cn/",
+    "contactPhone": "400-6910286",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "南开大学",
+    "aliases": ["南开", "NKU"],
+    "region": "天津",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合基础学科和经济数学方向学生" }
+    ],
+    "majors": ["数学类", "经济学类", "化学", "历史学"],
+    "specialNotes": ["文理基础较均衡，适合学科兴趣明确的学生"],
+    "officialAdmissionUrl": "https://zsb.nankai.edu.cn/",
+    "officialSiteUrl": "https://www.nankai.edu.cn/",
+    "contactPhone": "022-23504845",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "天津大学",
+    "aliases": ["天大", "TJU"],
+    "region": "天津",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "工科强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合条件的工科方向学生冲击名校" }
+    ],
+    "majors": ["化工与制药类", "建筑学", "智能制造", "数学类"],
+    "specialNotes": ["工科底蕴强，适合工程路线明确学生"],
+    "officialAdmissionUrl": "https://zs.tju.edu.cn/",
+    "officialSiteUrl": "https://www.tju.edu.cn/",
+    "contactPhone": "022-27405486",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "武汉大学",
+    "aliases": ["武大", "WHU"],
+    "region": "湖北",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "综合评价(部分项目)"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合政策条件的中西部和农村地区学生" }
+    ],
+    "majors": ["测绘工程", "法学", "遥感科学与技术", "新闻传播学类"],
+    "specialNotes": ["综合学科实力强，适合兴趣较广的学生"],
+    "officialAdmissionUrl": "https://aoff.whu.edu.cn/",
+    "officialSiteUrl": "https://www.whu.edu.cn/",
+    "contactPhone": "027-68754231",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "华中科技大学",
+    "aliases": ["华科", "HUST"],
+    "region": "湖北",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "工科强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合理工基础扎实、培养目标偏科研的学生" }
+    ],
+    "majors": ["机械类", "光电信息科学与工程", "计算机类", "临床医学"],
+    "specialNotes": ["医工结合突出，工科竞争力强"],
+    "officialAdmissionUrl": "https://zsb.hust.edu.cn/",
+    "officialSiteUrl": "https://www.hust.edu.cn/",
+    "contactPhone": "027-87542228",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "中山大学",
+    "aliases": ["中大", "SYSU"],
+    "region": "广东",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "综合评价(部分项目)"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合想兼顾名校平台和专业选择宽度的学生" }
+    ],
+    "majors": ["临床医学", "生态学", "计算机科学与技术", "工商管理"],
+    "specialNotes": ["校区和专业布局较多，报考时需看具体培养地点"],
+    "advisorProfile": {
+      "fitStudents": ["希望兼顾名校平台、医学商科等多方向选择，并能接受校区差异的学生"],
+      "cautionPoints": ["中大校区和培养地点差异是真实变量，不能只看学校名而忽略具体学院和校区安排"],
+      "strategy": "先按目标专业和校区做精细比较，再决定把它放在冲刺、匹配还是湾区资源导向的重点校。"
+    },
+    "officialAdmissionUrl": "https://admission.sysu.edu.cn/",
+    "officialSiteUrl": "https://www.sysu.edu.cn/",
+    "contactPhone": "020-84036491",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "厦门大学",
+    "aliases": ["厦大", "XMU"],
+    "region": "福建",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合基础学科与人文社科均衡发展的学生" }
+    ],
+    "majors": ["会计学", "海洋科学", "化学", "经济学"],
+    "specialNotes": ["经管与海洋特色明显，适合偏综合型发展路线"],
+    "officialAdmissionUrl": "https://zs.xmu.edu.cn/",
+    "officialSiteUrl": "https://www.xmu.edu.cn/",
+    "contactPhone": "0592-2188888",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "哈尔滨工业大学",
+    "aliases": ["哈工大", "HIT"],
+    "region": "黑龙江",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["强基", "高校专项", "航天工科"],
+    "pathways": ["强基计划", "高校专项"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合有工科志向、希望冲刺航天强校的学生" }
+    ],
+    "majors": ["力学", "航天工程", "材料科学与工程", "机器人工程"],
+    "specialNotes": ["工科与航天特色鲜明，培养风格偏硬核"],
+    "officialAdmissionUrl": "https://zsb.hit.edu.cn/",
+    "officialSiteUrl": "https://www.hit.edu.cn/",
+    "contactPhone": "0451-86414771",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "西安交通大学",
+    "aliases": ["西交", "XJTU"],
+    "region": "陕西",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流", "C9"],
+    "tags": ["强基", "少年班", "高校专项"],
+    "pathways": ["强基计划", "少年班", "高校专项"],
+    "pathwayDetails": [
+      { "name": "少年班", "note": "适合明显超前发展的理科尖子生" }
+    ],
+    "majors": ["机械工程", "电气工程及其自动化", "能源与动力工程", "数学类"],
+    "specialNotes": ["少年班辨识度高，需关注年级与能力要求"],
+    "officialAdmissionUrl": "https://zs.xjtu.edu.cn/",
+    "officialSiteUrl": "https://www.xjtu.edu.cn/",
+    "contactPhone": "029-82668320",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "电子科技大学",
+    "aliases": ["电子科大", "UESTC"],
+    "region": "四川",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "电子信息强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合电子信息方向目标明确的学生" }
+    ],
+    "majors": ["电子信息类", "计算机类", "人工智能", "网络空间安全"],
+    "specialNotes": ["信息学科优势强，适合理工科导向明确学生"],
+    "officialAdmissionUrl": "https://zs.uestc.edu.cn/",
+    "officialSiteUrl": "https://www.uestc.edu.cn/",
+    "contactPhone": "028-61831137",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "四川大学",
+    "aliases": ["川大", "SCU"],
+    "region": "四川",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "综合性平台广，适合想兼顾学校层次与专业宽度的学生" }
+    ],
+    "majors": ["口腔医学", "中国语言文学", "数学类", "高分子材料与工程"],
+    "specialNotes": ["医学与人文兼具，适合综合型报考策略"],
+    "officialAdmissionUrl": "https://zs.scu.edu.cn/",
+    "officialSiteUrl": "https://www.scu.edu.cn/",
+    "contactPhone": "028-86080605",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "重庆大学",
+    "aliases": ["重大", "CQU"],
+    "region": "重庆",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "工科强校"],
+    "pathways": ["强基计划", "高校专项"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合西部地区和符合条件的农村学生冲击985平台" }
+    ],
+    "majors": ["建筑学", "电气工程及其自动化", "机械工程", "数学类"],
+    "specialNotes": ["工科与建筑方向较强，西部区位优势明显"],
+    "officialAdmissionUrl": "https://zhaosheng.cqu.edu.cn/",
+    "officialSiteUrl": "https://www.cqu.edu.cn/",
+    "contactPhone": "023-65102371",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "昆山杜克大学",
+    "aliases": ["昆杜", "DKU"],
+    "region": "江苏",
+    "schoolType": "中外合作大学",
+    "levels": ["独立法人", "中外合作"],
+    "tags": ["综合评价", "国际化", "S11"],
+    "pathways": ["综合评价(校园日)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "综合评价(校园日)", "note": "重视学术潜力、英文表达与综合素养" }
+    ],
+    "majors": ["数据科学", "全球健康学", "环境科学", "计算与设计"],
+    "specialNotes": ["全英文环境强，适合国际化路径与跨学科发展"],
+    "officialAdmissionUrl": "https://admissions.dukekunshan.edu.cn/",
+    "officialSiteUrl": "https://dukekunshan.edu.cn/",
+    "contactPhone": "0512-36659999",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "上海纽约大学",
+    "aliases": ["上纽", "NYU Shanghai"],
+    "region": "上海",
+    "schoolType": "中外合作大学",
+    "levels": ["独立法人", "中外合作"],
+    "tags": ["综合评价", "国际化", "S11"],
+    "pathways": ["综合评价(校园日)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "综合评价(校园日)", "note": "更关注英文写作、沟通与综合素养" }
+    ],
+    "majors": ["计算机科学", "交互媒体艺术", "神经科学", "金融学"],
+    "specialNotes": ["国际化程度高，申请材料准备要求较细"],
+    "officialAdmissionUrl": "https://shanghai.nyu.edu/cn/admissions",
+    "officialSiteUrl": "https://shanghai.nyu.edu/",
+    "contactPhone": "021-20595599",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "香港中文大学（深圳）",
+    "aliases": ["港中深", "CUHK-Shenzhen"],
+    "region": "广东",
+    "schoolType": "中外合作大学",
+    "levels": ["独立法人", "中外合作"],
+    "tags": ["综合评价", "国际化", "S11"],
+    "pathways": ["综合评价(631)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(631)", "note": "高考、校测和学考共同参与评价" }
+    ],
+    "majors": ["数据科学与大数据技术", "金融学", "统计学", "人工智能"],
+    "specialNotes": ["更适合看重英文环境与商科/数据方向的学生"],
+    "advisorProfile": {
+      "fitStudents": ["英语能力好、家庭能接受国际化培养模式、对商科和数据方向有明确兴趣的学生"],
+      "cautionPoints": ["不要把它当成普通内地大学来看，英文环境、学费和培养方式都会显著影响适配度"],
+      "strategy": "把它放在国际化内地路径里评估，重点比较英语能力、家庭接受度、商科/数据方向匹配和预算。"
+    },
+    "officialAdmissionUrl": "https://admissions.cuhk.edu.cn/",
+    "officialSiteUrl": "https://www.cuhk.edu.cn/",
+    "contactPhone": "0755-84273284",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "西交利物浦大学",
+    "aliases": ["西浦", "XJTLU"],
+    "region": "江苏",
+    "schoolType": "中外合作大学",
+    "levels": ["独立法人", "中外合作"],
+    "tags": ["综合评价", "国际化", "S11"],
+    "pathways": ["综合评价", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "适合重视国际化课程体系与升学规划弹性的学生" }
+    ],
+    "majors": ["建筑学", "生物科学", "英语", "计算机科学与技术"],
+    "specialNotes": ["出国深造导向较强，适合国际升学准备充足学生"],
+    "officialAdmissionUrl": "https://www.xjtlu.edu.cn/zh/admissions",
+    "officialSiteUrl": "https://www.xjtlu.edu.cn/",
+    "contactPhone": "0512-88161888",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "宁波诺丁汉大学",
+    "aliases": ["宁诺", "UNNC"],
+    "region": "浙江",
+    "schoolType": "中外合作大学",
+    "levels": ["独立法人", "中外合作"],
+    "tags": ["普通统招", "国际化", "S11"],
+    "pathways": ["普通统招", "校内国际升学路径"],
+    "pathwayDetails": [
+      { "name": "普通统招", "note": "更适合重视英文环境和海外深造导向的学生" }
+    ],
+    "majors": ["国际商务", "航空航天工程", "经济学", "计算机科学"],
+    "specialNotes": ["偏国际课程体系，学费和语言要求需提前评估"],
+    "officialAdmissionUrl": "https://www.nottingham.edu.cn/cn/admissions",
+    "officialSiteUrl": "https://www.nottingham.edu.cn/",
+    "contactPhone": "0574-88180000",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "温州肯恩大学",
+    "aliases": ["温肯", "WKU"],
+    "region": "浙江",
+    "schoolType": "中外合作大学",
+    "levels": ["独立法人", "中外合作"],
+    "tags": ["三位一体", "国际化", "S11"],
+    "pathways": ["三位一体", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体", "note": "浙江考生可重点关注的综合评价型录取方式" }
+    ],
+    "majors": ["国际商务", "视觉传达设计", "计算机科学", "心理学"],
+    "specialNotes": ["适合浙江考生及偏国际教育方向家庭"],
+    "officialAdmissionUrl": "https://wku.edu.cn/zs/",
+    "officialSiteUrl": "https://wku.edu.cn/",
+    "contactPhone": "0577-55870000",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北师港浸大 (UIC)",
+    "aliases": ["UIC", "北师港浸大"],
+    "region": "广东",
+    "schoolType": "中外合作大学",
+    "levels": ["独立法人", "中外合作"],
+    "tags": ["综合评价", "国际化", "S11"],
+    "pathways": ["综合评价(631)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(631)", "note": "适合英文基础较强、希望兼顾内地与国际路径的学生" }
+    ],
+    "majors": ["统计学", "传播学", "应用经济学", "计算机科学"],
+    "specialNotes": ["珠海区位与国际化课程体系是核心特色"],
+    "officialAdmissionUrl": "https://admissions.uic.edu.cn/",
+    "officialSiteUrl": "https://uic.edu.cn/",
+    "contactPhone": "0756-3620011",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "香港大学",
+    "aliases": ["港大", "HKU"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "世界名校"],
+    "tags": ["独立招生", "面试", "国际化"],
+    "pathways": ["自主招生(面试)", "多元录取计划"],
+    "pathwayDetails": [
+      { "name": "自主招生(面试)", "note": "通常需要单独报名，重视英文能力与面试表现" }
+    ],
+    "majors": ["医学", "法学", "经济学", "工程学"],
+    "specialNotes": ["英文要求高，生活与就读成本需提前评估"],
+    "advisorProfile": {
+      "fitStudents": ["英语能力强、家庭对港校路径有充分认同、愿意接受独立申请和面试节奏的学生"],
+      "cautionPoints": ["港大不是单纯的名校替代路径，语言、面试、费用和城市适应度都会显著影响体验"],
+      "strategy": "把它放进港校独立申请体系里单独评估，重点看英语、预算、申请准备和未来留港/国际发展意向。"
+    },
+    "officialAdmissionUrl": "https://admissions.hku.hk/zh-hans",
+    "officialSiteUrl": "https://www.hku.hk/",
+    "contactPhone": "00852-39175886",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "香港科技大学",
+    "aliases": ["港科大", "HKUST"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "世界名校"],
+    "tags": ["独立招生", "面试", "国际化"],
+    "pathways": ["自主招生(面试)"],
+    "pathwayDetails": [
+      { "name": "自主招生(面试)", "note": "理工与商科竞争力强，英文面试通常很关键" }
+    ],
+    "majors": ["商科", "理科", "工程科学", "数据科学"],
+    "specialNotes": ["适合理工和商科导向、英语能力强的学生"],
+    "officialAdmissionUrl": "https://join.hkust.edu.cn/zh-hans",
+    "officialSiteUrl": "https://hkust.edu.hk/",
+    "contactPhone": "00852-23583917",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "香港中文大学",
+    "aliases": ["港中文", "CUHK"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "提前批"],
+    "tags": ["统招提前批", "港校"],
+    "pathways": ["统招提前批志愿"],
+    "pathwayDetails": [
+      { "name": "统招提前批志愿", "note": "不需要额外面试报名，走内地志愿系统提前批" }
+    ],
+    "majors": ["中国语言及文学", "数学", "社会学", "工商管理"],
+    "specialNotes": ["提前批模式更适合想保留内地志愿节奏的学生"],
+    "officialAdmissionUrl": "http://admission.cuhk.edu.hk/",
+    "officialSiteUrl": "https://www.cuhk.edu.hk/",
+    "contactPhone": "00852-39438947",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "香港理工大学",
+    "aliases": ["港理工", "PolyU"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "世界百强"],
+    "tags": ["独立招生", "港校"],
+    "pathways": ["自主招生"],
+    "pathwayDetails": [
+      { "name": "自主招生", "note": "多采用独立申请模式，部分专业辨识度高" }
+    ],
+    "majors": ["设计学", "酒店管理", "土木工程", "护理学"],
+    "specialNotes": ["专业导向强，实践型培养特色明显"],
+    "officialAdmissionUrl": "https://www.polyu.edu.hk/study",
+    "officialSiteUrl": "https://www.polyu.edu.hk/",
+    "contactPhone": "00852-23330600",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "香港城市大学",
+    "aliases": ["港城大", "CityU"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "提前批"],
+    "tags": ["统招提前批", "港校"],
+    "pathways": ["统招提前批志愿"],
+    "pathwayDetails": [
+      { "name": "统招提前批志愿", "note": "走提前批录取，适合希望减少额外申请负担的学生" }
+    ],
+    "majors": ["兽医学", "创意媒体", "电子工程", "法律学"],
+    "specialNotes": ["创意媒体和兽医等特色专业辨识度高"],
+    "officialAdmissionUrl": "https://www.cityu.edu.hk/admo/mainland",
+    "officialSiteUrl": "https://www.cityu.edu.hk/",
+    "contactPhone": "00852-34427373",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "澳门大学",
+    "aliases": ["澳大", "UM"],
+    "region": "澳门",
+    "schoolType": "港澳高校",
+    "levels": ["澳校"],
+    "tags": ["自主招生", "高考直报"],
+    "pathways": ["自主招生(高考直报)"],
+    "pathwayDetails": [
+      { "name": "自主招生(高考直报)", "note": "通常不占用内地志愿，可单独申请" }
+    ],
+    "majors": ["中药学", "微电子", "葡语教育", "工商管理"],
+    "specialNotes": ["适合希望兼顾国际化和中文环境的学生"],
+    "officialAdmissionUrl": "https://reg.um.edu.mo/admissions/",
+    "officialSiteUrl": "https://www.um.edu.mo/",
+    "contactPhone": "00853-88224007",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "澳门科技大学",
+    "aliases": ["澳科大", "MUST"],
+    "region": "澳门",
+    "schoolType": "港澳高校",
+    "levels": ["澳校"],
+    "tags": ["自主招生", "澳门院校"],
+    "pathways": ["自主招生"],
+    "pathwayDetails": [
+      { "name": "自主招生", "note": "适合希望增加港澳院校备选方案的学生" }
+    ],
+    "majors": ["太空科学", "酒店旅游", "中医药", "传播学"],
+    "specialNotes": ["医学、中医药、酒店旅游等方向关注度较高"],
+    "officialAdmissionUrl": "https://www.must.edu.mo/admission",
+    "officialSiteUrl": "https://www.must.edu.mo/",
+    "contactPhone": "00853-88972221",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "华南理工大学",
+    "aliases": ["华工", "SCUT"],
+    "region": "广东",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性工科"],
+    "pathways": ["强基计划", "高校专项", "综合评价(部分项目)"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合政策条件、希望冲击华南头部工科平台的学生" }
+    ],
+    "majors": ["建筑学", "轻工类", "材料科学与工程", "自动化"],
+    "specialNotes": ["工科优势明显，位于大湾区，适合工程方向学生"],
+    "advisorProfile": {
+      "fitStudents": ["工科和大湾区资源偏好都较强，希望在工程平台上长期发展的学生"],
+      "cautionPoints": ["华工的吸引力不只是 985 平台，更在于工科和区位资源，若专业方向不匹配会削弱价值"],
+      "strategy": "把它作为华南工科赛道核心目标校来评估，重点看专业方向、大湾区接受度和专项/综评路径是否匹配。"
+    },
+    "officialAdmissionUrl": "https://admission.scut.edu.cn/",
+    "officialSiteUrl": "https://www.scut.edu.cn/",
+    "contactPhone": "020-87110737",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "山东大学",
+    "aliases": ["山大", "SDU"],
+    "region": "山东",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合基础学科意愿明确、希望兼顾学校平台与学科深造的学生" }
+    ],
+    "majors": ["数学类", "临床医学", "中国语言文学", "材料类"],
+    "specialNotes": ["校区较多，报考时需注意培养地点与校区差异"],
+    "officialAdmissionUrl": "https://www.bkzs.sdu.edu.cn/",
+    "officialSiteUrl": "https://www.sdu.edu.cn/",
+    "contactPhone": "0531-59626977",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "吉林大学",
+    "aliases": ["吉大", "JLU"],
+    "region": "吉林",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合希望借助专项计划冲击985平台的学生" }
+    ],
+    "majors": ["车辆工程", "法学", "考古学", "化学"],
+    "specialNotes": ["学科覆盖面广，适合专业方向尚在比较阶段的学生"],
+    "officialAdmissionUrl": "https://zsb.jlu.edu.cn/",
+    "officialSiteUrl": "https://www.jlu.edu.cn/",
+    "contactPhone": "0431-85166420",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "大连理工大学",
+    "aliases": ["大工", "DUT"],
+    "region": "辽宁",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "工科强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合理工科基础扎实、工程路线明确的学生" }
+    ],
+    "majors": ["化工与制药类", "机械设计制造及其自动化", "软件工程", "数学类"],
+    "specialNotes": ["工科培养较硬核，适合目标明确的理工学生"],
+    "officialAdmissionUrl": "https://zs.dlut.edu.cn/",
+    "officialSiteUrl": "https://www.dlut.edu.cn/",
+    "contactPhone": "0411-84708375",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "东北大学",
+    "aliases": ["东大", "NEU"],
+    "region": "辽宁",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "工科强校"],
+    "pathways": ["强基计划", "高校专项"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合条件、目标东北地区头部工科平台的学生" }
+    ],
+    "majors": ["自动化", "计算机科学与技术", "材料科学与工程", "数学类"],
+    "specialNotes": ["自动化和材料方向辨识度高"],
+    "officialAdmissionUrl": "https://aao.neu.edu.cn/",
+    "officialSiteUrl": "https://www.neu.edu.cn/",
+    "contactPhone": "024-83687392",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "兰州大学",
+    "aliases": ["兰大", "LZU"],
+    "region": "甘肃",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "西部名校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合中西部地区学生关注的优质名校平台" }
+    ],
+    "majors": ["草业科学", "大气科学", "生态学", "数学类"],
+    "specialNotes": ["地学与生态特色突出，适合基础学科与西部发展导向学生"],
+    "officialAdmissionUrl": "https://zsb.lzu.edu.cn/",
+    "officialSiteUrl": "https://www.lzu.edu.cn/",
+    "contactPhone": "0931-8912116",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "西北工业大学",
+    "aliases": ["西工大", "NPU"],
+    "region": "陕西",
+    "schoolType": "研究型理工大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "航空航天强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合数理基础较强、愿意走航空航天与国防方向的学生" }
+    ],
+    "majors": ["航空航天类", "材料类", "计算机类", "海洋工程"],
+    "specialNotes": ["国防特色鲜明，适合工程方向目标明确学生"],
+    "officialAdmissionUrl": "https://zsb.nwpu.edu.cn/",
+    "officialSiteUrl": "https://www.nwpu.edu.cn/",
+    "contactPhone": "029-88460206",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "华东师范大学",
+    "aliases": ["华东师大", "ECNU"],
+    "region": "上海",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["综合评价", "高校专项", "师范强校"],
+    "pathways": ["综合评价", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "适合文理均衡、表达与综合素质较强的学生" }
+    ],
+    "majors": ["教育学", "心理学", "数学与应用数学", "汉语言文学"],
+    "specialNotes": ["师范与教育学优势明显，也适合综合性文理发展"],
+    "officialAdmissionUrl": "https://zsb.ecnu.edu.cn/",
+    "officialSiteUrl": "https://www.ecnu.edu.cn/",
+    "contactPhone": "021-62232212",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "南方科技大学",
+    "aliases": ["南科大", "SUSTech"],
+    "region": "广东",
+    "schoolType": "新型研究型大学",
+    "levels": ["双一流", "综合评价强校"],
+    "tags": ["综合评价", "创新型大学", "理工导向"],
+    "pathways": ["综合评价", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "高考、能力测试和高中学业表现共同作用，适合理工潜质型学生" }
+    ],
+    "majors": ["数学与应用数学", "物理学", "计算机科学与技术", "人工智能"],
+    "specialNotes": ["综合评价辨识度高，适合理工潜力突出且接受新型培养模式的学生"],
+    "advisorProfile": {
+      "fitStudents": ["理工潜质突出、自驱力强、愿意接受新型培养机制和英文科研环境的学生"],
+      "cautionPoints": ["南科大的价值在于培养模式和科研氛围，不适合只想用综评“降门槛”上名校的学生"],
+      "strategy": "把它作为理工综评赛道的特色目标校，重点判断自己是否匹配它的培养方式、学术节奏和城市资源。"
+    },
+    "officialAdmissionUrl": "https://zs.sustech.edu.cn/",
+    "officialSiteUrl": "https://www.sustech.edu.cn/",
+    "contactPhone": "0755-88010500",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京外国语大学",
+    "aliases": ["北外", "BFSU"],
+    "region": "北京",
+    "schoolType": "语言类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["保送生", "小语种", "外语强校"],
+    "pathways": ["外语类保送", "高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合外语能力突出、走外国语学校体系的学生" }
+    ],
+    "majors": ["英语", "外交学", "德语", "法语"],
+    "specialNotes": ["外语保送辨识度高，适合语言优势非常明确的学生"],
+    "officialAdmissionUrl": "https://joinus.bfsu.edu.cn/",
+    "officialSiteUrl": "https://www.bfsu.edu.cn/",
+    "contactPhone": "010-88816254",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "上海外国语大学",
+    "aliases": ["上外", "SISU"],
+    "region": "上海",
+    "schoolType": "语言类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["保送生", "小语种", "外语强校"],
+    "pathways": ["外语类保送", "综合评价(部分项目)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合外语方向突出、志向明确的学生" }
+    ],
+    "majors": ["英语", "新闻传播学", "日语", "国际经济与贸易"],
+    "specialNotes": ["国际化程度高，适合语言与传播方向学生"],
+    "officialAdmissionUrl": "https://admissions.shisu.edu.cn/",
+    "officialSiteUrl": "https://www.shisu.edu.cn/",
+    "contactPhone": "021-55386006",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "澳门理工大学",
+    "aliases": ["澳理工", "MPU"],
+    "region": "澳门",
+    "schoolType": "港澳高校",
+    "levels": ["澳校"],
+    "tags": ["自主招生", "澳门院校"],
+    "pathways": ["自主招生"],
+    "pathwayDetails": [
+      { "name": "自主招生", "note": "适合作为澳门院校备选方案进行平行规划" }
+    ],
+    "majors": ["中葡翻译", "博彩管理", "护理学", "教育学"],
+    "specialNotes": ["应用型与区域特色明显，适合作为港澳升学补充路径"],
+    "officialAdmissionUrl": "https://www.mpu.edu.mo/admission",
+    "officialSiteUrl": "https://www.mpu.edu.mo/",
+    "contactPhone": "00853-28578722",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "中南大学",
+    "aliases": ["中南", "CSU"],
+    "region": "湖南",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "医工强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合政策条件、希望冲击中部头部工医平台的学生" }
+    ],
+    "majors": ["临床医学", "材料科学与工程", "矿业工程", "数学类"],
+    "specialNotes": ["医工结合明显，校区和培养方向需具体查看学院方案"],
+    "officialAdmissionUrl": "https://zhaosheng.csu.edu.cn/",
+    "officialSiteUrl": "https://www.csu.edu.cn/",
+    "contactPhone": "0731-88830995",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "湖南大学",
+    "aliases": ["湖大", "HNU"],
+    "region": "湖南",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "综合性大学"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合基础学科或文理交叉方向的学生" }
+    ],
+    "majors": ["金融学", "车辆工程", "土木工程", "数学类"],
+    "specialNotes": ["综合平台较稳，适合想兼顾学校层次和专业选择的学生"],
+    "officialAdmissionUrl": "https://admi.hnu.edu.cn/",
+    "officialSiteUrl": "https://www.hnu.edu.cn/",
+    "contactPhone": "0731-88823560",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "中国农业大学",
+    "aliases": ["中农", "CAU"],
+    "region": "北京",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "农业强校"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合条件、关注农业生物与食品方向的学生" }
+    ],
+    "majors": ["农业工程", "生物科学", "食品科学与工程", "动物医学"],
+    "specialNotes": ["农科与生物方向全国辨识度高，适合相关志向明确的学生"],
+    "officialAdmissionUrl": "https://jwzs.cau.edu.cn/",
+    "officialSiteUrl": "https://www.cau.edu.cn/",
+    "contactPhone": "010-62737682",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "中国海洋大学",
+    "aliases": ["海大", "OUC"],
+    "region": "山东",
+    "schoolType": "研究型综合大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["强基", "高校专项", "海洋特色"],
+    "pathways": ["强基计划", "高校专项", "保送生"],
+    "pathwayDetails": [
+      { "name": "强基计划", "note": "适合基础学科和海洋相关方向兴趣明确的学生" }
+    ],
+    "majors": ["海洋科学", "水产养殖学", "食品科学与工程", "法学"],
+    "specialNotes": ["海洋特色鲜明，适合相关产业和科研志向学生"],
+    "officialAdmissionUrl": "https://bkzs.ouc.edu.cn/",
+    "officialSiteUrl": "https://www.ouc.edu.cn/",
+    "contactPhone": "0532-66782426",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京邮电大学",
+    "aliases": ["北邮", "BUPT"],
+    "region": "北京",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "信息强校", "保送生"],
+    "pathways": ["高校专项", "保送生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合信息类方向明确、想冲击热门工科平台的学生" }
+    ],
+    "majors": ["计算机科学与技术", "信息与通信工程", "网络工程", "电子商务"],
+    "specialNotes": ["信息类专业热度高，录取竞争通常较激烈"],
+    "officialAdmissionUrl": "https://zsb.bupt.edu.cn/",
+    "officialSiteUrl": "https://www.bupt.edu.cn/",
+    "contactPhone": "010-62282045",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京交通大学",
+    "aliases": ["北交", "BJTU"],
+    "region": "北京",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "综合性工科"],
+    "pathways": ["高校专项", "保送生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合轨道交通、信息和经管交叉方向学生" }
+    ],
+    "majors": ["交通运输类", "通信工程", "系统科学", "经济管理试验班"],
+    "specialNotes": ["轨道交通和系统工程特色明显"],
+    "officialAdmissionUrl": "https://gs.bjtu.edu.cn/cms/zszt/",
+    "officialSiteUrl": "https://www.bjtu.edu.cn/",
+    "contactPhone": "010-51688441",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "西安电子科技大学",
+    "aliases": ["西电", "XDU"],
+    "region": "陕西",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "信息强校", "保送生"],
+    "pathways": ["高校专项", "保送生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合信息通信、电子工程方向明确的学生" }
+    ],
+    "majors": ["电子信息工程", "通信工程", "网络空间安全", "人工智能"],
+    "specialNotes": ["电子通信优势很强，适合理工目标明确的学生"],
+    "officialAdmissionUrl": "https://zsb.xidian.edu.cn/",
+    "officialSiteUrl": "https://www.xidian.edu.cn/",
+    "contactPhone": "029-88202335",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "上海科技大学",
+    "aliases": ["上科大", "ShanghaiTech"],
+    "region": "上海",
+    "schoolType": "新型研究型大学",
+    "levels": ["双一流", "综合评价强校"],
+    "tags": ["综合评价", "创新型大学", "理工导向"],
+    "pathways": ["综合评价", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "重视创新潜质、科学兴趣和英文能力" }
+    ],
+    "majors": ["物质科学", "生命科学", "信息科学与技术", "创业与管理"],
+    "specialNotes": ["培养模式新，适合科研和创新导向很强的学生"],
+    "officialAdmissionUrl": "https://admission.shanghaitech.edu.cn/",
+    "officialSiteUrl": "https://www.shanghaitech.edu.cn/",
+    "contactPhone": "021-20685192",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "深圳大学",
+    "aliases": ["深大", "SZU"],
+    "region": "广东",
+    "schoolType": "综合大学",
+    "levels": ["双一流建设观察", "地方强校"],
+    "tags": ["综合评价", "地方强校", "大湾区"],
+    "pathways": ["综合评价(部分省份/项目)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(部分省份/项目)", "note": "需按当年省份政策与项目通知确认是否开放" }
+    ],
+    "majors": ["计算机科学与技术", "金融科技", "电子信息工程", "建筑学"],
+    "specialNotes": ["城市区位与就业资源好，适合作为大湾区重点备选"],
+    "officialAdmissionUrl": "https://zs.szu.edu.cn/",
+    "officialSiteUrl": "https://www.szu.edu.cn/",
+    "contactPhone": "0755-26536235",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京中医药大学",
+    "aliases": ["北中医", "BUCM"],
+    "region": "北京",
+    "schoolType": "医药类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "医药特色", "综合类专项"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合对中医药和生命健康方向有明确兴趣的学生" }
+    ],
+    "majors": ["中医学", "中药学", "针灸推拿学", "药学"],
+    "specialNotes": ["医药特色鲜明，适合专业志向非常明确的学生"],
+    "officialAdmissionUrl": "https://zsjy.bucm.edu.cn/",
+    "officialSiteUrl": "https://www.bucm.edu.cn/",
+    "contactPhone": "010-53911041",
+    "dataStatus": "core-seed"
+  },
+  {
+    "name": "北京科技大学",
+    "aliases": ["北科大", "USTB"],
+    "region": "北京",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "材料冶金"],
+    "pathways": ["高校专项", "保送生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合工科基础扎实、希望借专项计划冲击高平台的学生" }
+    ],
+    "majors": ["材料科学与工程", "冶金工程", "计算机科学与技术", "自动化"],
+    "specialNotes": ["工科优势突出，适合专业目标较明确的理工学生"],
+    "officialAdmissionUrl": "https://zhaosheng.ustb.edu.cn/",
+    "officialSiteUrl": "https://www.ustb.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "北京化工大学",
+    "aliases": ["北化", "BUCT"],
+    "region": "北京",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "化工强校", "理工导向"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合理工方向明确、希望兼顾化工与新材料平台的学生" }
+    ],
+    "majors": ["化学工程与工艺", "高分子材料与工程", "自动化", "制药工程"],
+    "specialNotes": ["化工材料优势明显，建议结合专业兴趣判断优先级"],
+    "officialAdmissionUrl": "https://goto.buct.edu.cn/",
+    "officialSiteUrl": "https://www.buct.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "北京林业大学",
+    "aliases": ["北林", "BJFU"],
+    "region": "北京",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "生态特色", "林学强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合对生态、园林、风景园林和绿色产业方向感兴趣的学生" }
+    ],
+    "majors": ["林学", "风景园林", "园林", "生物科学"],
+    "specialNotes": ["行业特色鲜明，适合专业志向相对清晰的学生"],
+    "officialAdmissionUrl": "https://zsb.bjfu.edu.cn/",
+    "officialSiteUrl": "https://www.bjfu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中国政法大学",
+    "aliases": ["法大", "CUPL"],
+    "region": "北京",
+    "schoolType": "研究型人文社科大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "法学强校", "人文社科"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合人文社科基础较好、希望冲击顶尖法学平台的学生" }
+    ],
+    "majors": ["法学", "政治学与行政学", "社会学", "国际商务"],
+    "specialNotes": ["法学热度高，建议关注专业分流和未来职业方向"],
+    "officialAdmissionUrl": "https://zs.cupl.edu.cn/",
+    "officialSiteUrl": "https://www.cupl.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中国石油大学（北京）",
+    "aliases": ["中石大(北京)", "CUPB"],
+    "region": "北京",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "能源强校", "行业特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合能源、地质、资源方向兴趣明确的学生" }
+    ],
+    "majors": ["石油工程", "资源勘查工程", "地质工程", "新能源科学与工程"],
+    "specialNotes": ["行业特色强，适合对能源产业链有明确兴趣的学生"],
+    "officialAdmissionUrl": "https://www.cup.edu.cn/zhaosheng/",
+    "officialSiteUrl": "https://www.cup.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中国地质大学（北京）",
+    "aliases": ["地大(北京)", "CUGB"],
+    "region": "北京",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "地学强校", "行业特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合地学、资源、环境方向兴趣明确的学生" }
+    ],
+    "majors": ["地质学", "地球物理学", "资源勘查工程", "环境工程"],
+    "specialNotes": ["地学特色鲜明，建议结合专业志向和城市接受度判断"],
+    "officialAdmissionUrl": "https://zhaosheng.cugb.edu.cn/",
+    "officialSiteUrl": "https://www.cugb.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "合肥工业大学",
+    "aliases": ["合工大", "HFUT"],
+    "region": "安徽",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "工科平台"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合分数稳健、希望冲击优质工科平台的学生" }
+    ],
+    "majors": ["机械设计制造及其自动化", "车辆工程", "电气工程及其自动化", "计算机科学与技术"],
+    "specialNotes": ["工科平台扎实，适合作为理工学生的重点匹配院校"],
+    "officialAdmissionUrl": "https://bkzs.hfut.edu.cn/",
+    "officialSiteUrl": "https://www.hfut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "南京航空航天大学",
+    "aliases": ["南航", "NUAA"],
+    "region": "江苏",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "航空航天", "理工强校"],
+    "pathways": ["高校专项", "保送生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合工科导向明确、想冲击航空航天平台的学生" }
+    ],
+    "majors": ["航空航天类", "飞行器设计与工程", "自动化", "信息工程"],
+    "specialNotes": ["航空特色鲜明，部分专业对理工基础要求较高"],
+    "officialAdmissionUrl": "https://zs.nuaa.edu.cn/",
+    "officialSiteUrl": "https://www.nuaa.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "南京理工大学",
+    "aliases": ["南理工", "NJUST"],
+    "region": "江苏",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "军工底色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合理工目标明确、看重工科平台与就业面的学生" }
+    ],
+    "majors": ["兵器类", "电子信息类", "计算机类", "化工与制药类"],
+    "specialNotes": ["工科优势明显，适合作为理工方向冲稳结合院校"],
+    "officialAdmissionUrl": "https://zsb.njust.edu.cn/",
+    "officialSiteUrl": "https://www.njust.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "河海大学",
+    "aliases": ["河海", "HHU"],
+    "region": "江苏",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "水利强校", "工程特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合工程基础较稳、看重水利土木与区域发展平台的学生" }
+    ],
+    "majors": ["水利水电工程", "港口航道与海岸工程", "土木工程", "环境工程"],
+    "specialNotes": ["行业认可度高，适合工程方向较清晰的学生"],
+    "officialAdmissionUrl": "https://zsw.hhu.edu.cn/",
+    "officialSiteUrl": "https://www.hhu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "南京农业大学",
+    "aliases": ["南农", "NJAU"],
+    "region": "江苏",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "农科强校", "生命科学"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合生命科学、农学、食品方向兴趣明确的学生" }
+    ],
+    "majors": ["农学", "植物保护", "食品科学与工程", "动物医学"],
+    "specialNotes": ["农科特色强，适合专业兴趣较明确的学生"],
+    "officialAdmissionUrl": "https://zsb.njau.edu.cn/",
+    "officialSiteUrl": "https://www.njau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中国药科大学",
+    "aliases": ["药大", "CPU"],
+    "region": "江苏",
+    "schoolType": "医药类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "医药特色", "行业强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合对药学、制药工程和生命健康方向兴趣明确的学生" }
+    ],
+    "majors": ["药学", "中药学", "制药工程", "生物制药"],
+    "specialNotes": ["行业特色鲜明，适合医药方向志向明确的学生"],
+    "officialAdmissionUrl": "https://zb.cpu.edu.cn/",
+    "officialSiteUrl": "https://www.cpu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "苏州大学",
+    "aliases": ["苏大", "SUDA"],
+    "region": "江苏",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["综合评价", "高校专项", "地方强校"],
+    "pathways": ["综合评价(江苏)", "高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "更适合江苏考生结合校测与志愿策略进行布局" },
+      { "name": "高校专项", "note": "适合符合专项资格且希望冲击双一流平台的学生" }
+    ],
+    "majors": ["纺织工程", "临床医学", "软件工程", "法学"],
+    "specialNotes": ["综合实力均衡，适合作为江苏赛道中的重点匹配院校"],
+    "officialAdmissionUrl": "https://zsb.suda.edu.cn/",
+    "officialSiteUrl": "https://www.suda.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "江南大学",
+    "aliases": ["江大", "JNU(无锡)"],
+    "region": "江苏",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "食品特色", "设计见长"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合食品、生工、设计方向兴趣明确的学生" }
+    ],
+    "majors": ["食品科学与工程", "生物工程", "工业设计", "轻化工程"],
+    "specialNotes": ["食品学科优势明显，适合作为特色强校重点关注"],
+    "officialAdmissionUrl": "https://zs.jiangnan.edu.cn/",
+    "officialSiteUrl": "https://www.jiangnan.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "华中农业大学",
+    "aliases": ["华农", "HZAU"],
+    "region": "湖北",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "农科强校", "生命科学"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合农学、园艺、生命科学方向兴趣明确的学生" }
+    ],
+    "majors": ["动物医学", "园艺", "食品科学与工程", "生物科学"],
+    "specialNotes": ["农科与生命科学优势强，适合专业方向较明确的学生"],
+    "officialAdmissionUrl": "https://zs.hzau.edu.cn/",
+    "officialSiteUrl": "https://www.hzau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "武汉理工大学",
+    "aliases": ["武理", "WHUT"],
+    "region": "湖北",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "交通建材"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合理工基础较稳、看重工程就业面的学生" }
+    ],
+    "majors": ["材料科学与工程", "机械工程", "车辆工程", "交通运输工程"],
+    "specialNotes": ["工程平台扎实，适合作为工科匹配院校重点关注"],
+    "officialAdmissionUrl": "https://zs.whut.edu.cn/",
+    "officialSiteUrl": "https://www.whut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "华中师范大学",
+    "aliases": ["华师", "CCNU"],
+    "region": "湖北",
+    "schoolType": "师范大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "公费师范", "师范强校"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范意向明确、接受培养与就业约定的学生" },
+      { "name": "高校专项", "note": "适合符合资格且希望冲击优质师范平台的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "心理学", "教育技术学"],
+    "specialNotes": ["师范氛围浓厚，报考前要想清楚是否接受教师职业路径"],
+    "officialAdmissionUrl": "https://zs.ccnu.edu.cn/",
+    "officialSiteUrl": "https://www.ccnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中南财经政法大学",
+    "aliases": ["中南财", "ZUEL"],
+    "region": "湖北",
+    "schoolType": "财经政法类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "财经政法", "人文社科"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合对财经、法学和商科方向兴趣较明确的学生" }
+    ],
+    "majors": ["法学", "金融学", "会计学", "财政学"],
+    "specialNotes": ["财经法学热度较高，建议结合职业方向做优先级排序"],
+    "officialAdmissionUrl": "https://bkzs.zuel.edu.cn/",
+    "officialSiteUrl": "https://www.zuel.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "暨南大学",
+    "aliases": ["暨大", "JNU"],
+    "region": "广东",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "港澳台侨特色", "大湾区"],
+    "pathways": ["高校专项", "港澳台侨联招", "普通统招"],
+    "pathwayDetails": [
+      { "name": "港澳台侨联招", "note": "适合有港澳台侨升学规划需求的家庭重点关注" },
+      { "name": "高校专项", "note": "适合符合资格且希望进入大湾区优质平台的学生" }
+    ],
+    "majors": ["新闻传播学", "经济学", "临床医学", "汉语言文学"],
+    "specialNotes": ["国际化与湾区资源优势突出，适合城市偏好明确的学生"],
+    "officialAdmissionUrl": "https://zsb.jnu.edu.cn/",
+    "officialSiteUrl": "https://www.jnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "华南师范大学",
+    "aliases": ["华南师大", "SCNU"],
+    "region": "广东",
+    "schoolType": "师范大学",
+    "levels": ["211", "双一流"],
+    "tags": ["综合评价", "公费师范", "师范强校"],
+    "pathways": ["综合评价(广东)", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东)", "note": "适合广东考生结合校测和专业倾向进行布局" },
+      { "name": "公费师范生", "note": "适合师范目标明确且接受定向培养机制的学生" }
+    ],
+    "majors": ["数学与应用数学", "心理学", "物理学", "教育技术学"],
+    "specialNotes": ["广东本地认可度高，适合师范与心理方向学生重点研究"],
+    "officialAdmissionUrl": "https://zsb.scnu.edu.cn/",
+    "officialSiteUrl": "https://www.scnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "福州大学",
+    "aliases": ["福大", "FZU"],
+    "region": "福建",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合分数稳健、希望进入东南区域双一流平台的学生" }
+    ],
+    "majors": ["化学", "电气工程及其自动化", "机械设计制造及其自动化", "计算机科学与技术"],
+    "specialNotes": ["福建区域认可度高，适合作为东南地区重点备选院校"],
+    "officialAdmissionUrl": "https://zsks.fzu.edu.cn/",
+    "officialSiteUrl": "https://www.fzu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "南昌大学",
+    "aliases": ["南大(江西)", "NCU"],
+    "region": "江西",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合希望冲击中部地区双一流平台的学生" }
+    ],
+    "majors": ["食品科学与工程", "临床医学", "材料成型及控制工程", "新闻传播学"],
+    "specialNotes": ["综合性较强，适合作为区域内冲稳结合院校"],
+    "officialAdmissionUrl": "https://zjc.ncu.edu.cn/",
+    "officialSiteUrl": "https://www.ncu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "郑州大学",
+    "aliases": ["郑大", "ZZU"],
+    "region": "河南",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重综合平台和区域发展资源的学生" }
+    ],
+    "majors": ["临床医学", "材料科学与工程", "化学工程与工艺", "法学"],
+    "specialNotes": ["体量大、专业面广，适合专业尚未极度收窄的学生"],
+    "officialAdmissionUrl": "https://ao.zzu.edu.cn/",
+    "officialSiteUrl": "https://www.zzu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "云南大学",
+    "aliases": ["云大", "YNU"],
+    "region": "云南",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合希望冲击西部双一流平台、兼顾人文与生态方向的学生" }
+    ],
+    "majors": ["民族学", "生态学", "法学", "计算机科学与技术"],
+    "specialNotes": ["西部区位特色明显，适合有地域接受度的学生"],
+    "officialAdmissionUrl": "https://zsb.ynu.edu.cn/",
+    "officialSiteUrl": "https://www.ynu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "贵州大学",
+    "aliases": ["贵大", "GZU"],
+    "region": "贵州",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合符合专项资格、希望以较优平台实现上跳的学生" }
+    ],
+    "majors": ["计算机科学与技术", "土木工程", "法学", "农学"],
+    "specialNotes": ["专项价值相对突出，适合把平台提升放在优先位的学生"],
+    "officialAdmissionUrl": "https://zs.gzu.edu.cn/",
+    "officialSiteUrl": "https://www.gzu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "广西大学",
+    "aliases": ["西大", "GXU"],
+    "region": "广西",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重区域平台与专项机会的学生" }
+    ],
+    "majors": ["土木工程", "电气工程及其自动化", "法学", "农学"],
+    "specialNotes": ["在西南华南交界区域有一定平台优势，适合作为区域备选"],
+    "officialAdmissionUrl": "https://zs.gxu.edu.cn/",
+    "officialSiteUrl": "https://www.gxu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "西南大学",
+    "aliases": ["西大(重庆)", "SWU"],
+    "region": "重庆",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "公费师范", "农科协同"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范方向明确且接受培养约定的学生" },
+      { "name": "高校专项", "note": "适合符合资格、希望冲击西南优质平台的学生" }
+    ],
+    "majors": ["教育学", "心理学", "农学", "生物科学"],
+    "specialNotes": ["师范和农科特色并存，适合目标比较清晰的学生"],
+    "officialAdmissionUrl": "https://bkzsw.swu.edu.cn/",
+    "officialSiteUrl": "https://www.swu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "西南交通大学",
+    "aliases": ["西南交大", "SWJTU"],
+    "region": "四川",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "交通强校", "理工导向"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合工程基础较稳、看重轨道交通平台的学生" }
+    ],
+    "majors": ["交通运输工程", "土木工程", "机械工程", "电气工程及其自动化"],
+    "specialNotes": ["交通特色鲜明，适合专业方向较明确的工科学生"],
+    "officialAdmissionUrl": "https://zhaosheng.swjtu.edu.cn/",
+    "officialSiteUrl": "https://www.swjtu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "西南财经大学",
+    "aliases": ["西财", "SWUFE"],
+    "region": "四川",
+    "schoolType": "财经类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "财经强校", "商科导向"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合财经商科方向清晰、想冲击财经强校平台的学生" }
+    ],
+    "majors": ["金融学", "会计学", "经济学", "统计学"],
+    "specialNotes": ["财经热度高，建议结合就业方向和城市偏好判断"],
+    "officialAdmissionUrl": "https://zb.swufe.edu.cn/",
+    "officialSiteUrl": "https://www.swufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "西北大学",
+    "aliases": ["西大(陕西)", "NWU"],
+    "region": "陕西",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "人文理科兼备"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合人文理科兼备、希望冲击西北综合平台的学生" }
+    ],
+    "majors": ["考古学", "地质学", "经济学", "计算机科学与技术"],
+    "specialNotes": ["文理兼备，适合专业方向尚未完全收窄的学生"],
+    "officialAdmissionUrl": "https://zs.nwu.edu.cn/",
+    "officialSiteUrl": "https://www.nwu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "长安大学",
+    "aliases": ["长大", "CHD"],
+    "region": "陕西",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "交通土木", "工程特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合道路交通、土木、地测方向兴趣明确的学生" }
+    ],
+    "majors": ["道路桥梁与渡河工程", "交通工程", "测绘工程", "地质工程"],
+    "specialNotes": ["行业特色鲜明，适合作为工程类赛道的重点备选"],
+    "officialAdmissionUrl": "https://zsb.chd.edu.cn/",
+    "officialSiteUrl": "https://www.chd.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "陕西师范大学",
+    "aliases": ["陕师大", "SNNU"],
+    "region": "陕西",
+    "schoolType": "师范大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "公费师范", "师范强校"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范目标明确、接受培养约定与就业安排的学生" },
+      { "name": "高校专项", "note": "适合符合资格且希望冲击师范平台的学生" }
+    ],
+    "majors": ["汉语言文学", "历史学", "数学与应用数学", "心理学"],
+    "specialNotes": ["师范特色鲜明，报考前要明确职业接受度"],
+    "officialAdmissionUrl": "https://zsb.snnu.edu.cn/",
+    "officialSiteUrl": "https://www.snnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中国石油大学（华东）",
+    "aliases": ["中石大(华东)", "UPC"],
+    "region": "山东",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "能源强校", "行业特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合能源、化工、海洋方向兴趣较明确的学生" }
+    ],
+    "majors": ["石油工程", "化学工程与工艺", "海洋油气工程", "机械设计制造及其自动化"],
+    "specialNotes": ["行业特色强，建议结合职业方向和行业接受度判断"],
+    "officialAdmissionUrl": "https://zhaosheng.upc.edu.cn/",
+    "officialSiteUrl": "https://www.upc.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中国地质大学（武汉）",
+    "aliases": ["地大(武汉)", "CUG"],
+    "region": "湖北",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "地学强校", "行业特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合地学、地理、资源环境方向兴趣明确的学生" }
+    ],
+    "majors": ["地质学", "资源勘查工程", "测绘工程", "环境工程"],
+    "specialNotes": ["地学特色鲜明，适合专业志向较明确的学生"],
+    "officialAdmissionUrl": "https://zhaosheng.cug.edu.cn/",
+    "officialSiteUrl": "https://www.cug.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "南京师范大学",
+    "aliases": ["南师大", "NNU"],
+    "region": "江苏",
+    "schoolType": "师范大学",
+    "levels": ["双一流", "师范强校"],
+    "tags": ["综合评价", "公费师范", "江苏重点"],
+    "pathways": ["综合评价(江苏)", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生把成绩、校测表现和专业偏好一起考虑" },
+      { "name": "公费师范生", "note": "适合师范目标明确、认可培养约定的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "地理科学", "新闻传播学"],
+    "specialNotes": ["江苏认可度高，适合师范与人文方向学生重点研究"],
+    "officialAdmissionUrl": "https://bkzs.njnu.edu.cn/",
+    "officialSiteUrl": "https://www.njnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "汕头大学",
+    "aliases": ["汕大", "STU"],
+    "region": "广东",
+    "schoolType": "综合大学",
+    "levels": ["省部共建", "地方强校"],
+    "tags": ["综合评价", "地方强校", "医学工科"],
+    "pathways": ["综合评价(广东/部分项目)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东/部分项目)", "note": "需根据当年省份与项目通知确认招生方式和校测安排" }
+    ],
+    "majors": ["临床医学", "电子信息工程", "法学", "新闻学"],
+    "specialNotes": ["在广东有一定辨识度，适合区域内重点匹配与梯度布局"],
+    "officialAdmissionUrl": "https://zs.stu.edu.cn/",
+    "officialSiteUrl": "https://www.stu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "深圳北理莫斯科大学",
+    "aliases": ["深北莫", "SMBU"],
+    "region": "广东",
+    "schoolType": "中外合作大学",
+    "levels": ["中外合作办学", "国际化办学"],
+    "tags": ["综合评价", "国际化", "小而精"],
+    "pathways": ["综合评价", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价", "note": "适合重视国际化培养、小班化环境和校测准备的学生" }
+    ],
+    "majors": ["数学与应用数学", "材料科学与工程", "俄语", "国际经济与贸易"],
+    "specialNotes": ["培养模式较新，建议重点确认语言环境、学费和升学出口"],
+    "officialAdmissionUrl": "https://admission.smbu.edu.cn/",
+    "officialSiteUrl": "https://www.smbu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "大连海事大学",
+    "aliases": ["大连海事", "DMU"],
+    "region": "辽宁",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "航运特色", "保送生"],
+    "pathways": ["高校专项", "保送生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合交通航运方向兴趣明确、看重行业资源的学生" }
+    ],
+    "majors": ["航海技术", "轮机工程", "交通运输", "法学"],
+    "specialNotes": ["航运特色鲜明，适合行业认知较清晰的学生"],
+    "officialAdmissionUrl": "https://bkzs.dlmu.edu.cn/",
+    "officialSiteUrl": "https://www.dlmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "广东外语外贸大学",
+    "aliases": ["广外", "GDUFS"],
+    "region": "广东",
+    "schoolType": "语言类大学",
+    "levels": ["省属重点", "外语强校"],
+    "tags": ["综合评价", "外语保送", "国际化"],
+    "pathways": ["综合评价(广东)", "外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东)", "note": "适合英语能力较强、愿意准备面试和材料的广东考生" },
+      { "name": "外语类保送", "note": "适合外语竞赛与语言能力突出的学生重点关注" }
+    ],
+    "majors": ["英语", "翻译", "国际经济与贸易", "法学"],
+    "specialNotes": ["语言和国际化氛围强，适合外语与商科方向学生"],
+    "officialAdmissionUrl": "https://zsb.gdufs.edu.cn/",
+    "officialSiteUrl": "https://www.gdufs.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "浙江工业大学",
+    "aliases": ["浙工大", "ZJUT"],
+    "region": "浙江",
+    "schoolType": "研究型理工大学",
+    "levels": ["浙江省重点", "地方强校"],
+    "tags": ["三位一体", "理工强校", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生用综合素质评价和校测表现争取更优录取结果" }
+    ],
+    "majors": ["化学工程与工艺", "机械工程", "软件工程", "制药工程"],
+    "specialNotes": ["浙江本地认可度较高，适合作为省内赛道型重点院校"],
+    "officialAdmissionUrl": "https://zs.zjut.edu.cn/",
+    "officialSiteUrl": "https://www.zjut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "浙江师范大学",
+    "aliases": ["浙师大", "ZJNU"],
+    "region": "浙江",
+    "schoolType": "师范大学",
+    "levels": ["浙江省重点", "师范强校"],
+    "tags": ["三位一体", "师范强校", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生综合素质较强、愿意准备校测和面试的学生" },
+      { "name": "公费师范生", "note": "适合师范路径明确的学生重点关注" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "学前教育", "英语"],
+    "specialNotes": ["师范与教育学优势明显，适合教师职业路径清晰的学生"],
+    "officialAdmissionUrl": "https://zs.zjnu.edu.cn/",
+    "officialSiteUrl": "https://www.zjnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "宁波大学",
+    "aliases": ["宁大", "NBU"],
+    "region": "浙江",
+    "schoolType": "综合大学",
+    "levels": ["双一流", "地方强校"],
+    "tags": ["三位一体", "综合大学", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生以综合评价方式争取更优平台与专业" }
+    ],
+    "majors": ["水产养殖学", "法学", "机械设计制造及其自动化", "英语"],
+    "specialNotes": ["区域认可度高，适合作为浙江本地综合型重要备选"],
+    "officialAdmissionUrl": "https://zsb.nbu.edu.cn/",
+    "officialSiteUrl": "https://www.nbu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "北京语言大学",
+    "aliases": ["北语", "BLCU"],
+    "region": "北京",
+    "schoolType": "语言类大学",
+    "levels": ["双一流建设观察", "语言特色"],
+    "tags": ["外语保送", "国际化", "语言强校"],
+    "pathways": ["外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合语言能力突出、外语竞赛和表达能力较强的学生" }
+    ],
+    "majors": ["汉语国际教育", "英语", "翻译", "国际经济与贸易"],
+    "specialNotes": ["国际化氛围强，适合语言导向和跨文化发展意向学生"],
+    "officialAdmissionUrl": "https://zsb.blcu.edu.cn/",
+    "officialSiteUrl": "https://www.blcu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "上海对外经贸大学",
+    "aliases": ["上经贸大", "SUIBE"],
+    "region": "上海",
+    "schoolType": "财经类大学",
+    "levels": ["上海市重点", "国际化办学"],
+    "tags": ["综合评价", "商科导向", "国际化"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生结合英语、表达和商科兴趣进行布局" }
+    ],
+    "majors": ["国际经济与贸易", "金融学", "商务英语", "法学"],
+    "specialNotes": ["商科与国际化特色突出，适合城市与商科偏好明显的学生"],
+    "officialAdmissionUrl": "https://zhaosheng.suibe.edu.cn/",
+    "officialSiteUrl": "https://www.suibe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "上海大学",
+    "aliases": ["上大", "SHU"],
+    "region": "上海",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["综合评价", "高校专项", "上海重点"],
+    "pathways": ["综合评价(上海)", "高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生结合校测表现与专业布局做梯度安排" },
+      { "name": "高校专项", "note": "适合符合资格且希望冲击上海双一流平台的学生" }
+    ],
+    "majors": ["材料科学与工程", "社会学", "电影制作", "信息工程"],
+    "specialNotes": ["综合性较强，适合作为上海赛道中的重要匹配院校"],
+    "officialAdmissionUrl": "https://bkzsw.shu.edu.cn/",
+    "officialSiteUrl": "https://www.shu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "东华大学",
+    "aliases": ["东华", "DHU"],
+    "region": "上海",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "设计纺织", "上海重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合设计、材料、纺织和管理交叉方向兴趣明确的学生" }
+    ],
+    "majors": ["纺织工程", "服装与服饰设计", "材料类", "工商管理"],
+    "specialNotes": ["设计与纺织辨识度高，适合方向相对明确的学生"],
+    "officialAdmissionUrl": "https://zs.dhu.edu.cn/",
+    "officialSiteUrl": "https://www.dhu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "华东理工大学",
+    "aliases": ["华理", "ECUST"],
+    "region": "上海",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "化工强校", "上海重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合理工基础扎实、希望冲击上海工科平台的学生" }
+    ],
+    "majors": ["化学工程与工艺", "应用化学", "生物工程", "自动化"],
+    "specialNotes": ["化工和生工优势突出，适合作为工科重点备选"],
+    "officialAdmissionUrl": "https://zsb.ecust.edu.cn/",
+    "officialSiteUrl": "https://www.ecust.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中国传媒大学",
+    "aliases": ["中传", "CUC"],
+    "region": "北京",
+    "schoolType": "传媒类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "艺术传播", "行业强校"],
+    "pathways": ["高校专项", "艺术类校考", "普通统招"],
+    "pathwayDetails": [
+      { "name": "艺术类校考", "note": "适合传媒、播音、艺术相关方向能力突出的学生" },
+      { "name": "高校专项", "note": "适合符合资格且希望进入传媒头部平台的学生" }
+    ],
+    "majors": ["新闻传播学", "播音与主持艺术", "数字媒体技术", "广告学"],
+    "specialNotes": ["传媒特色鲜明，需重视专业要求、校考流程与行业认知"],
+    "officialAdmissionUrl": "https://zhaosheng.cuc.edu.cn/",
+    "officialSiteUrl": "https://www.cuc.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "中央财经大学",
+    "aliases": ["央财", "CUFE"],
+    "region": "北京",
+    "schoolType": "财经类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "财经强校", "商科导向"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合财经方向清晰、想冲击北京商科平台的学生" }
+    ],
+    "majors": ["金融学", "会计学", "财政学", "经济统计学"],
+    "specialNotes": ["财经热度较高，建议结合专业竞争度和城市偏好判断"],
+    "officialAdmissionUrl": "https://zs.cufe.edu.cn/",
+    "officialSiteUrl": "https://www.cufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-1-expanded"
+  },
+  {
+    "name": "华北电力大学",
+    "aliases": ["华电", "NCEPU"],
+    "region": "北京",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "能源电力", "行业强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合电气、能源和自动化方向目标明确的学生" }
+    ],
+    "majors": ["电气工程及其自动化", "能源与动力工程", "自动化", "新能源科学与工程"],
+    "specialNotes": ["行业认可度高，适合作为能源电力方向的重要平台校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ncepu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "对外经济贸易大学",
+    "aliases": ["贸大", "UIBE"],
+    "region": "北京",
+    "schoolType": "财经类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "财经外语", "国际化"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合财经外语能力均衡、想冲击国际化平台的学生" }
+    ],
+    "majors": ["国际经济与贸易", "金融学", "法学", "商务英语"],
+    "specialNotes": ["财经外语热度高，建议结合英语能力与职业路径判断"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.uibe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "中国矿业大学",
+    "aliases": ["矿大", "CUMT"],
+    "region": "江苏",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "矿业能源", "行业特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合地矿、能源、安全和工程方向兴趣明确的学生" }
+    ],
+    "majors": ["采矿工程", "安全工程", "地质工程", "电气工程及其自动化"],
+    "specialNotes": ["行业特色鲜明，适合工程目标较清晰的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cumt.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "中国矿业大学（北京）",
+    "aliases": ["矿大(北京)", "CUMTB"],
+    "region": "北京",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "矿业能源", "北京平台"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合地矿、安全和资源方向兴趣明确的学生" }
+    ],
+    "majors": ["采矿工程", "安全工程", "地质工程", "机械工程"],
+    "specialNotes": ["平台位置好，适合行业志向清晰且接受专业特色的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cumtb.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "东北师范大学",
+    "aliases": ["东北师大", "NENU"],
+    "region": "吉林",
+    "schoolType": "师范大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "公费师范", "师范强校"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合教师职业意向明确且接受培养约定的学生" },
+      { "name": "高校专项", "note": "适合符合资格、希望冲击优质师范平台的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "思想政治教育", "心理学"],
+    "specialNotes": ["师范氛围强，报考前要明确自己对教师职业路径的接受度"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nenu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "东北林业大学",
+    "aliases": ["东林", "NEFU"],
+    "region": "黑龙江",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "生态林业", "行业特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合生态、林业、园林与生物方向兴趣明确的学生" }
+    ],
+    "majors": ["林学", "风景园林", "木材科学与工程", "生物科学"],
+    "specialNotes": ["生态林业特色明显，适合专业志向较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nefu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "东北农业大学",
+    "aliases": ["东北农大", "NEAU"],
+    "region": "黑龙江",
+    "schoolType": "行业特色大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "农科强校", "生命科学"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合农学、动物医学、食品方向兴趣明确的学生" }
+    ],
+    "majors": ["农学", "动物医学", "食品科学与工程", "农业机械化及其自动化"],
+    "specialNotes": ["农科平台扎实，适合专业方向较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.neau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "太原理工大学",
+    "aliases": ["太理", "TYUT"],
+    "region": "山西",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "能源化工"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合理工基础稳健、希望冲击能源化工平台的学生" }
+    ],
+    "majors": ["机械工程", "化学工程与工艺", "材料科学与工程", "电气工程及其自动化"],
+    "specialNotes": ["工科底盘扎实，适合作为北方理工类重点匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.tyut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "内蒙古大学",
+    "aliases": ["内大", "IMU"],
+    "region": "内蒙古",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重区域平台和人文理工兼备培养的学生" }
+    ],
+    "majors": ["数学与应用数学", "生物科学", "生态学", "计算机科学与技术"],
+    "specialNotes": ["西部平台属性较强，适合有地域接受度的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.imu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "辽宁大学",
+    "aliases": ["辽大", "LNU"],
+    "region": "辽宁",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "财经法学"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合人文社科和商科方向均有兴趣的学生" }
+    ],
+    "majors": ["经济学", "法学", "汉语言文学", "金融学"],
+    "specialNotes": ["文商科优势相对突出，适合作为东北区域重点综合院校备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.lnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "延边大学",
+    "aliases": ["延大", "YBU"],
+    "region": "吉林",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "民族特色", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重区域平台、医学语言或民族学特色的学生" }
+    ],
+    "majors": ["朝鲜语", "临床医学", "药学", "中国少数民族语言文学"],
+    "specialNotes": ["区域与民族特色明显，适合目标较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ybu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "海南大学",
+    "aliases": ["海大", "HNU(海南)"],
+    "region": "海南",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "自由贸易港"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重区域政策、生态和海洋方向发展的学生" }
+    ],
+    "majors": ["法学", "海洋科学", "计算机科学与技术", "农学"],
+    "specialNotes": ["区位特色鲜明，适合对海南自贸港和海洋方向有兴趣的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hainanu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "石河子大学",
+    "aliases": ["石大", "SHZU"],
+    "region": "新疆",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重平台提升和西部资源布局的学生" }
+    ],
+    "majors": ["临床医学", "农学", "化学工程与工艺", "经济学"],
+    "specialNotes": ["专项价值相对突出，适合把平台上跳作为优先位的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.shzu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "宁夏大学",
+    "aliases": ["宁大(宁夏)", "NXU"],
+    "region": "宁夏",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重专项平台和区域发展资源的学生" }
+    ],
+    "majors": ["草业科学", "葡萄与葡萄酒工程", "数学与应用数学", "汉语言文学"],
+    "specialNotes": ["西部平台属性较强，适合专项路径和区域平台提升型规划"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nxu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "新疆大学",
+    "aliases": ["新大", "XJU"],
+    "region": "新疆",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重双一流平台和西部资源布局的学生" }
+    ],
+    "majors": ["中国少数民族语言文学", "法学", "计算机科学与技术", "资源勘查工程"],
+    "specialNotes": ["地域特色较强，适合对西部发展与平台提升有接受度的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.xju.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "西藏大学",
+    "aliases": ["藏大", "UTibet"],
+    "region": "西藏",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重国家政策支持和区域平台上跳机会的学生" }
+    ],
+    "majors": ["生态学", "汉语言文学", "计算机科学与技术", "临床医学"],
+    "specialNotes": ["地域接受度是关键变量，适合规划目标和地域偏好都较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.utibet.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "青海大学",
+    "aliases": ["青大", "QHU"],
+    "region": "青海",
+    "schoolType": "综合大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "综合大学", "西部重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合希望通过专项计划实现平台跃升的学生" }
+    ],
+    "majors": ["生态学", "临床医学", "计算机科学与技术", "水利水电工程"],
+    "specialNotes": ["西部专项价值较高，适合把平台提升作为优先目标的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.qhu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "西北农林科技大学",
+    "aliases": ["西农", "NWAFU"],
+    "region": "陕西",
+    "schoolType": "行业特色大学",
+    "levels": ["985", "211", "双一流"],
+    "tags": ["高校专项", "农科强校", "生命科学"],
+    "pathways": ["高校专项", "强基计划", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合农林、生命、生态方向兴趣明确且希望冲击985平台的学生" },
+      { "name": "强基计划", "note": "适合基础学科扎实、愿意接受长期培养路径的学生" }
+    ],
+    "majors": ["农学", "动物医学", "植物保护", "生物科学"],
+    "specialNotes": ["农林生命方向优势非常强，适合专业志向明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nwafu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "天津医科大学",
+    "aliases": ["天医", "TMU"],
+    "region": "天津",
+    "schoolType": "医药类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "医学强校", "医药特色"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合医学方向明确、愿意接受较长培养周期的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "医学影像学", "护理学"],
+    "specialNotes": ["医学方向培养周期长，建议提前确认专业热爱和职业接受度"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.tmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "上海财经大学",
+    "aliases": ["上财", "SUFE"],
+    "region": "上海",
+    "schoolType": "财经类大学",
+    "levels": ["211", "双一流"],
+    "tags": ["综合评价", "财经强校", "上海重点"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生结合商科兴趣、表达能力和校测表现进行布局" }
+    ],
+    "majors": ["金融学", "会计学", "统计学", "经济学"],
+    "specialNotes": ["财经热度高，建议结合城市偏好与职业规划进行排序"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "上海中医药大学",
+    "aliases": ["上中医", "SHUTCM"],
+    "region": "上海",
+    "schoolType": "医药类大学",
+    "levels": ["双一流", "医药特色"],
+    "tags": ["综合评价", "医学方向", "上海重点"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生中医药兴趣明确、愿意准备校测和面试的学生" }
+    ],
+    "majors": ["中医学", "中药学", "针灸推拿学", "康复治疗学"],
+    "specialNotes": ["专业方向明确度要求高，适合医药路径清晰的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.shutcm.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "山东师范大学",
+    "aliases": ["山师", "SDNU"],
+    "region": "山东",
+    "schoolType": "师范大学",
+    "levels": ["山东省重点", "师范强校"],
+    "tags": ["综合评价", "师范强校", "山东重点"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生用高中过程性表现和面试测试争取更优录取结果" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "教育技术学", "新闻学"],
+    "specialNotes": ["山东省内认可度高，适合作为师范与人文方向重点研究院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sdnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "南京信息工程大学",
+    "aliases": ["南信大", "NUIST"],
+    "region": "江苏",
+    "schoolType": "研究型理工大学",
+    "levels": ["双一流", "江苏高水平大学"],
+    "tags": ["综合评价", "国家专项", "气象特色"],
+    "pathways": ["综合评价(江苏)", "国家专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生结合学科优势、校测表现和专业偏好做梯度布局" },
+      { "name": "国家专项", "note": "适合符合专项资格、希望提升平台层级的学生" }
+    ],
+    "majors": ["大气科学", "计算机科学与技术", "信息工程", "人工智能"],
+    "specialNotes": ["气象和信息方向辨识度高，适合作为江苏赛道型重点院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nuist.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "南京工业大学",
+    "aliases": ["南工大", "NJTech"],
+    "region": "江苏",
+    "schoolType": "研究型理工大学",
+    "levels": ["江苏高水平大学", "地方强校"],
+    "tags": ["综合评价", "化工强校", "工科导向"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生以综合素质、学科能力和校测表现争取更优专业" }
+    ],
+    "majors": ["化学工程与工艺", "材料科学与工程", "建筑学", "计算机科学与技术"],
+    "specialNotes": ["工科基础扎实，适合作为江苏工科方向的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.njtech.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "江苏大学",
+    "aliases": ["江大(镇江)", "UJS"],
+    "region": "江苏",
+    "schoolType": "综合大学",
+    "levels": ["江苏高水平大学", "地方强校"],
+    "tags": ["综合评价", "工科见长", "综合大学"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生用过程性评价与校测表现争取更优录取结果" }
+    ],
+    "majors": ["机械设计制造及其自动化", "车辆工程", "临床医学", "法学"],
+    "specialNotes": ["综合实力均衡，适合作为江苏省内冲稳结合院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ujs.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "扬州大学",
+    "aliases": ["扬大", "YZU"],
+    "region": "江苏",
+    "schoolType": "综合大学",
+    "levels": ["江苏高水平大学", "地方强校"],
+    "tags": ["综合评价", "师范农科", "综合大学"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生兼顾综合素质、学业稳定性和专业适配度进行布局" }
+    ],
+    "majors": ["汉语言文学", "农学", "临床医学", "化学"],
+    "specialNotes": ["综合性较强，适合作为江苏本地多方向备选院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.yzu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "南京邮电大学",
+    "aliases": ["南邮", "NJUPT"],
+    "region": "江苏",
+    "schoolType": "研究型理工大学",
+    "levels": ["双一流建设观察", "信息强校"],
+    "tags": ["综合评价", "信息强校", "工科导向"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生中信息通信方向较明确、愿意准备校测的学生" }
+    ],
+    "majors": ["通信工程", "电子科学与技术", "计算机科学与技术", "软件工程"],
+    "specialNotes": ["信息类热度较高，适合作为江苏信息赛道的重要目标院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.njupt.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "南京医科大学",
+    "aliases": ["南医大", "NJMU"],
+    "region": "江苏",
+    "schoolType": "医药类大学",
+    "levels": ["江苏高水平大学", "医药强校"],
+    "tags": ["综合评价", "医学方向", "江苏重点"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生医学意向明确、愿意准备面试与综合考核的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "预防医学", "医学影像学"],
+    "specialNotes": ["医学培养周期长，建议提前确认专业热爱与职业接受度"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.njmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "南京中医药大学",
+    "aliases": ["南中医", "NJUCM"],
+    "region": "江苏",
+    "schoolType": "医药类大学",
+    "levels": ["双一流", "医药特色"],
+    "tags": ["综合评价", "中医药特色", "江苏重点"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生中医药兴趣明确、综合素质较强的学生" }
+    ],
+    "majors": ["中医学", "中药学", "针灸推拿学", "药学"],
+    "specialNotes": ["方向要求明确，适合对中医药路径有较强认同感的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.njucm.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "南京林业大学",
+    "aliases": ["南林", "NJFU"],
+    "region": "江苏",
+    "schoolType": "行业特色大学",
+    "levels": ["双一流", "生态特色"],
+    "tags": ["综合评价", "林学园林", "江苏重点"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生在生态、园林、设计方向上进行赛道型布局" }
+    ],
+    "majors": ["林学", "风景园林", "家具设计与工程", "环境设计"],
+    "specialNotes": ["生态与设计特色强，适合方向明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.njfu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "南京审计大学",
+    "aliases": ["南审", "NAU"],
+    "region": "江苏",
+    "schoolType": "财经类大学",
+    "levels": ["江苏省重点", "财经特色"],
+    "tags": ["综合评价", "审计财经", "江苏重点"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生商科意向明确、愿意准备综合考核与面试的学生" }
+    ],
+    "majors": ["审计学", "会计学", "金融学", "法学"],
+    "specialNotes": ["财经与审计辨识度高，适合作为江苏商科赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "杭州电子科技大学",
+    "aliases": ["杭电", "HDU"],
+    "region": "浙江",
+    "schoolType": "研究型理工大学",
+    "levels": ["浙江省重点", "理工强校"],
+    "tags": ["三位一体", "信息强校", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生通过综合评价争取信息类热门平台和专业" }
+    ],
+    "majors": ["电子信息工程", "通信工程", "计算机科学与技术", "自动化"],
+    "specialNotes": ["信息类热度较高，适合作为浙江信息赛道重点院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hdu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江工商大学",
+    "aliases": ["浙工商", "ZJSU"],
+    "region": "浙江",
+    "schoolType": "财经类大学",
+    "levels": ["浙江省重点", "财经特色"],
+    "tags": ["三位一体", "商科导向", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在财经管理方向通过综合评价争取更优录取结果" }
+    ],
+    "majors": ["会计学", "金融学", "工商管理", "法学"],
+    "specialNotes": ["商科辨识度较高，适合作为浙江商科赛道重要备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zjgsu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江理工大学",
+    "aliases": ["浙理工", "ZSTU"],
+    "region": "浙江",
+    "schoolType": "研究型理工大学",
+    "levels": ["浙江省重点", "理工强校"],
+    "tags": ["三位一体", "设计纺织", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在理工与设计交叉方向进行赛道型布局" }
+    ],
+    "majors": ["纺织工程", "服装设计与工程", "机械工程", "计算机科学与技术"],
+    "specialNotes": ["设计纺织与工科兼具，适合方向相对明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zstu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "温州医科大学",
+    "aliases": ["温医大", "WMU"],
+    "region": "浙江",
+    "schoolType": "医药类大学",
+    "levels": ["浙江省重点", "医学特色"],
+    "tags": ["三位一体", "医学方向", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生医学意向明确、愿意通过综合评价争取医学平台" }
+    ],
+    "majors": ["临床医学", "眼视光医学", "口腔医学", "医学影像学"],
+    "specialNotes": ["医学方向要求明确，适合专业志向比较稳定的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.wmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江海洋大学",
+    "aliases": ["浙海大", "ZJOU"],
+    "region": "浙江",
+    "schoolType": "行业特色大学",
+    "levels": ["浙江省重点", "海洋特色"],
+    "tags": ["三位一体", "海洋方向", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合海洋、航运、食品方向兴趣明确的浙江考生" }
+    ],
+    "majors": ["海洋科学", "船舶与海洋工程", "食品科学与工程", "水产养殖学"],
+    "specialNotes": ["海洋产业特色鲜明，适合专业方向较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zjou.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江农林大学",
+    "aliases": ["浙农林", "ZAFU"],
+    "region": "浙江",
+    "schoolType": "行业特色大学",
+    "levels": ["浙江省重点", "生态特色"],
+    "tags": ["三位一体", "农林生态", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合生态、园林、农林方向兴趣明确的浙江考生" }
+    ],
+    "majors": ["林学", "园林", "农学", "风景园林"],
+    "specialNotes": ["生态与园林特色强，适合专业目标较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zafu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江中医药大学",
+    "aliases": ["浙中医", "ZCMU"],
+    "region": "浙江",
+    "schoolType": "医药类大学",
+    "levels": ["浙江省重点", "中医药特色"],
+    "tags": ["三位一体", "中医药特色", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合对中医药、康复和生命健康方向兴趣明确的浙江考生" }
+    ],
+    "majors": ["中医学", "中药学", "针灸推拿学", "康复治疗学"],
+    "specialNotes": ["专业志向要求较高，适合明确认可中医药路径的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zcmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "中国计量大学",
+    "aliases": ["中量大", "CJLU"],
+    "region": "浙江",
+    "schoolType": "研究型理工大学",
+    "levels": ["浙江省重点", "行业特色"],
+    "tags": ["三位一体", "质量计量", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合工科基础较稳、对质量计量和标准化方向感兴趣的学生" }
+    ],
+    "majors": ["测控技术与仪器", "标准化工程", "自动化", "电子信息工程"],
+    "specialNotes": ["行业特色较强，适合作为浙江理工类细分赛道院校备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cjlu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江科技大学",
+    "aliases": ["浙科大", "ZUST"],
+    "region": "浙江",
+    "schoolType": "研究型理工大学",
+    "levels": ["浙江省重点", "国际化办学"],
+    "tags": ["三位一体", "工科导向", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生通过综合评价争取工科与国际化培养平台" }
+    ],
+    "majors": ["机械工程", "土木工程", "信息工程", "德语"],
+    "specialNotes": ["应用型与国际化特色较明显，适合看重实践与交流环境的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zust.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江财经大学",
+    "aliases": ["浙财", "ZUFE"],
+    "region": "浙江",
+    "schoolType": "财经类大学",
+    "levels": ["浙江省重点", "财经特色"],
+    "tags": ["三位一体", "商科导向", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在财经商科方向用综合评价争取更好专业结果" }
+    ],
+    "majors": ["金融学", "会计学", "财政学", "经济统计学"],
+    "specialNotes": ["财经方向热度较高，适合商科目标比较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "杭州师范大学",
+    "aliases": ["杭师大", "HZNU"],
+    "region": "浙江",
+    "schoolType": "师范大学",
+    "levels": ["浙江省重点", "师范强校"],
+    "tags": ["三位一体", "师范强校", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在师范、人文和生命方向通过综合评价争取更优录取" }
+    ],
+    "majors": ["汉语言文学", "学前教育", "心理学", "生物科学"],
+    "specialNotes": ["师范与教育方向辨识度较高，适合作为浙江师范赛道重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hznu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "温州大学",
+    "aliases": ["温大", "WZU"],
+    "region": "浙江",
+    "schoolType": "综合大学",
+    "levels": ["浙江省重点", "地方强校"],
+    "tags": ["三位一体", "综合大学", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生作为综合性院校的重要梯度和匹配选择" }
+    ],
+    "majors": ["数学与应用数学", "法学", "电气工程及其自动化", "小学教育"],
+    "specialNotes": ["综合性较强，适合作为浙江本地多方向备选院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.wzu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江外国语学院",
+    "aliases": ["浙外", "ZISU"],
+    "region": "浙江",
+    "schoolType": "语言类大学",
+    "levels": ["浙江省重点", "语言特色"],
+    "tags": ["三位一体", "外语方向", "国际化"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合语言能力较强、重视国际交流与表达能力的浙江考生" }
+    ],
+    "majors": ["英语", "翻译", "商务英语", "国际经济与贸易"],
+    "specialNotes": ["语言导向明显，适合外语与国际化发展意向较强的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zisu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "杭州医学院",
+    "aliases": ["杭医", "HZCM"],
+    "region": "浙江",
+    "schoolType": "医药类大学",
+    "levels": ["省属医学院", "医学特色"],
+    "tags": ["三位一体", "医学方向", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合医学健康方向明确、希望在省内医学平台布局的浙江考生" }
+    ],
+    "majors": ["临床医学", "预防医学", "医学检验技术", "护理学"],
+    "specialNotes": ["医学方向培养周期长，适合志向明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hmc.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江万里学院",
+    "aliases": ["万里学院", "ZWU"],
+    "region": "浙江",
+    "schoolType": "综合大学",
+    "levels": ["浙江省应用型高校", "地方院校"],
+    "tags": ["三位一体", "应用导向", "国际合作"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生通过综合评价争取更适合自己的应用型培养路径" }
+    ],
+    "majors": ["物流管理", "会展经济与管理", "生物工程", "网络与新媒体"],
+    "specialNotes": ["更偏应用与实践，适合看重就业导向和培养体验的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zwu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "嘉兴大学",
+    "aliases": ["嘉大", "JXU"],
+    "region": "浙江",
+    "schoolType": "综合大学",
+    "levels": ["浙江省重点建设高校", "地方院校"],
+    "tags": ["三位一体", "综合大学", "浙江本地"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生进行区域内稳妥布局和专业匹配选择" }
+    ],
+    "majors": ["临床医学", "会计学", "机械设计制造及其自动化", "法学"],
+    "specialNotes": ["适合作为浙江本地综合型匹配院校之一"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zjxu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙大城市学院",
+    "aliases": ["浙大城院", "ZUCC"],
+    "region": "浙江",
+    "schoolType": "综合大学",
+    "levels": ["公办本科", "杭州本地"],
+    "tags": ["三位一体", "城市资源", "地方院校"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生看重杭州区位和综合评价录取机会的学生" }
+    ],
+    "majors": ["法学", "金融学", "计算机科学与技术", "英语"],
+    "specialNotes": ["城市资源优势较明显，适合作为杭州区域院校重点备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zucc.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙大宁波理工学院",
+    "aliases": ["浙大宁理", "NIT"],
+    "region": "浙江",
+    "schoolType": "理工类大学",
+    "levels": ["公办本科", "宁波本地"],
+    "tags": ["三位一体", "应用导向", "地方院校"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在宁波区域进行工程与应用方向布局" }
+    ],
+    "majors": ["机械设计制造及其自动化", "电气工程及其自动化", "国际经济与贸易", "土木工程"],
+    "specialNotes": ["更偏应用与工程实践，适合作为区域内匹配型院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nbt.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "宁波工程学院",
+    "aliases": ["宁工", "NIT(宁波)"],
+    "region": "浙江",
+    "schoolType": "理工类大学",
+    "levels": ["地方本科", "应用导向"],
+    "tags": ["三位一体", "应用工科", "宁波本地"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在工程实践与区域就业导向上进行稳妥布局" }
+    ],
+    "majors": ["机械设计制造及其自动化", "交通工程", "计算机科学与技术", "化学工程与工艺"],
+    "specialNotes": ["应用性较强，适合作为浙江工科方向的务实型选择"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nbut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江水利水电学院",
+    "aliases": ["浙水院", "ZJWEU"],
+    "region": "浙江",
+    "schoolType": "理工类大学",
+    "levels": ["地方本科", "行业特色"],
+    "tags": ["三位一体", "水利工程", "应用导向"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合对水利、土木和工程实践方向有明确兴趣的浙江考生" }
+    ],
+    "majors": ["水利水电工程", "土木工程", "测绘工程", "电气工程及其自动化"],
+    "specialNotes": ["行业特色较强，适合专业目标较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zjweu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "浙江警察学院",
+    "aliases": ["浙警院", "ZJPC"],
+    "region": "浙江",
+    "schoolType": "政法类大学",
+    "levels": ["省属本科", "公安特色"],
+    "tags": ["三位一体", "公安政法", "浙江本地"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合警务政法方向明确、符合体测政审等要求的浙江考生" }
+    ],
+    "majors": ["治安学", "侦查学", "交通管理工程", "网络安全与执法"],
+    "specialNotes": ["报考前需重点确认体检、体测和政审要求"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zjjcxy.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-2-expanded"
+  },
+  {
+    "name": "外交学院",
+    "aliases": ["外交学院", "CFAU"],
+    "region": "北京",
+    "schoolType": "语言与政法特色大学",
+    "levels": ["外交特色", "小而精"],
+    "tags": ["外语保送", "国际关系", "北京平台"],
+    "pathways": ["外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合语言能力和表达能力都强、对国际事务方向有明确兴趣的学生" }
+    ],
+    "majors": ["外交学", "国际政治", "英语", "翻译"],
+    "specialNotes": ["体量小但定位强，适合职业方向与院校气质高度匹配的学生"],
+    "advisorProfile": {
+      "fitStudents": ["英语能力突出、表达成熟、对国际关系和公共事务有长期兴趣的学生"],
+      "cautionPoints": ["不要只因为校名小众就低估竞争，也不要把它当作普通外语院校来理解"],
+      "strategy": "把它放在“方向高度匹配”的目标校里评估，重点比较职业路径、外语优势和面试表达能力。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cfau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "北京第二外国语学院",
+    "aliases": ["北二外", "BISU"],
+    "region": "北京",
+    "schoolType": "语言类大学",
+    "levels": ["北京市重点", "外语特色"],
+    "tags": ["外语保送", "国际化", "北京本地"],
+    "pathways": ["外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合外语能力较强、看重国际传播与文旅商科方向的学生" }
+    ],
+    "majors": ["英语", "日语", "翻译", "旅游管理"],
+    "specialNotes": ["语言氛围强，适合外语与国际传播方向较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.bisu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "天津外国语大学",
+    "aliases": ["天外", "TFSU"],
+    "region": "天津",
+    "schoolType": "语言类大学",
+    "levels": ["天津市重点", "外语特色"],
+    "tags": ["外语保送", "语言方向", "国际化"],
+    "pathways": ["外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合外语基础强、希望走语言与国际商务方向的学生" }
+    ],
+    "majors": ["英语", "俄语", "西班牙语", "国际经济与贸易"],
+    "specialNotes": ["适合作为语言类赛道的匹配型院校重点关注"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.tjfsu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "大连外国语大学",
+    "aliases": ["大外", "DLUFL"],
+    "region": "辽宁",
+    "schoolType": "语言类大学",
+    "levels": ["辽宁省重点", "外语特色"],
+    "tags": ["外语保送", "小语种", "国际化"],
+    "pathways": ["外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合语言能力较强、对小语种和国际传播有兴趣的学生" }
+    ],
+    "majors": ["日语", "俄语", "翻译", "国际事务与国际关系"],
+    "specialNotes": ["小语种辨识度较高，适合语言方向比较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.dlufl.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "四川外国语大学",
+    "aliases": ["川外", "SISU(重庆)"],
+    "region": "重庆",
+    "schoolType": "语言类大学",
+    "levels": ["重庆市重点", "外语特色"],
+    "tags": ["外语保送", "语言方向", "国际化"],
+    "pathways": ["外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合外语优势明显、看重国际传播和商科交叉培养的学生" }
+    ],
+    "majors": ["英语", "法语", "翻译", "商务英语"],
+    "specialNotes": ["适合作为语言赛道的西南区域重点院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sisu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "西安外国语大学",
+    "aliases": ["西外", "XISU"],
+    "region": "陕西",
+    "schoolType": "语言类大学",
+    "levels": ["陕西省重点", "外语特色"],
+    "tags": ["外语保送", "语言方向", "国际化"],
+    "pathways": ["外语类保送", "普通统招"],
+    "pathwayDetails": [
+      { "name": "外语类保送", "note": "适合外语表达能力较强、看重语言和国际传播平台的学生" }
+    ],
+    "majors": ["英语", "德语", "阿拉伯语", "新闻学"],
+    "specialNotes": ["适合作为西北区域语言赛道的代表院校之一"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.xisu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "华东政法大学",
+    "aliases": ["华政", "ECUPL"],
+    "region": "上海",
+    "schoolType": "政法类大学",
+    "levels": ["上海市重点", "政法强校"],
+    "tags": ["综合评价", "法学强校", "上海重点"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生用综合素质、表达与面试表现争取更优法学平台" }
+    ],
+    "majors": ["法学", "侦查学", "知识产权", "金融学"],
+    "specialNotes": ["法学辨识度很强，适合职业方向相对明确的学生"],
+    "advisorProfile": {
+      "fitStudents": ["文科表达强、逻辑清晰、对法学和公共规则体系有持续兴趣的学生"],
+      "cautionPoints": ["不要只因为法学名气高就报，法学路径对阅读、表达和长期投入要求都很高"],
+      "strategy": "把它作为法学赛道的核心目标校来评估，重点看自己是否真的接受法律职业路径和高强度学术训练。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ecupl.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "上海师范大学",
+    "aliases": ["上师大", "SHNU"],
+    "region": "上海",
+    "schoolType": "师范大学",
+    "levels": ["上海市重点", "师范强校"],
+    "tags": ["综合评价", "师范强校", "上海重点"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生在人文、师范和教育方向进行综合评价布局" }
+    ],
+    "majors": ["汉语言文学", "学前教育", "英语", "教育技术学"],
+    "specialNotes": ["适合作为师范和人文方向的上海本地重点备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.shnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "上海理工大学",
+    "aliases": ["上理工", "USST"],
+    "region": "上海",
+    "schoolType": "研究型理工大学",
+    "levels": ["上海市重点", "理工强校"],
+    "tags": ["综合评价", "理工导向", "上海重点"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生通过综合评价争取工科与光电方向优势专业" }
+    ],
+    "majors": ["光电信息科学与工程", "机械设计制造及其自动化", "医学影像技术", "人工智能"],
+    "specialNotes": ["工科导向明确，适合作为上海工科赛道的匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.usst.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "上海海事大学",
+    "aliases": ["上海事", "SMU"],
+    "region": "上海",
+    "schoolType": "行业特色大学",
+    "levels": ["上海市重点", "航运特色"],
+    "tags": ["综合评价", "航运物流", "上海重点"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合对航运、物流、国际贸易方向有兴趣的上海考生" }
+    ],
+    "majors": ["航海技术", "物流管理", "交通运输", "法学"],
+    "specialNotes": ["行业特色鲜明，适合看重航运与物流产业资源的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.shmtu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "上海海洋大学",
+    "aliases": ["上海洋", "SHOU"],
+    "region": "上海",
+    "schoolType": "行业特色大学",
+    "levels": ["双一流", "海洋特色"],
+    "tags": ["综合评价", "海洋方向", "上海重点"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合海洋、食品、生物方向兴趣明确的上海考生" }
+    ],
+    "majors": ["海洋科学", "水产养殖学", "食品科学与工程", "生物科学"],
+    "specialNotes": ["海洋特色很强，适合专业方向较清晰的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.shou.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "上海立信会计金融学院",
+    "aliases": ["立信", "Lixin"],
+    "region": "上海",
+    "schoolType": "财经类大学",
+    "levels": ["上海市重点", "财经特色"],
+    "tags": ["综合评价", "财经方向", "上海本地"],
+    "pathways": ["综合评价(上海)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(上海)", "note": "适合上海考生在财经、审计和会计方向上进行赛道布局" }
+    ],
+    "majors": ["会计学", "审计学", "金融学", "税收学"],
+    "specialNotes": ["专业导向很强，适合财经职业路径较清晰的学生"],
+    "advisorProfile": {
+      "fitStudents": ["对会计、审计、金融方向有较强兴趣，且希望尽早形成职业路径的学生"],
+      "cautionPoints": ["不要只因为财经标签就报考，财经院校更适合对商科体系和职业资格有接受度的学生"],
+      "strategy": "把它放在商科赛道里和上财、上经贸大等一起比较，重点看专业偏好、城市资源和就业导向。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.lixin.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "南京财经大学",
+    "aliases": ["南财", "NJUE"],
+    "region": "江苏",
+    "schoolType": "财经类大学",
+    "levels": ["江苏高水平大学", "财经特色"],
+    "tags": ["综合评价", "商科导向", "江苏重点"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生在财经商科方向上通过综合评价争取更优录取结果" }
+    ],
+    "majors": ["会计学", "金融学", "财政学", "审计学"],
+    "specialNotes": ["财经导向明显，适合作为江苏商科赛道的重要院校"],
+    "advisorProfile": {
+      "fitStudents": ["对财经、会计、金融方向兴趣稳定，且愿意接受商科就业导向评估的学生"],
+      "cautionPoints": ["不要把它简单当成“分低版名校商科”，商科路径对实习、城市资源和职业规划要求很高"],
+      "strategy": "在江苏商科赛道里把它和南审、苏大、上经贸大等放在一起比较，重点看专业适配度和就业城市偏好。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "南京工程学院",
+    "aliases": ["南工程", "NJIT"],
+    "region": "江苏",
+    "schoolType": "研究型理工大学",
+    "levels": ["江苏省重点", "应用工科"],
+    "tags": ["综合评价", "工科导向", "江苏本地"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生在电气、机械和工程实践方向进行稳妥布局" }
+    ],
+    "majors": ["电气工程及其自动化", "机械设计制造及其自动化", "自动化", "能源与动力工程"],
+    "specialNotes": ["应用工科导向较强，适合作为工程实践型院校重点关注"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.njit.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "常州大学",
+    "aliases": ["常大", "CCZU"],
+    "region": "江苏",
+    "schoolType": "研究型理工大学",
+    "levels": ["江苏省重点", "工科导向"],
+    "tags": ["综合评价", "化工特色", "江苏本地"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生在工科、材料和化工方向进行赛道型布局" }
+    ],
+    "majors": ["化学工程与工艺", "材料科学与工程", "机械工程", "计算机科学与技术"],
+    "specialNotes": ["适合作为江苏工科方向的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cczu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "江苏师范大学",
+    "aliases": ["江苏师大", "JSNU"],
+    "region": "江苏",
+    "schoolType": "师范大学",
+    "levels": ["江苏省重点", "师范强校"],
+    "tags": ["综合评价", "师范强校", "江苏本地"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生在师范、人文和教育方向进行综合评价布局" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "历史学", "教育技术学"],
+    "specialNotes": ["适合作为江苏师范赛道的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.jsnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "徐州医科大学",
+    "aliases": ["徐医大", "XZMU"],
+    "region": "江苏",
+    "schoolType": "医药类大学",
+    "levels": ["江苏省重点", "医学特色"],
+    "tags": ["综合评价", "医学方向", "江苏本地"],
+    "pathways": ["综合评价(江苏)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(江苏)", "note": "适合江苏考生医学方向明确、愿意通过综合评价争取医学平台的学生" }
+    ],
+    "majors": ["临床医学", "麻醉学", "医学影像学", "药学"],
+    "specialNotes": ["医学方向要求较明确，适合职业目标比较稳定的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.xzhmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "青岛大学",
+    "aliases": ["青大", "QDU"],
+    "region": "山东",
+    "schoolType": "综合大学",
+    "levels": ["山东省重点", "地方强校"],
+    "tags": ["综合评价", "综合大学", "山东重点"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生在综合平台、医学和师范交叉方向上进行布局" }
+    ],
+    "majors": ["临床医学", "汉语言文学", "自动化", "纺织工程"],
+    "specialNotes": ["综合性强，适合作为山东本地多方向冲稳结合院校"],
+    "advisorProfile": {
+      "fitStudents": ["希望兼顾平台、城市和专业弹性，且不想过早把方向锁死的学生"],
+      "cautionPoints": ["综合大学看起来选择多，但不同学院实力差异不小，不能只按校名做决定"],
+      "strategy": "把它作为山东本地综合型平台校来评估，重点看目标专业、城市偏好和是否需要更强的专项/综评加成。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.qdu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "山东财经大学",
+    "aliases": ["山财", "SDUFE"],
+    "region": "山东",
+    "schoolType": "财经类大学",
+    "levels": ["山东省重点", "财经特色"],
+    "tags": ["综合评价", "财经方向", "山东重点"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生在财经商科方向通过综合评价争取更优录取结果" }
+    ],
+    "majors": ["会计学", "金融学", "财政学", "经济统计学"],
+    "specialNotes": ["财经导向明显，适合作为山东商科赛道的重要院校"],
+    "advisorProfile": {
+      "fitStudents": ["对财经、会计、金融方向有持续兴趣，且看重省内资源与就业稳定性的学生"],
+      "cautionPoints": ["财经类院校不等于“轻松好就业”，后续实习、证书和城市资源都会影响结果"],
+      "strategy": "把它放进山东商科赛道里和青大、立信、南财等一起比，重点看专业兴趣和未来就业城市。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sdufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "山东科技大学",
+    "aliases": ["山科", "SDUST"],
+    "region": "山东",
+    "schoolType": "研究型理工大学",
+    "levels": ["山东省重点", "理工强校"],
+    "tags": ["综合评价", "工科导向", "山东重点"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生在工科、矿业和信息方向进行赛道布局" }
+    ],
+    "majors": ["采矿工程", "计算机科学与技术", "机械电子工程", "土木工程"],
+    "specialNotes": ["工科特色较强，适合作为山东理工方向的匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sdust.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "青岛科技大学",
+    "aliases": ["青科大", "QUST"],
+    "region": "山东",
+    "schoolType": "研究型理工大学",
+    "levels": ["山东省重点", "化工材料"],
+    "tags": ["综合评价", "工科导向", "山东本地"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生在化工、高分子和自动化方向上进行布局" }
+    ],
+    "majors": ["化学工程与工艺", "高分子材料与工程", "自动化", "机械工程"],
+    "specialNotes": ["化工材料辨识度较高，适合作为工科细分赛道院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.qust.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "山东农业大学",
+    "aliases": ["山农", "SDAU"],
+    "region": "山东",
+    "schoolType": "行业特色大学",
+    "levels": ["山东省重点", "农科特色"],
+    "tags": ["综合评价", "农科方向", "山东本地"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合生态、农学、食品方向兴趣明确的山东考生" }
+    ],
+    "majors": ["农学", "园艺", "动物医学", "食品科学与工程"],
+    "specialNotes": ["农科特色明显，适合专业方向比较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sdau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "山东中医药大学",
+    "aliases": ["山中医", "SDUTCM"],
+    "region": "山东",
+    "schoolType": "医药类大学",
+    "levels": ["山东省重点", "中医药特色"],
+    "tags": ["综合评价", "医学方向", "山东重点"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合对中医药、针灸推拿和康复方向兴趣明确的学生" }
+    ],
+    "majors": ["中医学", "中药学", "针灸推拿学", "康复治疗学"],
+    "specialNotes": ["中医药路径要求明确，适合真正认可中医药学习体系的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sdutcm.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "中国美术学院",
+    "aliases": ["国美", "CAA"],
+    "region": "浙江",
+    "schoolType": "艺术类大学",
+    "levels": ["双一流", "艺术顶尖院校"],
+    "tags": ["三位一体", "艺术类校考", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "艺术类校考", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在艺术创作能力与综合素质都较强的情况下布局" },
+      { "name": "艺术类校考", "note": "适合专业能力突出、作品集和校考准备充分的学生" }
+    ],
+    "majors": ["中国画", "视觉传达设计", "建筑学", "艺术与科技"],
+    "specialNotes": ["艺术要求非常明确，不能只把它当普通综合评价院校来看"],
+    "advisorProfile": {
+      "fitStudents": ["艺术表达能力突出、作品积累扎实、愿意为专业考试长期准备的学生"],
+      "cautionPoints": ["如果专业基础一般，只看名气硬冲会非常吃亏，艺术校考准备强度很高"],
+      "strategy": "把它作为艺术顶尖目标校看待，优先评估专业实力、作品集质量和长期训练投入。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.caa.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "浙江传媒学院",
+    "aliases": ["浙传", "ZJCU"],
+    "region": "浙江",
+    "schoolType": "传媒类大学",
+    "levels": ["浙江省重点", "传媒特色"],
+    "tags": ["三位一体", "艺术传播", "浙江重点"],
+    "pathways": ["三位一体(浙江)", "艺术类校考", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在传媒、播音、影视方向通过综合评价争取更优录取结果" }
+    ],
+    "majors": ["播音与主持艺术", "广播电视编导", "网络与新媒体", "数字媒体技术"],
+    "specialNotes": ["传媒导向明显，适合表达、镜头感和内容创作能力较强的学生"],
+    "advisorProfile": {
+      "fitStudents": ["表达能力强、对传播内容创作有兴趣、愿意提前准备面试或专业测试的学生"],
+      "cautionPoints": ["传媒类院校并不只是“会说话”就够，后续的作品意识、表达能力和职业方向都很重要"],
+      "strategy": "把它作为传媒赛道院校来单独评估，重点看表达能力、专业兴趣和是否愿意接受高强度实践训练。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cuz.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "绍兴文理学院",
+    "aliases": ["绍兴文理", "SXU"],
+    "region": "浙江",
+    "schoolType": "综合大学",
+    "levels": ["浙江省重点建设高校", "地方院校"],
+    "tags": ["三位一体", "综合大学", "浙江本地"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在地方综合平台上做稳妥布局和专业匹配" }
+    ],
+    "majors": ["汉语言文学", "临床医学", "纺织工程", "教育技术学"],
+    "specialNotes": ["适合作为浙江本地综合院校的稳妥梯度选择"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.usx.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "湖州师范学院",
+    "aliases": ["湖师院", "ZJHU"],
+    "region": "浙江",
+    "schoolType": "师范大学",
+    "levels": ["浙江省地方院校", "师范特色"],
+    "tags": ["三位一体", "师范强校", "浙江本地"],
+    "pathways": ["三位一体(浙江)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "三位一体(浙江)", "note": "适合浙江考生在师范教育和本地就业方向上做稳妥布局" }
+    ],
+    "majors": ["小学教育", "汉语言文学", "数学与应用数学", "护理学"],
+    "specialNotes": ["适合作为浙江本地师范和教育方向的匹配型院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.zjhu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "湖南师范大学",
+    "aliases": ["湖师大", "HNU(师范)"],
+    "region": "湖南",
+    "schoolType": "师范大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "公费师范", "师范强校"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范目标明确、认可培养约定与职业路径的学生" },
+      { "name": "高校专项", "note": "适合符合资格、希望冲击优质师范平台的学生" }
+    ],
+    "majors": ["汉语言文学", "思想政治教育", "数学与应用数学", "英语"],
+    "specialNotes": ["师范平台强，适合作为华中地区师范赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hunnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "湘潭大学",
+    "aliases": ["湘大", "XTU"],
+    "region": "湖南",
+    "schoolType": "综合大学",
+    "levels": ["双一流", "地方强校"],
+    "tags": ["高校专项", "综合大学", "法学数学"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合文理兼备、看重双一流平台和专业实力平衡的学生" }
+    ],
+    "majors": ["法学", "数学与应用数学", "材料科学与工程", "中国共产党历史"],
+    "specialNotes": ["适合把综合平台与专业实力一起看的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.xtu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "华侨大学",
+    "aliases": ["华大", "HQU"],
+    "region": "福建",
+    "schoolType": "综合大学",
+    "levels": ["中央统战部直属", "综合大学"],
+    "tags": ["综合评价", "港澳台侨特色", "国际化"],
+    "pathways": ["综合评价(部分项目)", "港澳台侨联招", "普通统招"],
+    "pathwayDetails": [
+      { "name": "港澳台侨联招", "note": "适合有港澳台侨升学规划需求的家庭重点研究" },
+      { "name": "综合评价(部分项目)", "note": "需按当年招生项目和省份通知确认" }
+    ],
+    "majors": ["建筑学", "中国语言文学类", "计算机科学与技术", "工商管理"],
+    "specialNotes": ["国际化和侨校特色明显，适合作为沿海区域综合型院校重点备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hqu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "福建师范大学",
+    "aliases": ["福师大", "FJNU"],
+    "region": "福建",
+    "schoolType": "师范大学",
+    "levels": ["福建省重点", "师范强校"],
+    "tags": ["综合评价", "师范强校", "福建重点"],
+    "pathways": ["综合评价(部分项目)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(部分项目)", "note": "需按当年招生项目与省份要求确认是否开放" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "地理科学", "心理学"],
+    "specialNotes": ["适合作为福建区域师范和人文方向的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.fjnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "福建农林大学",
+    "aliases": ["福农大", "FAFU"],
+    "region": "福建",
+    "schoolType": "行业特色大学",
+    "levels": ["福建省重点", "农林特色"],
+    "tags": ["综合评价", "农林方向", "福建本地"],
+    "pathways": ["综合评价(部分项目)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(部分项目)", "note": "需按当年项目通知确认是否开放及考核方式" }
+    ],
+    "majors": ["林学", "农学", "园艺", "食品科学与工程"],
+    "specialNotes": ["农林特色鲜明，适合作为生态和农科方向的区域重点院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.fafu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "香港浸会大学",
+    "aliases": ["港浸会", "HKBU"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "国际化"],
+    "tags": ["港澳高校", "自主申请", "人文传媒"],
+    "pathways": ["自主申请(港澳)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "自主申请(港澳)", "note": "适合英语能力较强、愿意单独准备申请与面试的学生" }
+    ],
+    "majors": ["新闻学", "传理学", "中医学", "工商管理"],
+    "specialNotes": ["需重点比较语言、面试、费用和家庭接受度"],
+    "advisorProfile": {
+      "fitStudents": ["英语能力强、家庭对港校路径认可度高、愿意接受独立申请节奏的学生"],
+      "cautionPoints": ["港校路径通常伴随更高成本、面试和语言要求，不能只看排名或城市光环"],
+      "strategy": "把它放在港校独立申请路径里评估，重点比较语言、预算、申请准备和未来发展方向。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hkbu.edu.hk/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "香港岭南大学",
+    "aliases": ["岭大", "Lingnan"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "博雅教育"],
+    "tags": ["港澳高校", "自主申请", "小班化"],
+    "pathways": ["自主申请(港澳)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "自主申请(港澳)", "note": "适合看重博雅教育、小班化和英文环境的学生" }
+    ],
+    "majors": ["工商管理", "社会科学", "中文", "数据科学"],
+    "specialNotes": ["培养模式和院校气质很关键，适合喜欢小班化学习环境的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ln.edu.hk/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "香港教育大学",
+    "aliases": ["港教大", "EdUHK"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "教育特色"],
+    "tags": ["港澳高校", "自主申请", "教育方向"],
+    "pathways": ["自主申请(港澳)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "自主申请(港澳)", "note": "适合教育、人文和社会科学方向兴趣明确的学生" }
+    ],
+    "majors": ["教育学", "心理学", "英语教育", "创意艺术与文化"],
+    "specialNotes": ["教育特色强，适合对教育和社会发展方向有明确兴趣的学生"],
+    "advisorProfile": {
+      "fitStudents": ["希望在教育、人文或社会发展方向持续深耕，且接受港校培养模式的学生"],
+      "cautionPoints": ["它不是单纯的“港校替代项”，更适合真正认可教育和人文路线的学生"],
+      "strategy": "重点判断自己是否接受教育类路径、英文环境和香港独立申请节奏，而不是只看地域吸引力。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.eduhk.hk/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "香港都会大学",
+    "aliases": ["港都会", "HKMU"],
+    "region": "香港",
+    "schoolType": "港澳高校",
+    "levels": ["港校", "应用导向"],
+    "tags": ["港澳高校", "自主申请", "应用实践"],
+    "pathways": ["自主申请(港澳)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "自主申请(港澳)", "note": "适合看重应用型培养、英文环境和港校路径的学生" }
+    ],
+    "majors": ["护理学", "计算机科学", "创意广告与媒体设计", "工商管理"],
+    "specialNotes": ["更偏应用与实践，适合职业导向较强的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hkmu.edu.hk/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "澳门城市大学",
+    "aliases": ["澳城大", "CityU Macau"],
+    "region": "澳门",
+    "schoolType": "港澳高校",
+    "levels": ["澳校", "国际化"],
+    "tags": ["港澳高校", "自主申请", "应用导向"],
+    "pathways": ["自主申请(港澳)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "自主申请(港澳)", "note": "适合家庭对澳门升学接受度较高、看重国际化环境的学生" }
+    ],
+    "majors": ["金融学", "应用心理学", "设计艺术学", "数据科学"],
+    "specialNotes": ["澳门路径通常节奏独立，需同步评估学费、生活和后续发展"],
+    "advisorProfile": {
+      "fitStudents": ["希望走港澳路径、重视国际化环境且家庭预算和地域接受度都较稳定的学生"],
+      "cautionPoints": ["不要把澳门路径只当作兜底选择，仍需认真比较专业质量、费用和未来升学就业出口"],
+      "strategy": "把它作为澳门独立申请路径中的一条备选来评估，重点看家庭接受度、专业匹配和长远出口。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cityu.edu.mo/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "澳门旅游大学",
+    "aliases": ["澳旅大", "UTM"],
+    "region": "澳门",
+    "schoolType": "港澳高校",
+    "levels": ["澳校", "旅游特色"],
+    "tags": ["港澳高校", "自主申请", "应用导向"],
+    "pathways": ["自主申请(港澳)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "自主申请(港澳)", "note": "适合对酒店、会展、旅游和服务管理方向兴趣明确的学生" }
+    ],
+    "majors": ["酒店管理", "旅游管理", "会展管理", "文化遗产管理"],
+    "specialNotes": ["专业导向很强，适合方向比较明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.utm.edu.mo/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "澳门镜湖护理学院",
+    "aliases": ["镜湖护理", "Kiang Wu Nursing"],
+    "region": "澳门",
+    "schoolType": "港澳高校",
+    "levels": ["澳校", "医学护理特色"],
+    "tags": ["港澳高校", "自主申请", "医学方向"],
+    "pathways": ["自主申请(港澳)", "普通申请"],
+    "pathwayDetails": [
+      { "name": "自主申请(港澳)", "note": "适合护理与医学健康方向明确、家庭对澳门路径接受度高的学生" }
+    ],
+    "majors": ["护理学", "助产学", "健康科学"],
+    "specialNotes": ["护理方向专业性强，适合职业路径非常明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.kwnc.edu.mo/",
+    "contactPhone": "",
+    "dataStatus": "phase-3-expanded"
+  },
+  {
+    "name": "河北工业大学",
+    "aliases": ["河工大", "HEBUT"],
+    "region": "河北",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "理工强校", "京津冀"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合理工基础较稳、希望冲击京津冀工科平台的学生" }
+    ],
+    "majors": ["电气工程及其自动化", "机械工程", "材料科学与工程", "化学工程与工艺"],
+    "specialNotes": ["工科平台扎实，适合作为北方工科赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hebut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "燕山大学",
+    "aliases": ["燕大", "YSU"],
+    "region": "河北",
+    "schoolType": "研究型理工大学",
+    "levels": ["河北省重点", "理工强校"],
+    "tags": ["高校专项", "机械材料", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合机械、材料和工科方向比较明确的学生" }
+    ],
+    "majors": ["机械设计制造及其自动化", "材料成型及控制工程", "自动化", "车辆工程"],
+    "specialNotes": ["机械材料辨识度高，适合作为工科方向的区域重点备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ysu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "河北大学",
+    "aliases": ["河大", "HBU"],
+    "region": "河北",
+    "schoolType": "综合大学",
+    "levels": ["河北省重点", "综合大学"],
+    "tags": ["高校专项", "综合大学", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合希望兼顾综合平台和区域资源的学生" }
+    ],
+    "majors": ["汉语言文学", "新闻传播学", "法学", "生物学"],
+    "specialNotes": ["综合性较强，适合作为河北区域多方向备选院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hbu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "河北师范大学",
+    "aliases": ["河北师大", "HEBNU"],
+    "region": "河北",
+    "schoolType": "师范大学",
+    "levels": ["河北省重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "公费师范"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范意向明确、认可培养约定与职业路径的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "思想政治教育", "英语"],
+    "specialNotes": ["适合作为河北及周边地区师范方向的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hebtu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "河北医科大学",
+    "aliases": ["河北医大", "HEBMU"],
+    "region": "河北",
+    "schoolType": "医药类大学",
+    "levels": ["河北省重点", "医学特色"],
+    "tags": ["高校专项", "医学方向", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合医学意向明确、愿意接受较长培养周期的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "药学", "医学影像学"],
+    "specialNotes": ["医学方向要求较明确，适合作为华北医学赛道匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hebmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "山西大学",
+    "aliases": ["山大(山西)", "SXU"],
+    "region": "山西",
+    "schoolType": "综合大学",
+    "levels": ["双一流", "山西省重点"],
+    "tags": ["高校专项", "综合大学", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重省会平台和综合学科布局的学生" }
+    ],
+    "majors": ["物理学", "计算机科学与技术", "法学", "中国语言文学"],
+    "specialNotes": ["综合性较强，适合作为山西及周边地区重点院校备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sxu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "哈尔滨工程大学",
+    "aliases": ["哈工程", "HEU"],
+    "region": "黑龙江",
+    "schoolType": "研究型理工大学",
+    "levels": ["211", "双一流"],
+    "tags": ["高校专项", "国防工科", "船海特色"],
+    "pathways": ["高校专项", "保送生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合船海、核能、信息和国防工科方向兴趣明确的学生" }
+    ],
+    "majors": ["船舶与海洋工程", "核工程与核技术", "自动化", "计算机科学与技术"],
+    "specialNotes": ["国防和船海特色突出，适合作为硬核工科赛道重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hrbeu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "天津工业大学",
+    "aliases": ["天工大", "TJU(工业)"],
+    "region": "天津",
+    "schoolType": "研究型理工大学",
+    "levels": ["双一流", "天津市重点"],
+    "tags": ["高校专项", "理工强校", "纺织材料"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合材料、纺织和工程方向兴趣明确的学生" }
+    ],
+    "majors": ["纺织工程", "材料科学与工程", "机械工程", "软件工程"],
+    "specialNotes": ["工科基础扎实，适合作为天津区域工科匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.tiangong.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "天津师范大学",
+    "aliases": ["天师大", "TJNU"],
+    "region": "天津",
+    "schoolType": "师范大学",
+    "levels": ["天津市重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "公费师范"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范目标明确、认可培养约定和教师职业路径的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "心理学", "教育技术学"],
+    "specialNotes": ["适合作为环渤海区域师范方向重点院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.tjnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "天津中医药大学",
+    "aliases": ["天中医", "TJUTCM"],
+    "region": "天津",
+    "schoolType": "医药类大学",
+    "levels": ["双一流", "医药特色"],
+    "tags": ["高校专项", "中医药特色", "医学方向"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合对中医药和康复方向有明确兴趣的学生" }
+    ],
+    "majors": ["中医学", "中药学", "针灸推拿学", "康复治疗学"],
+    "specialNotes": ["中医药方向要求明确，适合作为医药赛道特色院校重点关注"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.tjutcm.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "河南大学",
+    "aliases": ["河大(河南)", "HENU"],
+    "region": "河南",
+    "schoolType": "综合大学",
+    "levels": ["双一流", "河南省重点"],
+    "tags": ["高校专项", "综合大学", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合看重综合平台、师范人文基础和区域资源的学生" }
+    ],
+    "majors": ["汉语言文学", "历史学", "生物科学", "临床医学"],
+    "specialNotes": ["综合性强，适合作为河南区域重要平台院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.henu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "河南师范大学",
+    "aliases": ["河南师大", "HTU"],
+    "region": "河南",
+    "schoolType": "师范大学",
+    "levels": ["河南省重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "公费师范"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范方向明确、认可教师职业路径的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "化学", "英语"],
+    "specialNotes": ["适合作为河南师范赛道的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.htu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "河南财经政法大学",
+    "aliases": ["河财政法", "HAUEL"],
+    "region": "河南",
+    "schoolType": "财经政法类大学",
+    "levels": ["河南省重点", "财经政法特色"],
+    "tags": ["高校专项", "财经方向", "政法方向"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合财经和法学方向兴趣较明确、看重区域资源的学生" }
+    ],
+    "majors": ["法学", "会计学", "金融学", "财政学"],
+    "specialNotes": ["适合作为河南区域商科和法学赛道重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.huel.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "河南农业大学",
+    "aliases": ["河南农大", "HAU"],
+    "region": "河南",
+    "schoolType": "行业特色大学",
+    "levels": ["河南省重点", "农科特色"],
+    "tags": ["高校专项", "农科方向", "生命科学"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合农学、动医、园艺和食品方向兴趣明确的学生" }
+    ],
+    "majors": ["农学", "动物医学", "园艺", "食品科学与工程"],
+    "specialNotes": ["农科特色明显，适合作为区域农科院校重点关注"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.henau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "广东工业大学",
+    "aliases": ["广工", "GDUT"],
+    "region": "广东",
+    "schoolType": "研究型理工大学",
+    "levels": ["广东省高水平大学", "理工强校"],
+    "tags": ["综合评价", "工科导向", "大湾区"],
+    "pathways": ["综合评价(广东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东)", "note": "适合广东考生在工科和信息方向通过综合评价争取更优录取结果" }
+    ],
+    "majors": ["计算机科学与技术", "机械工程", "自动化", "材料科学与工程"],
+    "specialNotes": ["工科就业面较好，适合作为大湾区工科赛道重要院校"],
+    "advisorProfile": {
+      "fitStudents": ["工科和湾区资源偏好较明确，希望在工程实践和就业导向间取得平衡的学生"],
+      "cautionPoints": ["不要只看城市资源，工科院校更要结合具体专业实力和自身工程兴趣来判断"],
+      "strategy": "把它放在湾区工科赛道里和广医、华工、深大等一起比较，重点看专业、区位和分数匹配度。"
+    },
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gdut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "广州大学",
+    "aliases": ["广大", "GZHU"],
+    "region": "广东",
+    "schoolType": "综合大学",
+    "levels": ["广东省高水平大学", "地方强校"],
+    "tags": ["综合评价", "综合大学", "大湾区"],
+    "pathways": ["综合评价(广东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东)", "note": "适合广东考生以综合平台和城市资源为导向进行布局" }
+    ],
+    "majors": ["土木工程", "计算机科学与技术", "法学", "汉语言文学"],
+    "specialNotes": ["适合作为广州区域综合型院校的重要梯度选择"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gzhu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "广州医科大学",
+    "aliases": ["广医", "GZHMU"],
+    "region": "广东",
+    "schoolType": "医药类大学",
+    "levels": ["广东省高水平大学", "医学特色"],
+    "tags": ["综合评价", "医学方向", "大湾区"],
+    "pathways": ["综合评价(广东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东)", "note": "适合广东考生医学方向明确、愿意准备综合考核和后续长期培养的学生" }
+    ],
+    "majors": ["临床医学", "儿科学", "麻醉学", "医学检验技术"],
+    "specialNotes": ["医学培养周期长，适合职业方向稳定的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gzhmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "南方医科大学",
+    "aliases": ["南医", "SMU"],
+    "region": "广东",
+    "schoolType": "医药类大学",
+    "levels": ["广东省高水平大学", "医学强校"],
+    "tags": ["综合评价", "医学方向", "大湾区"],
+    "pathways": ["综合评价(广东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东)", "note": "适合医学目标明确、愿意在湾区医学平台长期发展的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "预防医学", "药学"],
+    "specialNotes": ["医学氛围浓厚，适合真正接受医学培养强度的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.smu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "广东财经大学",
+    "aliases": ["广财", "GDUFE"],
+    "region": "广东",
+    "schoolType": "财经类大学",
+    "levels": ["广东省重点", "财经特色"],
+    "tags": ["综合评价", "财经方向", "大湾区"],
+    "pathways": ["综合评价(广东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(广东)", "note": "适合商科方向明确、看重大湾区城市资源的学生" }
+    ],
+    "majors": ["会计学", "金融学", "法学", "审计学"],
+    "specialNotes": ["适合作为广东商科赛道的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gdufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "济南大学",
+    "aliases": ["济大", "UJN"],
+    "region": "山东",
+    "schoolType": "综合大学",
+    "levels": ["山东省重点", "综合大学"],
+    "tags": ["综合评价", "综合大学", "山东本地"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生在综合平台上进行稳妥布局与专业匹配" }
+    ],
+    "majors": ["材料科学与工程", "汉语言文学", "自动化", "金融学"],
+    "specialNotes": ["综合性较强，适合作为山东本地综合梯度院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ujn.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "山东理工大学",
+    "aliases": ["山理工", "SDUT"],
+    "region": "山东",
+    "schoolType": "研究型理工大学",
+    "levels": ["山东省重点", "理工强校"],
+    "tags": ["综合评价", "工科导向", "山东本地"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生在工科与工程实践方向上进行赛道型布局" }
+    ],
+    "majors": ["机械工程", "车辆工程", "电气工程及其自动化", "计算机科学与技术"],
+    "specialNotes": ["工科方向较强，适合作为山东理工类匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sdut.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "曲阜师范大学",
+    "aliases": ["曲师大", "QFNU"],
+    "region": "山东",
+    "schoolType": "师范大学",
+    "levels": ["山东省重点", "师范强校"],
+    "tags": ["综合评价", "师范强校", "山东本地"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合山东考生在人文、师范和教育方向进行布局" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "历史学", "思想政治教育"],
+    "specialNotes": ["师范方向辨识度较高，适合作为山东师范赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.qfnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "山东建筑大学",
+    "aliases": ["山建大", "SDJZU"],
+    "region": "山东",
+    "schoolType": "研究型理工大学",
+    "levels": ["山东省重点", "建筑土木"],
+    "tags": ["综合评价", "工科导向", "建筑土木"],
+    "pathways": ["综合评价(山东)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(山东)", "note": "适合建筑、土木和工程管理方向兴趣明确的山东考生" }
+    ],
+    "majors": ["建筑学", "土木工程", "城乡规划", "工程管理"],
+    "specialNotes": ["建筑土木特色较强，适合方向明确的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.sdjzu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "江西财经大学",
+    "aliases": ["江财", "JXUFE"],
+    "region": "江西",
+    "schoolType": "财经类大学",
+    "levels": ["江西省重点", "财经强校"],
+    "tags": ["高校专项", "财经方向", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合财经商科方向较明确、看重区域资源的学生" }
+    ],
+    "majors": ["会计学", "金融学", "财政学", "法学"],
+    "specialNotes": ["财经方向热度较高，适合作为中部商科赛道重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.jxufe.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "江西师范大学",
+    "aliases": ["江西师大", "JXNU"],
+    "region": "江西",
+    "schoolType": "师范大学",
+    "levels": ["江西省重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "公费师范"],
+    "pathways": ["高校专项", "公费师范生", "普通统招"],
+    "pathwayDetails": [
+      { "name": "公费师范生", "note": "适合师范目标明确且接受培养约定的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "地理科学", "英语"],
+    "specialNotes": ["适合作为江西及周边师范赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.jxnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "江西农业大学",
+    "aliases": ["江西农大", "JXAU"],
+    "region": "江西",
+    "schoolType": "行业特色大学",
+    "levels": ["江西省重点", "农科特色"],
+    "tags": ["高校专项", "农科方向", "生命科学"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合农学、动医、园艺与食品方向兴趣明确的学生" }
+    ],
+    "majors": ["农学", "动物医学", "林学", "食品科学与工程"],
+    "specialNotes": ["农科特色明显，适合作为区域农科方向重点院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.jxau.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "广西师范大学",
+    "aliases": ["广西师大", "GXNU"],
+    "region": "广西",
+    "schoolType": "师范大学",
+    "levels": ["广西区重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合师范和人文方向兴趣明确、看重区域平台的学生" }
+    ],
+    "majors": ["汉语言文学", "英语", "地理科学", "学前教育"],
+    "specialNotes": ["适合作为广西及周边师范方向的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gxnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "桂林电子科技大学",
+    "aliases": ["桂电", "GUET"],
+    "region": "广西",
+    "schoolType": "研究型理工大学",
+    "levels": ["广西区重点", "信息强校"],
+    "tags": ["高校专项", "工科导向", "电子信息"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合电子信息、通信和计算机方向兴趣明确的学生" }
+    ],
+    "majors": ["电子信息工程", "通信工程", "计算机科学与技术", "自动化"],
+    "specialNotes": ["信息类辨识度较高，适合作为华南西南交界区域工科院校重点关注"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.guet.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "广西医科大学",
+    "aliases": ["广西医大", "GXMU"],
+    "region": "广西",
+    "schoolType": "医药类大学",
+    "levels": ["广西区重点", "医学特色"],
+    "tags": ["高校专项", "医学方向", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合医学目标明确、看重区域医学平台的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "预防医学", "药学"],
+    "specialNotes": ["医学方向要求明确，适合作为西南华南区域医学院校重点备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gxmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "云南师范大学",
+    "aliases": ["云师大", "YNNU"],
+    "region": "云南",
+    "schoolType": "师范大学",
+    "levels": ["云南省重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合师范方向明确、看重西南区域平台的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "教育技术学", "英语"],
+    "specialNotes": ["适合作为西南区域师范方向的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.ynnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "昆明医科大学",
+    "aliases": ["昆医大", "KMU"],
+    "region": "云南",
+    "schoolType": "医药类大学",
+    "levels": ["云南省重点", "医学特色"],
+    "tags": ["高校专项", "医学方向", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合医学目标明确、看重西南医学平台的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "药学", "预防医学"],
+    "specialNotes": ["医学路径要求明确，适合作为西南医学赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.kmmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "昆明理工大学",
+    "aliases": ["昆工", "KMUST"],
+    "region": "云南",
+    "schoolType": "研究型理工大学",
+    "levels": ["云南省重点", "理工强校"],
+    "tags": ["高校专项", "理工导向", "区域强校"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合理工基础较稳、看重西南区域工科平台的学生" }
+    ],
+    "majors": ["冶金工程", "矿物加工工程", "机械工程", "计算机科学与技术"],
+    "specialNotes": ["工科平台扎实，适合作为西南理工赛道重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.kmust.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "贵州师范大学",
+    "aliases": ["贵师大", "GZNU"],
+    "region": "贵州",
+    "schoolType": "师范大学",
+    "levels": ["贵州省重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合师范和人文方向兴趣明确、看重区域平台的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "地理科学", "思想政治教育"],
+    "specialNotes": ["适合作为西南区域师范方向的重要匹配院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gznu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "贵州医科大学",
+    "aliases": ["贵医大", "GMU"],
+    "region": "贵州",
+    "schoolType": "医药类大学",
+    "levels": ["贵州省重点", "医学特色"],
+    "tags": ["高校专项", "医学方向", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合医学方向明确、看重西南区域医学平台的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "药学", "医学检验技术"],
+    "specialNotes": ["医学培养周期长，适合职业目标比较稳定的学生"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gmc.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "贵州财经大学",
+    "aliases": ["贵财", "GZUFE"],
+    "region": "贵州",
+    "schoolType": "财经类大学",
+    "levels": ["贵州省重点", "财经特色"],
+    "tags": ["高校专项", "财经方向", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合财经方向兴趣较明确、看重区域平台的学生" }
+    ],
+    "majors": ["会计学", "金融学", "财政学", "审计学"],
+    "specialNotes": ["适合作为西南区域财经赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.gzife.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "西北师范大学",
+    "aliases": ["西北师大", "NWNU"],
+    "region": "甘肃",
+    "schoolType": "师范大学",
+    "levels": ["甘肃省重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合师范方向明确、看重西北区域平台的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "地理科学", "英语"],
+    "specialNotes": ["适合作为西北区域师范赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.nwnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "海南师范大学",
+    "aliases": ["海师大", "Hainnu"],
+    "region": "海南",
+    "schoolType": "师范大学",
+    "levels": ["海南省重点", "师范强校"],
+    "tags": ["高校专项", "师范强校", "自由贸易港"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合师范和教育方向明确、看重海南区位特色的学生" }
+    ],
+    "majors": ["汉语言文学", "数学与应用数学", "小学教育", "英语"],
+    "specialNotes": ["适合作为海南区域师范方向的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hainnu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "海南医科大学",
+    "aliases": ["海医", "HMU"],
+    "region": "海南",
+    "schoolType": "医药类大学",
+    "levels": ["海南省重点", "医学特色"],
+    "tags": ["高校专项", "医学方向", "自由贸易港"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合医学方向明确、看重海南区域医学平台的学生" }
+    ],
+    "majors": ["临床医学", "口腔医学", "护理学", "药学"],
+    "specialNotes": ["医学路径要求明确，适合作为海南及华南医学赛道备选院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.hainmc.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "西南政法大学",
+    "aliases": ["西政", "SWUPL"],
+    "region": "重庆",
+    "schoolType": "政法类大学",
+    "levels": ["重庆市重点", "政法强校"],
+    "tags": ["高校专项", "法学强校", "人文社科"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合法学方向明确、看重西南政法平台的学生" }
+    ],
+    "majors": ["法学", "知识产权", "政治学与行政学", "新闻学"],
+    "specialNotes": ["法学辨识度高，适合作为西南法学赛道重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.swupl.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "重庆邮电大学",
+    "aliases": ["重邮", "CQUPT"],
+    "region": "重庆",
+    "schoolType": "研究型理工大学",
+    "levels": ["重庆市重点", "信息强校"],
+    "tags": ["高校专项", "信息强校", "工科导向"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合电子信息、通信和计算机方向兴趣明确的学生" }
+    ],
+    "majors": ["通信工程", "电子信息工程", "计算机科学与技术", "自动化"],
+    "specialNotes": ["信息类辨识度较高，适合作为西南信息赛道重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cqupt.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "重庆医科大学",
+    "aliases": ["重医", "CQMU"],
+    "region": "重庆",
+    "schoolType": "医药类大学",
+    "levels": ["重庆市重点", "医学特色"],
+    "tags": ["高校专项", "医学方向", "区域重点"],
+    "pathways": ["高校专项", "普通统招"],
+    "pathwayDetails": [
+      { "name": "高校专项", "note": "适合医学目标明确、看重西南医学平台的学生" }
+    ],
+    "majors": ["临床医学", "儿科学", "口腔医学", "药学"],
+    "specialNotes": ["医学培养周期长，适合作为西南医学赛道的重要院校"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.cqmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  },
+  {
+    "name": "集美大学",
+    "aliases": ["集大", "JMU(厦门)"],
+    "region": "福建",
+    "schoolType": "综合大学",
+    "levels": ["福建省重点", "区域强校"],
+    "tags": ["综合评价", "航海水产", "福建本地"],
+    "pathways": ["综合评价(部分项目)", "普通统招"],
+    "pathwayDetails": [
+      { "name": "综合评价(部分项目)", "note": "需按当年项目通知确认是否开放和具体考核方式" }
+    ],
+    "majors": ["航海技术", "水产养殖学", "会计学", "轮机工程"],
+    "specialNotes": ["海洋和航海特色较强，适合作为福建区域特色院校备选"],
+    "officialAdmissionUrl": "#",
+    "officialSiteUrl": "https://www.jmu.edu.cn/",
+    "contactPhone": "",
+    "dataStatus": "phase-4-expanded"
+  }
+]
