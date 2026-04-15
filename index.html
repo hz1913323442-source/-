@@ -13,17 +13,187 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <style>
-        @import url('https://fonts.loli.net/css2?family=Inter:wght@400;600;800&display=swap');
-        body { font-family: 'Inter', "Microsoft YaHei", sans-serif; overflow: hidden; }
+        :root {
+            --bg-base: #f7f6f3;
+            --bg-soft: #f3f1ed;
+            --bg-panel: rgba(255, 255, 255, 0.82);
+            --bg-panel-strong: rgba(255, 255, 255, 0.92);
+            --bg-subtle: rgba(248, 247, 244, 0.92);
+            --border-soft: rgba(30, 41, 59, 0.08);
+            --border-strong: rgba(30, 41, 59, 0.12);
+            --text-main: #1c2430;
+            --text-muted: #707a88;
+            --text-soft: #94a0af;
+            --accent: #4DA1A9;
+            --accent-strong: #4DA1A9;
+            --accent-hover: #438f96;
+            --accent-soft: rgba(77, 161, 169, 0.12);
+            --accent-pale: #d6efe9;
+            --accent-dot: #79D7BE;
+            --shadow-soft: 0 14px 34px rgba(24, 39, 75, 0.06);
+            --shadow-card: 0 18px 44px rgba(24, 39, 75, 0.08);
+            --radius-xl: 28px;
+            --radius-lg: 22px;
+            --radius-md: 16px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+            overflow: hidden;
+            color: var(--text-main);
+            background:
+                radial-gradient(circle at 0% 0%, rgba(220, 235, 230, 0.78), transparent 26%),
+                radial-gradient(circle at 100% 8%, rgba(228, 236, 242, 0.82), transparent 24%),
+                radial-gradient(circle at 52% 100%, rgba(228, 238, 235, 0.5), transparent 26%),
+                linear-gradient(180deg, #fbfaf8 0%, #f7f6f3 48%, #f4f1ec 100%);
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0)),
+                radial-gradient(circle at 22% 18%, rgba(230, 240, 236, 0.74), transparent 18%),
+                radial-gradient(circle at 76% 22%, rgba(228, 235, 243, 0.56), transparent 18%);
+            opacity: 0.92;
+        }
+
         .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, rgba(182, 188, 198, 0.72), rgba(210, 214, 221, 0.92));
+            border-radius: 999px;
+        }
         .cursor-grab { cursor: grab; }
         .cursor-grabbing { cursor: grabbing; }
+
+        .glass-panel {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px) saturate(160%);
+            -webkit-backdrop-filter: blur(24px) saturate(160%);
+        }
+
+        .glass-panel-strong {
+            background: var(--bg-panel-strong);
+            border: 1px solid rgba(255, 255, 255, 0.74);
+            box-shadow: var(--shadow-card), 0 2px 6px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.84);
+            backdrop-filter: blur(28px) saturate(160%);
+            -webkit-backdrop-filter: blur(28px) saturate(160%);
+        }
+
+        .section-shell {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(250, 249, 246, 0.86));
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            box-shadow: var(--shadow-card);
+            backdrop-filter: blur(26px) saturate(150%);
+            -webkit-backdrop-filter: blur(26px) saturate(150%);
+        }
+
+        .green-header-surface {
+            background: linear-gradient(135deg, rgba(121, 215, 190, 0.18) 0%, rgba(77, 161, 169, 0.11) 100%);
+            border-bottom: 1px solid rgba(77, 161, 169, 0.12);
+        }
+
+        .green-header-surface-strong {
+            background:
+                radial-gradient(circle at top left, rgba(255, 255, 255, 0.56), transparent 28%),
+                linear-gradient(135deg, rgba(121, 215, 190, 0.22) 0%, rgba(77, 161, 169, 0.15) 100%);
+            border: 1px solid rgba(77, 161, 169, 0.12);
+        }
+
+        .green-header-surface .editorial-kicker,
+        .green-header-surface-strong .editorial-kicker {
+            color: rgba(46, 80, 119, 0.56);
+        }
+
+        .surface-soft {
+            background: var(--bg-subtle);
+            border: 1px solid rgba(30, 41, 59, 0.06);
+        }
+
+        .neo-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .neo-button::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.26), transparent 44%, transparent 56%, rgba(255, 255, 255, 0.18));
+            opacity: 0;
+            transition: opacity 240ms ease;
+        }
+
+        .neo-button:hover::before {
+            opacity: 1;
+        }
+
+        .node-card {
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px) saturate(150%);
+            -webkit-backdrop-filter: blur(20px) saturate(150%);
+        }
+
+        .node-card::after {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            border-radius: inherit;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.16));
+            pointer-events: none;
+            opacity: 0.72;
+        }
+
+        .floating-glow {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 999px;
+            filter: blur(68px);
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .panel-title {
+            letter-spacing: 0.02em;
+            text-shadow: none;
+        }
+
+        .editorial-kicker {
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-soft);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .reading-body {
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .animate-float {
+            animation: floatPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes floatPulse {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-transparent">
     <div id="root"></div>
 
     <script type="text/babel">
@@ -32,12 +202,12 @@
 
         const mindMapData = {
             name: "高考多元升学",
-            color: "bg-blue-600",
+            color: "bg-[#5f7f89]",
             isOpenDefault: true,
             children: [
                 {
                     name: "拔尖与综合评价",
-                    color: "bg-indigo-500",
+                    color: "bg-[#6e8f87]",
                     isOpenDefault: true,
                     description: "学霸与综合素质优生专属",
                     details: {
@@ -76,7 +246,7 @@
                 },
                 {
                     name: "政策定向专项",
-                    color: "bg-emerald-500",
+                    color: "bg-[#74879a]",
                     isOpenDefault: false,
                     description: "促进教育公平的政策照顾",
                     details: {
@@ -92,7 +262,7 @@
                 },
                 {
                     name: "特长与免试类",
-                    color: "bg-amber-500",
+                    color: "bg-[#8c8971]",
                     isOpenDefault: false,
                     description: "特殊天赋与长期专业训练",
                     children: [
@@ -102,7 +272,7 @@
                 },
                 {
                     name: "国际/中外合作",
-                    color: "bg-rose-500",
+                    color: "bg-[#8a7475]",
                     isOpenDefault: false,
                     description: "跨境教育与国际化背景",
                     children: [
@@ -111,6 +281,254 @@
                     ]
                 }
             ]
+        };
+
+        const normalizeKeyword = (value = '') => value.toLowerCase().replace(/\s+/g, '');
+        const uniqueOptions = (values = []) => [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+        const uniqueValues = (values = []) => {
+            const seen = new Set();
+            return values.filter((value) => {
+                if (!value || seen.has(value)) return false;
+                seen.add(value);
+                return true;
+            });
+        };
+        const excludedPathwayLabels = new Set(['普通统招', '校内国际升学路径']);
+        const tagDisplayMap = {
+            '少年班': '少年班/创新班',
+            '创新班': '少年班/创新班'
+        };
+        const pathwayDisplayMap = {
+            '医学部综合评价': '综合评价（医学部）',
+            '综合评价(631)': '综合评价（631）',
+            '综合评价(校园日)': '综合评价（校园日）',
+            '综合评价(上海)': '综合评价（上海）',
+            '综合评价(山东)': '综合评价（山东）',
+            '综合评价(广东)': '综合评价（广东）',
+            '综合评价(广东/部分项目)': '综合评价（广东）',
+            '综合评价(江苏)': '综合评价（江苏）',
+            '综合评价(部分项目)': '综合评价（部分项目）',
+            '综合评价(部分省份/项目)': '综合评价（部分项目）',
+            '三位一体(浙江)': '三位一体',
+            '自主招生': '自主申请',
+            '自主招生(面试)': '自主申请',
+            '自主招生(高考直报)': '自主申请',
+            '自主申请(港澳)': '港澳自主申请',
+            '普通申请': '自主申请',
+            '多元录取计划': '自主申请',
+            '统招提前批志愿': '港校提前批',
+            '少年班': '少年班/创新班',
+            '校内国际升学路径': '国际化培养路径'
+        };
+        const getDisplayTagLabel = (tag = '') => tagDisplayMap[tag] || tag;
+        const getDisplayPathwayLabel = (pathway = '') => {
+            if (!pathway || excludedPathwayLabels.has(pathway)) return null;
+            return pathwayDisplayMap[pathway] || pathway;
+        };
+        const getMeaningfulTags = (school = {}) => uniqueValues((school.tags || []).map(getDisplayTagLabel).filter(Boolean));
+        const getMeaningfulPathways = (school = {}) => uniqueValues((school.pathways || []).map(getDisplayPathwayLabel).filter(Boolean));
+
+        const buildSchoolSearchText = (school) => [
+            school.name,
+            ...(school.aliases || []),
+            school.region,
+            school.schoolType,
+            ...(school.levels || []),
+            ...getMeaningfulTags(school),
+            ...getMeaningfulPathways(school),
+            ...(school.majors || []),
+            ...(school.specialNotes || []),
+            ...((school.pathwayDetails || []).map(item => `${item.name} ${item.note}`)),
+            ...((school.advisorProfile?.fitStudents) || []),
+            ...((school.advisorProfile?.cautionPoints) || []),
+            school.advisorProfile?.strategy || ''
+        ].join(' ');
+
+        const matchesSchoolKeyword = (school, keyword) => {
+            if (!keyword.trim()) return true;
+            return normalizeKeyword(buildSchoolSearchText(school)).includes(normalizeKeyword(keyword));
+        };
+
+        const normalizeAdvisorProfile = (advisorProfile) => {
+            if (!advisorProfile || typeof advisorProfile !== 'object') return null;
+            const fitStudents = Array.isArray(advisorProfile.fitStudents) ? advisorProfile.fitStudents.filter(Boolean) : [];
+            const cautionPoints = Array.isArray(advisorProfile.cautionPoints) ? advisorProfile.cautionPoints.filter(Boolean) : [];
+            const strategy = typeof advisorProfile.strategy === 'string' ? advisorProfile.strategy.trim() : '';
+            if (!fitStudents.length && !cautionPoints.length && !strategy) return null;
+            return {
+                fitStudents,
+                cautionPoints,
+                strategy
+            };
+        };
+
+        const normalizeSchoolRecord = (school = {}) => ({
+            name: school.name || '未命名院校',
+            aliases: Array.isArray(school.aliases) ? school.aliases : [],
+            region: school.region || '地区待补充',
+            schoolType: school.schoolType || '类型待补充',
+            levels: Array.isArray(school.levels) ? school.levels : [],
+            tags: Array.isArray(school.tags) ? school.tags : [],
+            pathways: Array.isArray(school.pathways) ? school.pathways : [],
+            pathwayDetails: Array.isArray(school.pathwayDetails)
+                ? school.pathwayDetails.filter(item => item && typeof item === 'object').map(item => ({
+                    name: item.name || '待补充',
+                    note: item.note || '说明待补充'
+                }))
+                : [],
+            majors: Array.isArray(school.majors) ? school.majors : [],
+            specialNotes: Array.isArray(school.specialNotes) ? school.specialNotes : [],
+            officialAdmissionUrl: school.officialAdmissionUrl || '#',
+            officialSiteUrl: school.officialSiteUrl || '#',
+            contactPhone: school.contactPhone || '',
+            advisorProfile: normalizeAdvisorProfile(school.advisorProfile),
+            dataStatus: school.dataStatus || 'core-seed'
+        });
+
+        const deriveAdvisorProfile = (school) => {
+            if (school?.advisorProfile) {
+                return {
+                    fitStudents: school.advisorProfile.fitStudents.length ? school.advisorProfile.fitStudents : ['建议结合成绩区间、学科优势、城市偏好和赛道门槛综合评估。'],
+                    cautionPoints: school.advisorProfile.cautionPoints.length ? school.advisorProfile.cautionPoints : ['建议以当年招生简章、招生计划和校测安排为准。'],
+                    strategy: school.advisorProfile.strategy || '先确认招生路径是否真实匹配自己，再决定把它放在冲刺、匹配还是保底层。'
+                };
+            }
+            const text = buildSchoolSearchText(school);
+            const hasKeyword = (keyword) => text.includes(keyword);
+            const fitStudents = [];
+            const cautionPoints = [];
+            let strategy = '建议把这所学校作为“赛道型目标院校”来研究，先确认招生简章，再结合分数、学科优势和地区意向判断优先级。';
+
+            if (hasKeyword('强基计划') || hasKeyword('基础学科')) {
+                fitStudents.push('高分段、数理基础扎实、愿意走长期学术培养路线的学生');
+                cautionPoints.push('强基通常更适合真正接受基础学科路径的学生，不适合只把它当降分跳板');
+                strategy = '优先核对强基招生专业、转专业限制和校测风格，再判断是否值得投入准备。';
+            }
+            if (hasKeyword('综合评价') || hasKeyword('校园日') || hasKeyword('631')) {
+                fitStudents.push('校内成绩稳定、表达能力较强、愿意准备面试与材料的学生');
+                cautionPoints.push('综合评价往往不是只看高考分，材料与面试准备不足会拉低胜率');
+                strategy = '把高考成绩、校测要求、面试风格和省份政策放在一起比较，别只看学校名气。';
+            }
+            if (hasKeyword('高校专项') || hasKeyword('国家专项') || hasKeyword('地方专项')) {
+                fitStudents.push('符合农村或专项政策条件、希望冲击更高平台的学生');
+                cautionPoints.push('专项计划最关键的是资格条件和报名节点，材料不完整会直接失去机会');
+                strategy = '先确认自己是否符合资格，再评估这条路径是否值得作为冲层主线。';
+            }
+            if (hasKeyword('港校') || hasKeyword('澳校') || hasKeyword('自主招生') || hasKeyword('面试')) {
+                fitStudents.push('英语能力较强、家庭对港澳升学接受度高、能适应独立申请流程的学生');
+                cautionPoints.push('港澳路径常常伴随面试、英文要求和更高成本，不能只看排名');
+                strategy = '把语言、预算、面试准备和志愿系统关系一起评估，再决定是否重点投入。';
+            }
+            if (hasKeyword('中外合作') || hasKeyword('国际化') || hasKeyword('全英文')) {
+                fitStudents.push('重视国际化课程体系、未来有海外深造或跨文化发展意向的学生');
+                cautionPoints.push('中外合作院校往往学费更高，对语言和自驱力要求也更高');
+                strategy = '重点比较学费、语言环境、升学出口和家庭接受度，而不只是看校名。';
+            }
+            if (hasKeyword('保送') || hasKeyword('外语类保送')) {
+                fitStudents.push('竞赛、外语或特定学校体系背景明显的学生');
+                cautionPoints.push('保送类路径对背景门槛要求强，不具备硬条件时不要误判为普适通道');
+                strategy = '先确认自己是否真的满足保送资格，再看目标校是否值得作为主申目标。';
+            }
+
+            if (fitStudents.length === 0) {
+                fitStudents.push('希望在学校平台、专业方向和多元升学机会之间做平衡的学生');
+            }
+            if (cautionPoints.length === 0) {
+                cautionPoints.push('这类院校更适合放在整体志愿组合里比较，而不是脱离分数和地区单独判断。');
+            }
+
+            return {
+                fitStudents: fitStudents.slice(0, 3),
+                cautionPoints: cautionPoints.slice(0, 3),
+                strategy
+            };
+        };
+
+        const getSchoolLevelWeight = (school) => {
+            const values = [...(school.levels || []), ...(school.tags || [])];
+            if (values.some(item => item.includes('C9'))) return 42;
+            if (values.some(item => item.includes('985'))) return 34;
+            if (values.some(item => item.includes('强基'))) return 24;
+            if (values.some(item => item.includes('双一流'))) return 18;
+            if (values.some(item => item.includes('211'))) return 12;
+            if (values.some(item => item.includes('综合评价强校'))) return 12;
+            if (values.some(item => item.includes('独立法人'))) return 10;
+            return 6;
+        };
+
+        const getSchoolRecommendationMeta = (school, context = {}) => {
+            const query = (context.query || '').trim();
+            const filters = context.filters || {};
+            const normalizedQuery = normalizeKeyword(query);
+            const nameNorm = normalizeKeyword(school.name);
+            const aliasNorms = (school.aliases || []).map(normalizeKeyword);
+            const reasons = [];
+            let score = getSchoolLevelWeight(school);
+
+            const pushReason = (reason) => {
+                if (reason && !reasons.includes(reason) && reasons.length < 3) reasons.push(reason);
+            };
+
+            if (normalizedQuery) {
+                if (nameNorm === normalizedQuery) {
+                    score += 140;
+                    pushReason('学校名精确命中');
+                } else if (aliasNorms.includes(normalizedQuery)) {
+                    score += 120;
+                    pushReason('别名精确命中');
+                } else if (nameNorm.includes(normalizedQuery)) {
+                    score += 92;
+                    pushReason('学校名高度相关');
+                } else if (aliasNorms.some(alias => alias.includes(normalizedQuery))) {
+                    score += 72;
+                    pushReason('别名相关');
+                } else if ((school.majors || []).some(major => normalizeKeyword(major).includes(normalizedQuery))) {
+                    score += 52;
+                    pushReason('专业方向匹配');
+                } else if (getMeaningfulPathways(school).some(pathway => normalizeKeyword(pathway).includes(normalizedQuery))) {
+                    score += 48;
+                    pushReason('赛道关键词匹配');
+                } else if ((school.tags || []).some(tag => normalizeKeyword(tag).includes(normalizedQuery))) {
+                    score += 32;
+                    pushReason('院校标签匹配');
+                } else if ((school.specialNotes || []).some(note => normalizeKeyword(note).includes(normalizedQuery))) {
+                    score += 18;
+                    pushReason('报考提醒相关');
+                }
+            }
+
+            if (filters.pathway && filters.pathway !== '全部赛道' && getMeaningfulPathways(school).includes(filters.pathway)) {
+                score += 68;
+                pushReason(`${filters.pathway} 赛道匹配`);
+            }
+
+            if (filters.region && filters.region !== '全部地区' && school.region === filters.region) {
+                score += 22;
+                pushReason(`${filters.region} 地区匹配`);
+            }
+
+            if (filters.schoolType && filters.schoolType !== '全部类型' && school.schoolType === filters.schoolType) {
+                score += 18;
+                pushReason('院校类型匹配');
+            }
+
+            if (school.advisorProfile) {
+                score += 12;
+                pushReason('含顾问判断');
+            }
+
+            score += Math.min(getMeaningfulPathways(school).length, 6) * 4;
+            score += Math.min((school.pathwayDetails || []).length, 4) * 3;
+
+            if (school.dataStatus === 'core-seed') score += 6;
+            if (school.dataStatus?.startsWith('phase-')) score += 3;
+
+            let label = '建议了解';
+            if (score >= 150) label = '优先推荐';
+            else if (score >= 105) label = '重点查看';
+            else if (score >= 70) label = '值得比较';
+
+            return { score, reasons, label };
         };
 
         const FormattedText = ({ text, isUser = false }) => {
@@ -128,10 +546,10 @@
                             className = isUser ? "text-[13px] leading-relaxed text-white pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-white/70" : "text-[13px] leading-relaxed text-slate-700 pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-slate-400";
                         } else if (content.startsWith('#### ')) {
                             content = content.replace('#### ', '');
-                            className = isUser ? "text-[13px] font-bold mt-2 text-white flex items-center gap-1.5 before:content-[''] before:w-1 before:h-3 before:bg-white before:rounded-full" : "text-[13px] font-bold mt-2 text-slate-800 flex items-center gap-1.5 before:content-[''] before:w-1 before:h-3 before:bg-blue-400 before:rounded-full";
+                            className = isUser ? "text-[13px] font-bold mt-2 text-white flex items-center gap-1.5 before:content-[''] before:w-1 before:h-3 before:bg-white before:rounded-full" : "text-[13px] font-bold mt-2 text-slate-900 flex items-center gap-1.5 before:content-[''] before:w-1 before:h-3 before:bg-slate-400 before:rounded-full";
                         } else if (content.startsWith('### ')) {
                             content = content.replace('### ', '');
-                            className = isUser ? "text-sm font-bold mt-3 mb-1 text-white border-b border-white/20 pb-1 flex items-center gap-2" : "text-sm font-bold mt-3 mb-1 text-blue-700 border-b border-blue-50 pb-1 flex items-center gap-2";
+                            className = isUser ? "text-sm font-bold mt-3 mb-1 text-white border-b border-white/20 pb-1 flex items-center gap-2" : "text-sm font-bold mt-3 mb-1 text-slate-900 border-b border-slate-200 pb-1 flex items-center gap-2";
                         } else if (content.startsWith('## ')) {
                             content = content.replace('## ', '');
                             className = isUser ? "text-base font-extrabold mt-4 mb-2 text-white flex items-center gap-2" : "text-base font-extrabold mt-4 mb-2 text-slate-900 flex items-center gap-2";
@@ -145,18 +563,18 @@
                                     if (!part) return null;
                                     // 1. 处理加粗 **text**
                                     if (part.startsWith('**') && part.endsWith('**')) {
-                                        return <strong key={i} className={isUser ? "font-bold text-white bg-white/20 px-1 rounded" : "font-bold text-slate-900 bg-blue-50/50 px-1 rounded"}>{part.slice(2, -2)}</strong>;
+                                        return <strong key={i} className={isUser ? "font-bold text-white bg-white/20 px-1 rounded" : "font-bold text-slate-900 bg-slate-100 px-1 rounded"}>{part.slice(2, -2)}</strong>;
                                     }
                                     // 2. 处理 Markdown 链接 [文字](URL)
                                     if (part.startsWith('[') && part.includes('](')) {
                                         const match = part.match(/\[(.*?)\]\((.*?)\)/);
                                         if (match) {
-                                            return <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer" className={isUser ? "text-white underline font-bold decoration-2" : "text-blue-600 underline font-bold hover:text-blue-800 decoration-2 transition-colors"}>{match[1]}</a>;
+                                            return <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer" className={isUser ? "text-white underline font-bold decoration-2" : "text-[#4DA1A9] underline font-bold hover:text-[#2E5077] decoration-2 transition-colors"}>{match[1]}</a>;
                                         }
                                     }
                                     // 3. 处理纯文本 URL
                                     if (part.startsWith('http')) {
-                                        return <a key={i} href={part} target="_blank" rel="noopener noreferrer" className={isUser ? "text-white underline break-all opacity-90" : "text-blue-500 underline break-all hover:text-blue-700 transition-colors"}>{part}</a>;
+                                        return <a key={i} href={part} target="_blank" rel="noopener noreferrer" className={isUser ? "text-white underline break-all opacity-90" : "text-[#4DA1A9] underline break-all hover:text-[#2E5077] transition-colors"}>{part}</a>;
                                     }
                                     return part;
                                 })}
@@ -186,53 +604,54 @@
             return (
                 <div className="flex flex-col items-center">
                     <div className="relative group">
+                        <div className={`floating-glow ${isRoot ? 'bg-[#cdeee3]' : isChild ? 'bg-[#eef7f4]' : 'bg-[#dff2ed]'} left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:opacity-20 transition-opacity duration-300`}></div>
                         <div 
                             onClick={handleNodeClick}
                             onMouseEnter={() => onNodeHover?.(node.name)}
                             onMouseLeave={() => onNodeHover?.(null)}
-                            className={`relative p-3.5 rounded-xl shadow-sm border-2 transition-all cursor-pointer select-none
-                                ${isRoot ? 'bg-blue-600 text-white border-blue-700 text-lg font-bold shadow-blue-200/50 hover:shadow-lg hover:shadow-blue-300/50' : 
-                                isChild ? `bg-white text-slate-800 border-slate-200 hover:border-blue-400 hover:shadow-md ${isActive ? 'ring-2 ring-blue-400 border-blue-400 shadow-md' : ''}` : 
-                                `${node.color} text-white border-transparent font-semibold shadow-md ${isActive ? 'ring-4 ring-blue-200' : 'hover:-translate-y-0.5'}`}
-                                min-w-[150px] max-w-[200px] text-center z-10 flex flex-col items-center justify-center`}
+                            className={`node-card relative p-4 rounded-[22px] border transition-all duration-300 cursor-pointer select-none
+                                ${isRoot ? 'bg-[linear-gradient(180deg,#79D7BE_0%,#4DA1A9_100%)] text-white border-white/70 text-lg font-semibold shadow-[0_24px_50px_rgba(77,161,169,0.22)] hover:shadow-[0_28px_56px_rgba(77,161,169,0.28)]' : 
+                                isChild ? `bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(248,246,242,0.95)_100%)] text-slate-800 border-white/80 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(24,39,75,0.08)] ${isActive ? 'ring-2 ring-slate-300/80 border-slate-300 shadow-[0_12px_34px_rgba(24,39,75,0.1)]' : ''}` : 
+                                `bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(238,249,245,0.96)_100%)] text-slate-900 border-[#d8ece5] font-semibold shadow-[0_16px_36px_rgba(77,161,169,0.08)] ${isActive ? 'ring-4 ring-[#cfece3]/95 border-[#9ed8cb] scale-[1.01] shadow-[0_22px_44px_rgba(77,161,169,0.14)]' : 'hover:-translate-y-0.5 hover:border-[#c4e3da] hover:shadow-[0_20px_42px_rgba(77,161,169,0.11)]'}`}
+                                min-w-[160px] max-w-[220px] text-center z-10 flex flex-col items-center justify-center`}
                         >
-                            <span className="leading-snug">{node.name}</span>
-                            {node.description && <span className={`text-[10px] mt-1 font-normal leading-tight opacity-90 ${isChild ? 'text-slate-500' : 'text-white'}`}>{node.description}</span>}
+                            <span className="leading-snug relative z-10">{node.name}</span>
+                            {node.description && <span className="text-[10px] mt-1.5 font-normal leading-tight opacity-90 relative z-10 text-slate-500">{node.description}</span>}
                         </div>
 
                         {/* 🌟 详情提示气泡 */}
                         {hasDetails && !isRoot && (
-                            <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none bg-slate-800 text-white text-xs px-2.5 py-1 rounded-full whitespace-nowrap z-50">
+                            <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none bg-white/96 text-slate-600 text-xs px-3 py-1.5 rounded-full whitespace-nowrap z-50 border border-slate-200 shadow-[0_10px_22px_rgba(24,39,75,0.08)]">
                                 📄 点击查看详情
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-800 transform rotate-45"></div>
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-white transform rotate-45 border-r border-b border-slate-200"></div>
                             </div>
                         )}
 
                         {hasChildren && (
                             <div 
                                 onClick={toggleOpen}
-                                className={`absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-white border-2 rounded-full flex items-center justify-center cursor-pointer shadow-sm z-20 hover:bg-slate-50 hover:scale-110 transition-transform ${isRoot ? 'border-blue-600 text-blue-600' : 'border-slate-300 text-slate-500'}`}
+                                className={`absolute -bottom-3 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full flex items-center justify-center cursor-pointer z-20 hover:scale-110 transition-transform glass-panel ${isRoot ? 'text-slate-700 border-white/75' : 'text-slate-500 border-white/85'}`}
                             >
-                                <i data-lucide={isOpen ? "minus" : "plus"} className="w-3 h-3"></i>
+                                <span className="text-sm font-semibold leading-none">{isOpen ? '−' : '+'}</span>
                             </div>
                         )}
                         
                         {hasDetails && !isRoot && (
-                            <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-red-400 rounded-full border-2 border-white shadow-sm animate-pulse" title="点击查看详情"></div>
+                            <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-[#79D7BE] rounded-full border-2 border-white shadow-[0_6px_14px_rgba(121,215,190,0.24)] animate-pulse" title="点击查看详情"></div>
                         )}
                     </div>
                     
                     <div className={`transition-all duration-300 origin-top overflow-hidden ${isOpen ? 'opacity-100 max-h-[1000px]' : 'opacity-0 max-h-0'}`}>
                         {hasChildren && (
                             <div className="flex flex-col items-center">
-                                <div className="w-px h-8 bg-slate-300"></div>
+                                <div className="w-px h-8 bg-gradient-to-b from-slate-300 to-slate-200"></div>
                                 <div className="flex space-x-6 relative pt-4">
                                     {node.children.map((child, idx) => (
                                         <div key={idx} className="relative flex flex-col items-center">
                                             <div className="absolute top-0 left-0 right-0 flex justify-center -mt-4">
-                                                {idx !== 0 && <div className="absolute top-0 right-1/2 w-1/2 h-px bg-slate-300"></div>}
-                                                {idx !== node.children.length - 1 && <div className="absolute top-0 left-1/2 w-1/2 h-px bg-slate-300"></div>}
-                                                <div className="absolute top-0 left-1/2 w-px h-4 bg-slate-300"></div>
+                                                {idx !== 0 && <div className="absolute top-0 right-1/2 w-1/2 h-px bg-gradient-to-l from-slate-300 to-slate-200"></div>}
+                                                {idx !== node.children.length - 1 && <div className="absolute top-0 left-1/2 w-1/2 h-px bg-gradient-to-r from-slate-300 to-slate-200"></div>}
+                                                <div className="absolute top-0 left-1/2 w-px h-4 bg-gradient-to-b from-slate-300 to-slate-200"></div>
                                             </div>
                                             <Node node={child} isChild={!isRoot} onNodeSelect={onNodeSelect} activeNodeName={activeNodeName} onNodeHover={onNodeHover} />
                                         </div>
@@ -241,6 +660,86 @@
                             </div>
                         )}
                     </div>
+                </div>
+            );
+        };
+
+        const MobileNodeList = ({ node, depth = 0, onNodeSelect, activeNodeName }) => {
+            const [isOpen, setIsOpen] = useState(depth < 1 ? true : !!node.isOpenDefault);
+            const hasChildren = node.children && node.children.length > 0;
+            const hasDetails = !!node.details;
+            const isActive = activeNodeName === node.name;
+            const levelTone = depth === 0
+                ? 'from-[#fbfffd] to-[#f3fbf8] border-[#dceee7]'
+                : depth === 1
+                    ? 'from-[#f7fdfa] to-[#eaf7f3] border-[#d2e8e1]'
+                    : 'from-[#fdfcf9] to-[#f5f2ec] border-slate-200/75';
+            const levelLabel = depth === 0 ? '总览' : depth === 1 ? '主路径' : '细分项';
+
+            return (
+                <div className={`${depth === 0 ? 'space-y-4' : 'space-y-3'} ${depth > 0 ? 'pl-4 ml-1 border-l border-slate-200' : ''}`}>
+                    <div className={`rounded-[24px] border bg-gradient-to-br ${levelTone} backdrop-blur-xl transition-all duration-300 shadow-[0_16px_36px_rgba(24,39,75,0.06)] ${isActive ? 'ring-2 ring-[#cfece3] border-[#9ed8cb] shadow-[0_18px_38px_rgba(77,161,169,0.1)]' : depth === 1 ? 'hover:border-[#bcded4] hover:shadow-[0_18px_38px_rgba(77,161,169,0.08)]' : ''}`}>
+                        <div className="flex items-start gap-3 p-5">
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    if (hasChildren) {
+                                        setIsOpen(v => !v);
+                                        return;
+                                    }
+                                    if (hasDetails) onNodeSelect(node);
+                                }}
+                                className="flex-1 text-left"
+                            >
+                                <div className="flex items-center gap-2.5">
+                                    <span className={`h-2.5 w-2.5 rounded-full ${depth === 0 ? 'bg-[#4DA1A9]' : depth === 1 ? 'bg-[#79D7BE]' : 'bg-slate-400'} shadow-[0_4px_10px_rgba(77,161,169,0.18)]`}></span>
+                                    <span className="inline-flex rounded-full border border-slate-200 bg-white px-2 py-0.5 text-[10px] tracking-[0.16em] text-slate-500 uppercase">{levelLabel}</span>
+                                </div>
+                                <h3 className={`mt-3 font-semibold leading-snug ${depth === 0 ? 'text-[22px] text-slate-900' : depth === 1 ? 'text-[19px] text-slate-900' : 'text-base text-slate-800'}`}>{node.name}</h3>
+                                {node.description && <p className="mt-2 text-sm leading-7 text-slate-500">{node.description}</p>}
+                            </button>
+                            {(hasChildren || hasDetails) && (
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        if (hasChildren) {
+                                            setIsOpen(v => !v);
+                                        } else if (hasDetails) {
+                                            onNodeSelect(node);
+                                        }
+                                    }}
+                                    className={`mt-0.5 h-10 w-10 shrink-0 rounded-full border flex items-center justify-center text-lg font-semibold transition-all ${hasChildren ? 'border-[#d6ebe4] bg-white text-[#4DA1A9] shadow-[0_8px_20px_rgba(77,161,169,0.08)]' : 'border-slate-200 bg-slate-50 text-slate-500'}`}
+                                    aria-label={hasChildren ? (isOpen ? '收起' : '展开') : '查看详情'}
+                                >
+                                    {hasChildren ? (isOpen ? '−' : '+') : '›'}
+                                </button>
+                            )}
+                        </div>
+                        {hasDetails && (
+                            <div className="px-5 pb-5 pt-1">
+                                <button
+                                    type="button"
+                                    onClick={() => onNodeSelect(node)}
+                                    className="w-full rounded-2xl bg-[#4DA1A9] text-white border border-[#4DA1A9] px-4 py-3.5 text-sm font-medium text-left shadow-[0_10px_24px_rgba(77,161,169,0.18)] hover:bg-[#438f96]"
+                                >
+                                    查看该路径详情与适配建议
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                    {hasChildren && isOpen && (
+                        <div className="space-y-3">
+                            {node.children.map((child, idx) => (
+                                <MobileNodeList
+                                    key={`${child.name}-${idx}`}
+                                    node={child}
+                                    depth={depth + 1}
+                                    onNodeSelect={onNodeSelect}
+                                    activeNodeName={activeNodeName}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
             );
         };
@@ -255,11 +754,27 @@
             const [copiedIndex, setCopiedIndex] = useState(null);
             const [isExporting, setIsExporting] = useState(false);
             const [attachment, setAttachment] = useState(null); 
+            const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+            const [searchSchool, setSearchSchool] = useState('');
+            const [schoolDatabase, setSchoolDatabase] = useState([]);
+            const [selectedSchoolProfile, setSelectedSchoolProfile] = useState(null);
+            const [schoolFilters, setSchoolFilters] = useState({
+                pathway: '全部赛道',
+                region: '全部地区',
+                schoolType: '全部类型'
+            });
+            const [schoolSortMode, setSchoolSortMode] = useState('recommended');
+            const [schoolLibraryStatus, setSchoolLibraryStatus] = useState({
+                loading: true,
+                error: ''
+            });
+            const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
             
             const fileInputRef = useRef(null);
             const exportRef = useRef(null);
             const scrollRef = useRef(null);
             const mainRef = useRef(null);
+            const schoolModalBodyRef = useRef(null);
 
             const [messages, setMessages] = useState(() => {
                 const saved = localStorage.getItem('gaokao_ai_chat_history');
@@ -273,6 +788,68 @@
 
             const [isDragging, setIsDragging] = useState(false);
             const dragStart = useRef({ x: 0, y: 0 });
+            const normalizedSchoolDatabase = schoolDatabase.map(normalizeSchoolRecord);
+            const schoolQuery = searchSchool.trim();
+            const hasSchoolCriteria = !!schoolQuery || schoolFilters.pathway !== '全部赛道' || schoolFilters.region !== '全部地区' || schoolFilters.schoolType !== '全部类型';
+            const schoolRegionOptions = ['全部地区', ...uniqueOptions(normalizedSchoolDatabase.map(school => school.region))];
+            const schoolPathwayOptions = ['全部赛道', ...uniqueOptions(normalizedSchoolDatabase.flatMap(school => getMeaningfulPathways(school)))];
+            const schoolTypeOptions = ['全部类型', ...uniqueOptions(normalizedSchoolDatabase.map(school => school.schoolType))];
+            const schoolLookupKeyword = selectedSchoolProfile?.name || schoolQuery;
+            const sortSchoolResults = (results = []) => {
+                const sorted = [...results];
+                if (schoolSortMode === 'name') {
+                    return sorted.sort((a, b) => a.school.name.localeCompare(b.school.name, 'zh-CN'));
+                }
+                if (schoolSortMode === 'pathways') {
+                    return sorted.sort((a, b) => {
+                        const pathwayDiff = getMeaningfulPathways(b.school).length - getMeaningfulPathways(a.school).length;
+                        if (pathwayDiff !== 0) return pathwayDiff;
+                        return b.recommendation.score - a.recommendation.score;
+                    });
+                }
+                if (schoolSortMode === 'level') {
+                    return sorted.sort((a, b) => {
+                        const levelDiff = getSchoolLevelWeight(b.school) - getSchoolLevelWeight(a.school);
+                        if (levelDiff !== 0) return levelDiff;
+                        return b.recommendation.score - a.recommendation.score;
+                    });
+                }
+                    return sorted.sort((a, b) => {
+                    const scoreDiff = b.recommendation.score - a.recommendation.score;
+                    if (scoreDiff !== 0) return scoreDiff;
+                    return getMeaningfulPathways(b.school).length - getMeaningfulPathways(a.school).length;
+                });
+            };
+            const baseRecommendationContext = {
+                query: schoolQuery,
+                filters: schoolFilters
+            };
+            const rankedSchoolResults = sortSchoolResults(
+                normalizedSchoolDatabase
+                .filter((school) => {
+                    if (!matchesSchoolKeyword(school, schoolQuery)) return false;
+                    if (schoolFilters.region !== '全部地区' && school.region !== schoolFilters.region) return false;
+                    if (schoolFilters.schoolType !== '全部类型' && school.schoolType !== schoolFilters.schoolType) return false;
+                    if (schoolFilters.pathway !== '全部赛道' && !getMeaningfulPathways(school).includes(schoolFilters.pathway)) return false;
+                    return true;
+                })
+                .map((school) => ({
+                    school,
+                    recommendation: getSchoolRecommendationMeta(school, baseRecommendationContext)
+                }))
+            );
+            const filteredSchools = rankedSchoolResults.map(item => item.school);
+            const featuredSchoolResults = sortSchoolResults(
+                normalizedSchoolDatabase.map((school) => ({
+                    school,
+                    recommendation: getSchoolRecommendationMeta(school, {
+                        query: '',
+                        filters: { pathway: '全部赛道', region: '全部地区', schoolType: '全部类型' }
+                    })
+                }))
+            ).slice(0, 6);
+            const selectedSchoolAdvisor = selectedSchoolProfile ? deriveAdvisorProfile(selectedSchoolProfile) : null;
+            const selectedSchoolRecommendation = selectedSchoolProfile ? getSchoolRecommendationMeta(selectedSchoolProfile, baseRecommendationContext) : null;
 
             // --- 简历/图片解析逻辑 ---
             const processFile = async (file) => {
@@ -318,6 +895,33 @@
                 e.target.value = '';
             };
 
+            const updateSchoolFilter = (key, value) => {
+                setSchoolFilters(prev => ({ ...prev, [key]: value }));
+            };
+
+            const openSchoolProfile = (school) => {
+                setSelectedSchoolProfile(school);
+                if (window.innerWidth < 1024) {
+                    requestAnimationFrame(() => {
+                        schoolModalBodyRef.current?.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                }
+            };
+
+            const resetSchoolFilters = () => {
+                setSearchSchool('');
+                setSelectedSchoolProfile(null);
+                setSchoolSortMode('recommended');
+                setSchoolFilters({
+                    pathway: '全部赛道',
+                    region: '全部地区',
+                    schoolType: '全部类型'
+                });
+            };
+
             useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [messages]);
             useEffect(() => { 
                 if (window.lucide) {
@@ -325,7 +929,57 @@
                 } else {
                     console.warn('Lucide icons not loaded yet');
                 }
-            }, [isAIChatOpen, messages, selectedNode, zoom]);
+            }, [isAIChatOpen, messages, selectedNode, zoom, isSearchModalOpen, isMobileView, selectedSchoolProfile, schoolDatabase.length, schoolLibraryStatus.loading, schoolLibraryStatus.error]);
+
+            useEffect(() => {
+                const handleResize = () => {
+                    const mobile = window.innerWidth < 768;
+                    setIsMobileView(mobile);
+                    setZoom(mobile ? 0.68 : 0.85);
+                };
+                handleResize();
+                window.addEventListener('resize', handleResize);
+                return () => window.removeEventListener('resize', handleResize);
+            }, []);
+
+            useEffect(() => {
+                if (!isSearchModalOpen) {
+                    setSelectedSchoolProfile(null);
+                }
+            }, [isSearchModalOpen]);
+
+            useEffect(() => {
+                let cancelled = false;
+
+                const loadSchoolDatabase = async () => {
+                    setSchoolLibraryStatus({ loading: true, error: '' });
+                    try {
+                        const response = await fetch(`./data/schools.json?v=20260414`);
+                        if (!response.ok) throw new Error(`院校库加载失败（${response.status}）`);
+                        const data = await response.json();
+                        if (!Array.isArray(data)) throw new Error('院校库格式不正确');
+                        if (!cancelled) {
+                            setSchoolDatabase(data);
+                            setSchoolLibraryStatus({ loading: false, error: '' });
+                        }
+                    } catch (error) {
+                        console.error('加载院校库失败:', error);
+                        if (!cancelled) {
+                            setSchoolDatabase([]);
+                            setSchoolLibraryStatus({
+                                loading: false,
+                                error: '院校库加载失败。请优先使用 VS Code Live Preview / 本地服务器方式打开页面。'
+                            });
+                        }
+                    }
+                };
+
+                loadSchoolDatabase();
+
+                return () => {
+                    cancelled = true;
+                };
+            }, []);
 
             // 🌟 拖拽平移画布功能
             const handleMouseDown = (e) => {
@@ -400,10 +1054,12 @@
                 setTimeout(() => setCopiedIndex(null), 2000);
             };
 
-            const handleSend = async () => {
-                if ((!input.trim() && !attachment) || loading) return;
+            const handleSend = async (customText = null) => {
+                // 判断 customText 是否是字符串（因为 onClick 默认传 event 对象）
+                const textToUse = typeof customText === 'string' ? customText : input.trim();
+                if ((!textToUse && !attachment) || loading) return;
                 
-                let userContent = input.trim();
+                let userContent = textToUse;
                 let displayContent = userContent;
                 
                 // 🌟 新增：强制 AI 补充学校案例和链接的系统指令
@@ -415,8 +1071,8 @@
                     userContent = userContent ? `${userContent}${fileText}${systemPrompt}` : `请帮我分析这份${attachment.type === 'image' ? '图片' : '文档'}，并给出规划建议：${fileText}${systemPrompt}`;
                     
                     displayContent = attachment.type === 'image' 
-                        ? (input.trim() ? `${input.trim()}\n(已上传图片: ${attachment.name})` : `(已上传图片: ${attachment.name})`)
-                        : (input.trim() ? `${input.trim()}\n(已解析文档: ${attachment.name})` : `(已解析文档: ${attachment.name})`);
+                        ? (textToUse ? `${textToUse}\n(已上传图片: ${attachment.name})` : `(已上传图片: ${attachment.name})`)
+                        : (textToUse ? `${textToUse}\n(已解析文档: ${attachment.name})` : `(已解析文档: ${attachment.name})`);
                 } else {
                     userContent = `${userContent}${systemPrompt}`;
                 }
@@ -458,94 +1114,107 @@
             };
 
             return (
-                <div className="h-screen flex flex-col font-sans overflow-hidden bg-[#f8fafc]">
+                <div className="h-screen flex flex-col font-sans overflow-hidden bg-transparent text-slate-900 relative">
+                    <div className="absolute inset-0 pointer-events-none">
+                        <div className="floating-glow bg-[#e2efe9] left-[12%] top-[10%]"></div>
+                        <div className="floating-glow bg-[#e5eef1] right-[8%] top-[22%]"></div>
+                        <div className="floating-glow bg-[#edf2ea] left-[42%] bottom-[8%]"></div>
+                    </div>
                     {/* 🌟 隐藏的长图生成专属容器 (带水印和设计感) */}
                     <div className="absolute left-[-9999px] top-[-9999px]">
-                        <div ref={exportRef} className="w-[600px] bg-slate-50 flex flex-col font-sans relative">
+                        <div ref={exportRef} className="w-[600px] flex flex-col font-sans relative overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#ffffff_0%,#f5f5f7_100%)] text-slate-900 border border-white">
                             {/* 🌟 全局透明水印 */}
                             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
-                                <div className="text-slate-500/10 text-6xl font-black -rotate-45 select-none whitespace-nowrap">
+                                <div className="text-slate-300/40 text-6xl font-black -rotate-45 select-none whitespace-nowrap">
                                     罗宾@Duke出品
                                 </div>
                             </div>
                             {/* Header */}
-                            <div className="bg-blue-600 p relative z-10-8 flex flex-col items-center justify-center text-white border-b-4 border-blue-800 relative z-10">
-                                <svg className="w-14 h-14 mb-4 text-white opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-                                <h1 className="text-3xl font-extrabold tracking-wider">高考多元升学路径</h1>
-                                <p className="text-blue-200 mt-2 text-base">专属 AI 智能规划分析报告</p>
+                            <div className="p-8 flex flex-col items-center justify-center text-white border-b border-[#8ed1c8]/50 relative z-10 bg-[linear-gradient(135deg,#79D7BE_0%,#4DA1A9_100%)]">
+                                <svg className="w-14 h-14 mb-4 text-white opacity-95" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                                <h1 className="text-3xl font-semibold tracking-tight text-white">高考多元升学路径</h1>
+                                <p className="text-white/85 mt-2 text-base">专属 AI 智能规划分析报告</p>
                             </div>
                             {/* Body */}
                             <div className="p-8 space-y-6">
                                 {messages.map((m, i) => (
                                     <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                        <div className={`max-w-[88%] p-4 rounded-2xl shadow-sm ${m.role === 'user' ? 'bg-blue-600 text-white rounded-br-sm' : 'bg-white text-slate-700 border border-slate-200 rounded-bl-sm'}`}>
+                                        <div className={`max-w-[88%] p-4 rounded-2xl ${m.role === 'user' ? 'bg-slate-900 text-white rounded-br-sm shadow-[0_18px_40px_rgba(15,23,42,0.12)]' : 'bg-white text-slate-700 border border-slate-200 rounded-bl-sm shadow-[0_18px_40px_rgba(15,23,42,0.06)]'}`}>
                                             <FormattedText text={m.content} isUser={m.role === 'user'} />
                                         </div>
                                     </div>
                                 ))}
                             </div>
                             {/* Footer Watermark */}
-                            <div className="bg-slate-100 p-6 flex flex-col items-center justify-center border-t border-slate-200">
-                                <div className="flex items-center gap-2 mb-2 text-slate-400">
+                            <div className="bg-white/70 p-6 flex flex-col items-center justify-center border-t border-slate-200">
+                                <div className="flex items-center gap-2 mb-2 text-slate-500">
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                     <span className="text-sm font-bold tracking-widest">高考升学 AI 规划师生成</span>
                                 </div>
-                                <div className="text-xs text-slate-400 opacity-60">时间：{new Date().toLocaleString()}</div>
+                                <div className="text-xs text-slate-400 opacity-80">时间：{new Date().toLocaleString()}</div>
                             </div>
                         </div>
                     </div>
 
-                    <header className="bg-white border-b border-slate-200 px-6 py-3.5 flex justify-between items-center shadow-sm z-30 shrink-0">
-                        <div className="flex items-center gap-3">
-                            <div className="p-2 bg-blue-50 rounded-lg text-blue-600 border border-blue-100">
+                    <header className="section-shell green-header-surface-strong mx-4 mt-4 rounded-[30px] px-5 md:px-7 py-5 flex justify-between items-center z-30 shrink-0 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.68),transparent_28%),radial-gradient(circle_at_right,rgba(121,215,190,0.18),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.18),rgba(255,255,255,0))] pointer-events-none"></div>
+                        <div className="flex items-center gap-3 min-w-0">
+                            <div className="p-3 rounded-[18px] text-[#2E5077] border border-white/80 bg-white/72 shadow-[0_10px_26px_rgba(77,161,169,0.08)]">
                                 <i data-lucide="map" className="w-5 h-5"></i>
                             </div>
-                            <div>
-                                <h1 className="text-lg font-bold text-slate-800 tracking-tight">高考多元升学路径全解析</h1>
-                                <p className="text-xs text-slate-500 hidden sm:block mt-0.5">点击带有红点标记的节点查看硬核资料</p>
+                            <div className="min-w-0">
+                                <div className="flex items-center gap-3 flex-wrap">
+                                    <h1 className="panel-title text-[19px] font-semibold text-slate-900 tracking-tight">高考多元升学路径全解析</h1>
+                                    <span className="hidden lg:inline-flex px-3 py-1 rounded-full text-[10px] tracking-[0.18em] uppercase border border-[#b9e1d6] bg-white/66 text-[#4f8d92]">Planning Edition</span>
+                                </div>
+                                <p className="text-sm text-[#5e7980] hidden md:block mt-1.5 leading-6">更适合教育咨询场景的路径地图。点击节点查看关键资料，并结合 AI 获得个性化判断。</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4">
-                            <div className="hidden md:flex gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 shadow-inner">
-                                <button onClick={() => setZoom(z => Math.min(z + 0.1, 1.5))} className="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600 hover:text-blue-600" title="放大"><i data-lucide="zoom-in" className="w-4 h-4"></i></button>
-                                <div className="flex items-center px-1 text-xs font-mono text-slate-400">{Math.round(zoom * 100)}%</div>
-                                <button onClick={() => setZoom(z => Math.max(z - 0.1, 0.4))} className="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600 hover:text-blue-600" title="缩小"><i data-lucide="zoom-out" className="w-4 h-4"></i></button>
+                        <div className="flex items-center gap-2 md:gap-4 shrink-0">
+                            <div className="hidden md:flex gap-1 p-1 rounded-full border border-[#cfe7df] bg-white/72 shadow-[inset_0_1px_0_rgba(255,255,255,0.84)]">
+                                <button onClick={() => setZoom(z => Math.min(z + 0.1, 1.5))} className="p-2 hover:bg-[#eef8f5] rounded-xl transition-all text-[#5f7f86] hover:text-[#2E5077]" title="放大"><i data-lucide="zoom-in" className="w-4 h-4"></i></button>
+                                <div className="flex items-center px-2 text-xs font-mono text-slate-400">{Math.round(zoom * 100)}%</div>
+                                <button onClick={() => setZoom(z => Math.max(z - 0.1, 0.4))} className="p-2 hover:bg-[#eef8f5] rounded-xl transition-all text-[#5f7f86] hover:text-[#2E5077]" title="缩小"><i data-lucide="zoom-out" className="w-4 h-4"></i></button>
                             </div>
-                            <button onClick={() => setIsAIChatOpen(true)} className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm font-semibold shadow-lg hover:shadow-xl active:scale-95 transition-all">
-                                <i data-lucide="sparkles" className="w-4 h-4"></i><span>AI 智能规划</span>
+                            <button onClick={() => setIsSearchModalOpen(true)} className="neo-button flex items-center gap-2 px-4 md:px-5 py-2.5 bg-white/74 border border-[#cfe7df] text-slate-700 rounded-full text-sm font-medium shadow-[0_10px_22px_rgba(77,161,169,0.06)] hover:bg-[#f5fbf9] active:scale-95 transition-all">
+                                <i data-lucide="search" className="w-4 h-4"></i><span className="hidden sm:inline">院校情报</span>
+                            </button>
+                            <button onClick={() => setIsAIChatOpen(true)} className="neo-button flex items-center gap-2 px-4 md:px-5 py-2.5 bg-[#4DA1A9] text-white rounded-full text-sm font-medium shadow-[0_14px_26px_rgba(77,161,169,0.18)] hover:bg-[#438f96] active:scale-95 transition-all">
+                                <i data-lucide="sparkles" className="w-4 h-4"></i><span className="hidden sm:inline">AI 智能规划</span>
                             </button>
                         </div>
                     </header>
 
-                    <div className="flex-1 relative flex overflow-hidden">
+                    <div className="flex-1 relative flex overflow-hidden px-4 pb-4 pt-4 gap-4">
                         {/* 🌟 移动端遮罩层 */}
                         {selectedNode && (
                             <div 
                                 onClick={() => setSelectedNode(null)}
-                                className="absolute inset-0 bg-black/20 z-10 md:hidden"
+                                className="absolute inset-0 bg-white/55 z-10 md:hidden backdrop-blur-sm"
                             ></div>
                         )}
-                        <div className={`absolute left-0 top-0 bottom-0 w-full md:w-[380px] bg-white border-r border-slate-200 shadow-2xl z-20 transition-transform duration-300 ease-in-out flex flex-col ${selectedNode ? 'translate-x-0' : '-translate-x-full'}`}>
+                        <div className={`absolute left-0 top-0 bottom-0 w-full md:w-[400px] section-shell rounded-[30px] z-20 transition-transform duration-300 ease-in-out flex flex-col ${selectedNode ? 'translate-x-0' : '-translate-x-full'}`}>
                             {selectedNode && (
                                 <>
-                                    <div className="p-5 border-b border-slate-100 bg-slate-50 flex justify-between items-start">
+                                    <div className="green-header-surface p-6 flex justify-between items-start">
                                         <div>
-                                            <h2 className="text-xl font-bold text-slate-800 leading-tight mb-2">{selectedNode.details.title || selectedNode.name}</h2>
+                                            <p className="editorial-kicker mb-3">Path Brief</p>
+                                            <h2 className="text-[34px] font-semibold text-slate-900 leading-tight mb-3 tracking-tight">{selectedNode.details.title || selectedNode.name}</h2>
                                             {selectedNode.details.tags && (
                                                 <div className="flex flex-wrap gap-2">
                                                     {selectedNode.details.tags.map((tag, i) => (
-                                                        <span key={i} className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs rounded border border-blue-200">{tag}</span>
+                                                        <span key={i} className="px-3 py-1.5 bg-[#f4f8f6] text-[#4f6d67] text-xs rounded-full border border-[#d9e6e1]">{tag}</span>
                                                     ))}
                                                 </div>
                                             )}
                                         </div>
-                                        <button onClick={() => setSelectedNode(null)} className="p-1.5 hover:bg-slate-200 rounded-lg transition-colors text-slate-400 hover:text-slate-700"><i data-lucide="x" className="w-5 h-5"></i></button>
+                                        <button onClick={() => setSelectedNode(null)} className="p-2 hover:bg-slate-100 rounded-xl transition-colors text-slate-400 hover:text-slate-700"><i data-lucide="x" className="w-5 h-5"></i></button>
                                     </div>
-                                    <div className="flex-1 overflow-y-auto p-6 custom-scrollbar text-[14px]">
+                                    <div className="flex-1 overflow-y-auto p-6 custom-scrollbar reading-body text-slate-700">
                                         <FormattedText text={selectedNode.details.content} />
                                     </div>
-                                    <div className="p-4 border-t border-slate-100 bg-slate-50 flex justify-center">
-                                        <button onClick={() => { setIsAIChatOpen(true); setInput(`我想详细了解关于“${selectedNode.name}”的政策，我适合报考吗？`); }} className="w-full py-2.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-xl font-medium text-sm transition-colors flex justify-center items-center gap-2 border border-indigo-200">
+                                    <div className="p-5 border-t border-slate-200/80 bg-white/74 flex justify-center">
+                                        <button onClick={() => { setIsAIChatOpen(true); setInput(`我想详细了解关于“${selectedNode.name}”的政策，我适合报考吗？`); }} className="w-full py-3.5 bg-[#4DA1A9] hover:bg-[#438f96] text-white rounded-[18px] font-medium text-sm transition-all flex justify-center items-center gap-2 shadow-[0_14px_26px_rgba(77,161,169,0.18)]">
                                             <i data-lucide="message-square" className="w-4 h-4"></i> 针对此路径向 AI 提问
                                         </button>
                                     </div>
@@ -553,22 +1222,43 @@
                             )}
                         </div>
 
-                        <main className="flex-1 overflow-auto relative custom-scrollbar w-full h-full cursor-grab active:cursor-grabbing" ref={mainRef} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
-                            <div className="min-w-max min-h-max p-20 flex justify-center items-start pt-32">
-                                <div className="transition-transform duration-300 origin-top" style={{ transform: `scale(${zoom})` }}>
-                                    <Node node={mindMapData} isRoot={true} onNodeSelect={handleNodeSelect} activeNodeName={selectedNode?.name} onNodeHover={setHoveredNodeName} />
+                        <main className={`flex-1 overflow-auto relative custom-scrollbar w-full h-full ${isMobileView ? '' : 'cursor-grab active:cursor-grabbing'}`} ref={mainRef} onMouseDown={isMobileView ? undefined : handleMouseDown} onMouseMove={isMobileView ? undefined : handleMouseMove} onMouseUp={isMobileView ? undefined : handleMouseUp} onMouseLeave={isMobileView ? undefined : handleMouseUp}>
+                            <div className={`relative ${isMobileView ? 'p-3' : 'min-w-max p-12'}`}>
+                                <div className={`relative rounded-[30px] border border-white bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(248,246,242,0.92)_100%)] shadow-[0_18px_40px_rgba(24,39,75,0.06)] ${isMobileView ? 'p-4' : 'min-w-max min-h-[760px] px-20 py-20'}`}>
+                                    {isMobileView ? (
+                                        <div className="space-y-4">
+                                            <div className="green-header-surface rounded-[24px] px-5 py-4 shadow-[0_10px_26px_rgba(77,161,169,0.08)]">
+                                                <div className="flex items-center justify-between gap-3">
+                                                <div>
+                                                    <p className="editorial-kicker">Mobile View</p>
+                                                    <h2 className="mt-2 text-[18px] font-semibold text-slate-900 tracking-tight">升学路径分层浏览</h2>
+                                                </div>
+                                                <span className="rounded-full border border-[#b9e1d6] bg-white/62 px-3 py-1.5 text-xs text-[#4f8d92]">更适合手机查看</span>
+                                                </div>
+                                            </div>
+                                            <MobileNodeList node={mindMapData} onNodeSelect={handleNodeSelect} activeNodeName={selectedNode?.name} />
+                                        </div>
+                                    ) : (
+                                        <div className="flex justify-center items-start pt-12">
+                                            <div className="animate-float">
+                                                <div className="transition-transform duration-300 origin-top" style={{ transform: `scale(${zoom})` }}>
+                                                    <Node node={mindMapData} isRoot={true} onNodeSelect={handleNodeSelect} activeNodeName={selectedNode?.name} onNodeHover={setHoveredNodeName} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </main>
 
-                        <div className={`absolute right-0 top-0 bottom-0 w-full sm:w-[420px] bg-white border-l border-slate-200 shadow-2xl z-30 flex flex-col transition-transform duration-300 ease-in-out ${isAIChatOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                            <div className="p-4 border-b flex justify-between items-center bg-blue-600 text-white shadow-sm shrink-0">
-                                <div className="flex items-center gap-2"><i data-lucide="bot" className="w-5 h-5"></i><span className="font-bold tracking-wide">AI 升学规划师</span></div>
+                        <div className={`absolute right-0 top-0 bottom-0 w-full sm:w-[420px] section-shell rounded-[30px] z-30 flex flex-col transition-transform duration-300 ease-in-out ${isAIChatOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                            <div className="green-header-surface p-5 flex justify-between items-center text-slate-900 shrink-0">
+                                <div className="flex items-center gap-2"><i data-lucide="bot" className="w-5 h-5"></i><span className="font-semibold tracking-wide">AI 升学规划师</span></div>
                                 <div className="flex items-center gap-2">
                                     <button 
                                         onClick={handleExport}
                                         disabled={isExporting}
-                                        className="p-1.5 hover:bg-white/20 rounded-lg transition-colors flex items-center gap-1 text-xs font-medium disabled:opacity-50 disabled:cursor-not-allowed" 
+                                        className="p-1.5 hover:bg-slate-100 rounded-xl transition-colors flex items-center gap-1 text-xs font-medium disabled:opacity-50 disabled:cursor-not-allowed" 
                                         title="导出为长图"
                                     >
                                         {isExporting ? <i data-lucide="loader-2" className="w-4 h-4 animate-spin"></i> : <i data-lucide="image" className="w-4 h-4"></i>}
@@ -582,16 +1272,16 @@
                                                 localStorage.removeItem('gaokao_ai_chat_history');
                                             }
                                         }}
-                                        className="p-1.5 hover:bg-white/20 rounded-lg transition-colors" 
+                                        className="p-1.5 hover:bg-slate-100 rounded-xl transition-colors" 
                                         title="清空对话"
                                     >
                                         <i data-lucide="trash-2" className="w-4 h-4"></i>
                                     </button>
-                                    <button onClick={() => setIsAIChatOpen(false)} className="p-1.5 hover:bg-white/20 rounded-lg transition-colors"><i data-lucide="x" className="w-5 h-5"></i></button>
+                                    <button onClick={() => setIsAIChatOpen(false)} className="p-1.5 hover:bg-slate-100 rounded-xl transition-colors"><i data-lucide="x" className="w-5 h-5"></i></button>
                                 </div>
                             </div>
                             {/* 🌟 快捷提示词 */}
-                            <div className="px-4 pt-4 pb-0 flex gap-2 overflow-x-auto custom-scrollbar pb-3 border-b border-slate-100 shrink-0">
+                            <div className="px-4 pt-4 pb-0 flex gap-2 overflow-x-auto custom-scrollbar pb-3 border-b border-slate-200 shrink-0">
                                 {[
                                     { text: '我理科550分怎么选', query: '我是高三理科生，高考成绩预估550分，请推荐适合我的升学赛道' },
                                     { text: '强基vs综评', query: '强基计划和综合评价有什么区别，我应该选哪一个？' },
@@ -607,20 +1297,20 @@
                                                 if (sendBtn) sendBtn.click();
                                             }, 100);
                                         }}
-                                        className="px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs rounded-full border border-blue-200 whitespace-nowrap transition-colors flex-shrink-0"
+                                        className="px-3 py-1.5 bg-white hover:bg-slate-50 text-slate-600 text-xs rounded-full border border-slate-200 whitespace-nowrap transition-colors flex-shrink-0 shadow-[0_8px_18px_rgba(24,39,75,0.04)]"
                                     >
                                         {prompt.text}
                                     </button>
                                 ))}
                             </div>
-                            <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-5 bg-slate-50 custom-scrollbar">
+                            <div ref={scrollRef} className="flex-1 overflow-y-auto p-5 space-y-5 bg-transparent custom-scrollbar">
                                 {messages.map((m, i) => (
                                     <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                        <div className={`max-w-[88%] p-3.5 rounded-2xl text-[14px] shadow-sm relative group ${m.role === 'user' ? 'bg-blue-600 text-white rounded-br-sm' : 'bg-white text-slate-700 border border-slate-200 rounded-bl-sm'}`}>
+                                        <div className={`max-w-[88%] p-4 rounded-[22px] text-[14px] relative group backdrop-blur-xl ${m.role === 'user' ? 'bg-[#4DA1A9] text-white rounded-br-sm shadow-[0_14px_28px_rgba(77,161,169,0.18)]' : 'bg-white text-slate-700 border border-slate-200 rounded-bl-sm shadow-[0_14px_28px_rgba(24,39,75,0.06)]'}`}>
                                             <FormattedText text={m.content} isUser={m.role === 'user'} />
                                             {m.role === 'assistant' && (
-                                                <div className="flex justify-end mt-2 pt-2 border-t border-slate-100/50">
-                                                    <button onClick={() => copyToClipboard(m.content, i)} className="text-[11px] text-slate-400 hover:text-blue-600 flex items-center gap-1 transition-colors select-none">
+                                                <div className="flex justify-end mt-2 pt-2 border-t border-slate-100">
+                                                    <button onClick={() => copyToClipboard(m.content, i)} className="text-[11px] text-slate-400 hover:text-slate-700 flex items-center gap-1 transition-colors select-none">
                                                         {copiedIndex === i ? (
                                                             <><svg className="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg> <span className="text-green-500">已复制</span></>
                                                         ) : (
@@ -633,21 +1323,21 @@
                                     </div>
                                 ))}
                                 {loading && (
-                                    <div className="flex items-center gap-2 text-slate-500 text-[13px] ml-2 bg-white w-max px-4 py-2 rounded-full border border-slate-200 shadow-sm"><i data-lucide="loader-2" className="animate-spin w-4 h-4 text-blue-600"></i><span>正在深度分析数据...</span></div>
+                                    <div className="flex items-center gap-2 text-slate-500 text-[13px] ml-2 bg-white w-max px-4 py-2 rounded-full border border-slate-200 shadow-[0_10px_24px_rgba(15,23,42,0.05)]"><i data-lucide="loader-2" className="animate-spin w-4 h-4 text-slate-500"></i><span>正在深度分析数据...</span></div>
                                 )}
                             </div>
-                            <div className="p-4 border-t border-slate-200 bg-white shrink-0">
+                            <div className="p-5 border-t border-slate-200 bg-white/78 shrink-0">
                                 {attachment && (
-                                    <div className="mb-3 flex items-center gap-3 p-2 bg-slate-50 rounded-lg border border-blue-100 animate-in fade-in slide-in-from-bottom-2">
+                                    <div className="mb-3 flex items-center gap-3 p-3 bg-slate-50 rounded-[18px] border border-slate-200 animate-in fade-in slide-in-from-bottom-2">
                                         {attachment.type === 'image' ? (
                                             <img src={attachment.preview} className="w-10 h-10 object-cover rounded border" />
                                         ) : (
-                                            <div className="p-2 bg-blue-100 text-blue-600 rounded">
+                                            <div className="p-2 bg-slate-100 text-slate-600 rounded-xl">
                                                 <i data-lucide="file-text" className="w-5 h-5"></i>
                                             </div>
                                         )}
                                         <div className="flex-1 min-w-0 text-left">
-                                            <p className="text-xs font-medium text-slate-700 truncate">{attachment.name}</p>
+                                            <p className="text-xs font-medium text-slate-800 truncate">{attachment.name}</p>
                                             <p className="text-[10px] text-slate-400">已就绪，点击发送开始分析</p>
                                         </div>
                                         <button onClick={() => setAttachment(null)} className="p-1 hover:text-red-500 text-slate-400">
@@ -666,21 +1356,450 @@
                                     />
                                     <button 
                                         onClick={() => fileInputRef.current.click()}
-                                        className="self-end p-3 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors border border-slate-200"
+                                        className="self-end p-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 rounded-[18px] transition-colors border border-slate-200 bg-white"
                                         title="上传简历或图片"
                                     >
                                         <i data-lucide="paperclip" className="w-5 h-5"></i>
                                     </button>
-                                    <textarea rows="2" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } }} placeholder="输入问题或上传简历进行分析..." className="flex-1 p-3 border border-slate-300 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none outline-none bg-slate-50 focus:bg-white" />
+                                    <textarea rows="2" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } }} placeholder="输入问题或上传简历进行分析..." className="flex-1 p-3.5 border border-slate-200 rounded-[18px] text-sm resize-none outline-none bg-white text-slate-800 placeholder:text-slate-400 focus:ring-2 focus:ring-[#d7e7e2] focus:border-[#9bc9bc] leading-6" />
                                     <button 
                                         onClick={handleSend} 
                                         disabled={loading || (!input.trim() && !attachment)} 
                                         aria-label="send-btn"
-                                        className="self-end bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-xl disabled:opacity-50 transition-colors shadow-sm"><i data-lucide="send" className="w-5 h-5"></i></button>
+                                        className="self-end bg-[#4DA1A9] hover:bg-[#438f96] text-white p-3 rounded-[18px] disabled:opacity-50 transition-colors shadow-[0_14px_26px_rgba(77,161,169,0.18)]"><i data-lucide="send" className="w-5 h-5"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {/* 🌟 院校搜索/情报提取 Modal */}
+                    {isSearchModalOpen && (
+                        <div className="fixed inset-0 bg-[rgba(247,246,243,0.75)] backdrop-blur-md z-50 flex items-center justify-center p-4 animate-in fade-in duration-200">
+                            <div className="section-shell rounded-[30px] w-full max-w-6xl overflow-hidden flex flex-col max-h-[90vh] relative">
+                                <div className="green-header-surface px-6 py-5 flex justify-between items-center shrink-0">
+                                    <div className="flex items-center gap-2 text-slate-900">
+                                        <div className="p-2 bg-white/70 text-[#2E5077] rounded-xl border border-[#cfe7df]"><i data-lucide="graduation-cap" className="w-5 h-5"></i></div>
+                                        <div>
+                                            <p className="editorial-kicker">School Search</p>
+                                            <h3 className="font-semibold text-lg mt-1">院校情报检索库</h3>
+                                        </div>
+                                    </div>
+                                    <button onClick={() => { setIsSearchModalOpen(false); resetSchoolFilters(); }} className="text-slate-400 hover:text-slate-700 p-2 bg-white/76 rounded-full border border-[#cfe7df] shadow-sm"><i data-lucide="x" className="w-5 h-5"></i></button>
+                                </div>
+                                <div ref={schoolModalBodyRef} className="relative min-h-0 flex-1 overflow-y-auto custom-scrollbar">
+                                <div className={`p-6 min-h-full ${selectedSchoolProfile ? 'lg:pr-[28rem]' : ''}`}>
+                                    <div className="mb-4">
+                                        <div className="flex items-start justify-between gap-3">
+                                            <div>
+                                                <p className="text-sm font-semibold text-slate-800">本地核心院校情报库</p>
+                                                <p className="text-xs text-slate-500 mt-1 leading-5">先返回结构化信息，再配合下方官方链接做深度联查。</p>
+                                            </div>
+                                            <span className="shrink-0 rounded-full border border-[#d8ece5] bg-[#f3fbf8] px-3 py-1 text-[11px] text-[#4f8d92]">
+                                                {schoolLibraryStatus.loading ? '加载中...' : `${schoolDatabase.length} 所核心院校`}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div className="mb-4">
+                                        <label className="block text-sm font-semibold text-slate-700 mb-2">输入学校名、别名、赛道或专业关键词</label>
+                                        <div className="relative">
+                                            <i data-lucide="search" className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"></i>
+                                            <input 
+                                                type="text" 
+                                                value={searchSchool} 
+                                                onChange={(e) => setSearchSchool(e.target.value)} 
+                                                placeholder="例如：上海交通大学、香港大学..." 
+                                                className="w-full pl-10 pr-3 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#d7e7e2] focus:border-[#9bc9bc] outline-none transition-all shadow-sm bg-white text-slate-800 placeholder:text-slate-400"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 mb-5">
+                                        <div>
+                                            <label className="block text-[11px] font-semibold text-slate-500 mb-1.5">赛道</label>
+                                            <select value={schoolFilters.pathway} onChange={(e) => updateSchoolFilter('pathway', e.target.value)} className="w-full rounded-2xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-700 outline-none focus:ring-2 focus:ring-[#d7e7e2] focus:border-[#9bc9bc]">
+                                                {schoolPathwayOptions.map(option => <option key={option} value={option}>{option}</option>)}
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label className="block text-[11px] font-semibold text-slate-500 mb-1.5">地区</label>
+                                            <select value={schoolFilters.region} onChange={(e) => updateSchoolFilter('region', e.target.value)} className="w-full rounded-2xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-700 outline-none focus:ring-2 focus:ring-[#d7e7e2] focus:border-[#9bc9bc]">
+                                                {schoolRegionOptions.map(option => <option key={option} value={option}>{option}</option>)}
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label className="block text-[11px] font-semibold text-slate-500 mb-1.5">院校类型</label>
+                                            <select value={schoolFilters.schoolType} onChange={(e) => updateSchoolFilter('schoolType', e.target.value)} className="w-full rounded-2xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-700 outline-none focus:ring-2 focus:ring-[#d7e7e2] focus:border-[#9bc9bc]">
+                                                {schoolTypeOptions.map(option => <option key={option} value={option}>{option}</option>)}
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label className="block text-[11px] font-semibold text-slate-500 mb-1.5">排序方式</label>
+                                            <select value={schoolSortMode} onChange={(e) => setSchoolSortMode(e.target.value)} className="w-full rounded-2xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-700 outline-none focus:ring-2 focus:ring-[#d7e7e2] focus:border-[#9bc9bc]">
+                                                <option value="recommended">推荐优先</option>
+                                                <option value="level">平台层级</option>
+                                                <option value="pathways">赛道覆盖</option>
+                                                <option value="name">学校名称</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div className="mb-5">
+                                        <p className="text-[11px] font-semibold text-slate-500 mb-2">快速入口</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {[
+                                                { label: '强基计划', pathway: '强基计划' },
+                                                { label: '高校专项', pathway: '高校专项' },
+                                                { label: '综合评价', keyword: '综合评价' },
+                                                { label: '中外合作', schoolType: '中外合作大学' },
+                                                { label: '港澳高校', schoolType: '港澳高校' },
+                                                { label: '外语保送', keyword: '保送' }
+                                            ].map((preset) => (
+                                                <button
+                                                    key={preset.label}
+                                                    type="button"
+                                                    onClick={() => {
+                                                        setSearchSchool(preset.keyword || '');
+                                                        setSchoolFilters({
+                                                            pathway: preset.pathway || '全部赛道',
+                                                            region: '全部地区',
+                                                            schoolType: preset.schoolType || '全部类型'
+                                                        });
+                                                    }}
+                                                    className="rounded-full border border-[#d8ece5] bg-[#f6fbfa] px-3 py-1.5 text-xs text-[#4f8d92] hover:bg-[#edf8f4] transition-colors"
+                                                >
+                                                    {preset.label}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center justify-between gap-3 mb-5 rounded-[22px] border border-[#dcece7] bg-[#f6fbfa] px-4 py-3">
+                                        <div>
+                                            <p className="text-sm font-medium text-slate-800">
+                                                {hasSchoolCriteria ? `筛到 ${filteredSchools.length} 所匹配院校` : '先从核心院校库开始检索'}
+                                            </p>
+                                            <p className="text-xs text-slate-500 mt-1">
+                                                可组合“学校名 + 赛道 + 地区 + 类型”进行缩小范围，当前按“
+                                                {schoolSortMode === 'recommended' ? '推荐优先' : schoolSortMode === 'level' ? '平台层级' : schoolSortMode === 'pathways' ? '赛道覆盖' : '学校名称'}
+                                                ”排序。
+                                            </p>
+                                        </div>
+                                        <button onClick={resetSchoolFilters} className="shrink-0 rounded-full border border-[#cfe7df] bg-white px-3 py-1.5 text-xs text-[#4f8d92] hover:bg-[#f5fbf9] transition-colors">
+                                            重置筛选
+                                        </button>
+                                    </div>
+
+                                    {schoolLibraryStatus.loading ? (
+                                        <div className="p-8 text-center bg-slate-50 rounded-[24px] border border-dashed border-slate-200 mb-6">
+                                            <i data-lucide="loader-2" className="w-8 h-8 text-slate-300 mx-auto mb-2 animate-spin"></i>
+                                            <p className="text-sm text-slate-500">正在加载本地院校库...</p>
+                                        </div>
+                                    ) : schoolLibraryStatus.error ? (
+                                        <div className="p-8 text-center bg-slate-50 rounded-[24px] border border-dashed border-slate-200 mb-6">
+                                            <i data-lucide="alert-circle" className="w-8 h-8 text-slate-300 mx-auto mb-2"></i>
+                                            <p className="text-sm text-slate-500">{schoolLibraryStatus.error}</p>
+                                        </div>
+                                    ) : (
+                                        <div className="mb-6">
+                                            {!hasSchoolCriteria ? (
+                                                <div className="space-y-4">
+                                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">精选起点</h4>
+                                                    {featuredSchoolResults.map(({ school, recommendation }, idx) => (
+                                                        <div key={`${school.name}-${idx}`} className="bg-white border border-slate-200 rounded-[24px] p-4 shadow-[0_12px_30px_rgba(24,39,75,0.05)] relative overflow-hidden backdrop-blur-xl">
+                                                            <div className="absolute top-0 right-0 px-3 py-1 bg-[#4DA1A9] text-white text-[10px] font-bold rounded-bl-xl">{recommendation.label}</div>
+                                                            <div className="flex flex-wrap items-center gap-2 mb-2">
+                                                                <h5 className="text-lg font-bold text-slate-900">{school.name}</h5>
+                                                                <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200">{school.region}</span>
+                                                                <span className="text-xs bg-[#f3fbf8] text-[#4f8d92] px-2 py-0.5 rounded-full border border-[#d8ece5]">{school.schoolType}</span>
+                                                            </div>
+                                                            <div className="flex flex-wrap gap-1.5 mb-3">
+                                                                <span className="text-[10px] bg-[#eef8f5] text-[#3a7f84] border border-[#d8ece5] px-2 py-0.5 rounded-full">推荐度 {recommendation.score}</span>
+                                                                {recommendation.reasons.map(reason => (
+                                                                    <span key={reason} className="text-[10px] bg-white text-slate-500 border border-slate-200 px-2 py-0.5 rounded-full">{reason}</span>
+                                                                ))}
+                                                            </div>
+                                                            <p className="text-xs text-slate-500 leading-6">{school.specialNotes?.[0] || '适合进一步联查招生官网与政策细则。'}</p>
+                                                            <div className="mt-3 pt-3 border-t border-slate-100">
+                                                                <button onClick={() => openSchoolProfile(school)} className="w-full rounded-xl border border-[#cfe7df] bg-[#f6fbfa] px-3 py-2 text-xs font-medium text-[#4f8d92] hover:bg-[#edf8f4] transition-colors">
+                                                                    查看详情
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            ) : filteredSchools.length > 0 ? (
+                                                <div className="space-y-4">
+                                                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">库内结构化结果</h4>
+                                                    {rankedSchoolResults.map(({ school, recommendation }, idx) => (
+                                                        <div key={`${school.name}-${idx}`} className="bg-white border border-slate-200 rounded-[24px] p-4 shadow-[0_12px_30px_rgba(24,39,75,0.05)] relative overflow-hidden backdrop-blur-xl">
+                                                            <div className="absolute top-0 right-0 px-3 py-1 bg-[#4DA1A9] text-white text-[10px] font-bold rounded-bl-xl">{recommendation.label}</div>
+                                                            <div className="flex flex-wrap items-center gap-2 mb-2">
+                                                                <h5 className="text-lg font-bold text-slate-900">{school.name}</h5>
+                                                                <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full border border-slate-200">{school.region}</span>
+                                                                <span className="text-xs bg-[#f3fbf8] text-[#4f8d92] px-2 py-0.5 rounded-full border border-[#d8ece5]">{school.schoolType}</span>
+                                                            </div>
+                                                            <div className="flex flex-wrap gap-1.5 mb-3">
+                                                                <span className="text-[10px] bg-[#eef8f5] text-[#3a7f84] border border-[#d8ece5] px-2 py-0.5 rounded-full">推荐度 {recommendation.score}</span>
+                                                                {recommendation.reasons.map(reason => (
+                                                                    <span key={reason} className="text-[10px] bg-white text-slate-500 border border-slate-200 px-2 py-0.5 rounded-full">{reason}</span>
+                                                                ))}
+                                                            </div>
+                                                            {school.aliases?.length > 0 && (
+                                                                <p className="text-[11px] text-slate-400 mb-3">别名：{school.aliases.join(' / ')}</p>
+                                                            )}
+                                                            <div className="flex flex-wrap gap-1.5 mb-3">
+                                                                {(school.levels || []).map(level => <span key={level} className="text-[10px] bg-slate-100 text-slate-600 border border-slate-200 px-1.5 py-0.5 rounded-full">{level}</span>)}
+                                                                {getMeaningfulTags(school).map(tag => <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 border border-slate-200 px-1.5 py-0.5 rounded-full">{tag}</span>)}
+                                                            </div>
+                                                            <div className="mb-3">
+                                                                <p className="text-[11px] font-bold text-slate-500 mb-1">支持的多元升学赛道</p>
+                                                                <div className="flex flex-wrap gap-1.5">
+                                                                    {getMeaningfulPathways(school).map(pathway => <span key={pathway} className="text-xs font-medium text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-full">{pathway}</span>)}
+                                                                </div>
+                                                            </div>
+                                                            {school.pathwayDetails?.length > 0 && (
+                                                                <div className="mb-3 rounded-2xl bg-[#f8fbfb] border border-[#e5efee] p-3">
+                                                                    <p className="text-[11px] font-bold text-slate-500 mb-2">赛道提示</p>
+                                                                    <div className="space-y-2">
+                                                                        {school.pathwayDetails.slice(0, 2).map((detail, detailIdx) => (
+                                                                            <div key={`${detail.name}-${detailIdx}`} className="text-xs text-slate-600 leading-5">
+                                                                                <span className="font-semibold text-slate-800">{getDisplayPathwayLabel(detail.name) || detail.name}：</span>{detail.note}
+                                                                            </div>
+                                                                        ))}
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                            <div className="mb-3">
+                                                                <p className="text-[11px] font-bold text-slate-500 mb-1">特色/王牌专业</p>
+                                                                <p className="text-xs text-slate-700 leading-relaxed">{(school.majors || []).join('、')}</p>
+                                                            </div>
+                                                            {school.specialNotes?.length > 0 && (
+                                                                <div className="mb-4">
+                                                                    <p className="text-[11px] font-bold text-slate-500 mb-1">报考提醒</p>
+                                                                    <p className="text-xs text-slate-700 leading-relaxed">{school.specialNotes.join('；')}</p>
+                                                                </div>
+                                                            )}
+                                                            <div className="mb-3">
+                                                                <button onClick={() => openSchoolProfile(school)} className="w-full rounded-xl border border-[#cfe7df] bg-[#f6fbfa] px-3 py-2 text-xs font-medium text-[#4f8d92] hover:bg-[#edf8f4] transition-colors">
+                                                                    展开院校详情
+                                                                </button>
+                                                            </div>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-slate-100">
+                                                                {school.officialAdmissionUrl && school.officialAdmissionUrl !== '#' && (
+                                                                    <a href={school.officialAdmissionUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 bg-[#4DA1A9] text-white text-center rounded-xl text-xs font-bold hover:bg-[#438f96] transition-colors">招生官网</a>
+                                                                )}
+                                                                {school.officialSiteUrl && school.officialSiteUrl !== '#' && (
+                                                                    <a href={school.officialSiteUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 bg-white text-slate-700 text-center rounded-xl text-xs font-bold hover:bg-slate-50 transition-colors border border-slate-200">学校主页</a>
+                                                                )}
+                                                                {school.contactPhone && (
+                                                                    <a href={`tel:${school.contactPhone}`} className="flex-1 py-2 bg-white text-slate-700 text-center rounded-xl text-xs font-bold hover:bg-slate-50 transition-colors border border-slate-200">招生办</a>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            ) : (
+                                                <div className="p-8 text-center bg-slate-50 rounded-[24px] border border-dashed border-slate-200">
+                                                    <i data-lucide="info" className="w-8 h-8 text-slate-300 mx-auto mb-2"></i>
+                                                    <p className="text-sm text-slate-500">当前筛选条件下没有命中院校，建议放宽赛道或地区条件，或直接使用下方全网联查。</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {/* 全网联查区 */}
+                                    <div className="space-y-3">
+                                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">权威数据全网联查 (中转直达)</h4>
+                                        <button 
+                                            onClick={() => {
+                                                if(!schoolLookupKeyword.trim()) return alert('请输入学校名称');
+                                                window.open(`https://www.baidu.com/s?wd=${encodeURIComponent(schoolLookupKeyword.trim() + ' 历年录取分数线 site:gaokao.cn')}`, '_blank');
+                                            }}
+                                            className="w-full flex items-center justify-between p-3.5 bg-white hover:bg-slate-50 text-slate-700 rounded-2xl transition-colors border border-slate-200 group"
+                                        >
+                                            <div className="flex items-center gap-3"><i data-lucide="bar-chart-2" className="w-5 h-5"></i> <div className="text-left"><p className="font-semibold text-sm">历年专业分数线查询</p><p className="text-xs opacity-70">直达掌上高考官方数据平台 (结构化图表)</p></div></div>
+                                            <i data-lucide="external-link" className="w-4 h-4 opacity-50 group-hover:translate-x-1 transition-transform"></i>
+                                        </button>
+
+                                        <button 
+                                            onClick={() => {
+                                                if(!schoolLookupKeyword.trim()) return alert('请输入学校名称');
+                                                window.open(`https://gaokao.chsi.com.cn/sch/search--schName-${encodeURIComponent(schoolLookupKeyword.trim())}.dhtml`, '_blank');
+                                            }}
+                                            className="w-full flex items-center justify-between p-3.5 bg-white hover:bg-slate-50 text-slate-700 rounded-2xl transition-colors border border-slate-200 group"
+                                        >
+                                            <div className="flex items-center gap-3"><i data-lucide="landmark" className="w-5 h-5"></i> <div className="text-left"><p className="font-semibold text-sm">教育部阳光高考网档案</p><p className="text-xs opacity-70">查看官方院校简介、学科评估与王牌专业</p></div></div>
+                                            <i data-lucide="external-link" className="w-4 h-4 opacity-50 group-hover:translate-x-1 transition-transform"></i>
+                                        </button>
+
+                                        <button 
+                                            onClick={() => {
+                                                if(!schoolLookupKeyword.trim()) return alert('请输入学校名称');
+                                                window.open(`https://www.baidu.com/s?wd=${encodeURIComponent(schoolLookupKeyword.trim() + ' 强基计划 综合评价 招生简章 site:edu.cn')}`, '_blank');
+                                            }}
+                                            className="w-full flex items-center justify-between p-3.5 bg-white hover:bg-slate-50 text-slate-700 rounded-2xl transition-colors border border-slate-200 group"
+                                        >
+                                            <div className="flex items-center gap-3"><i data-lucide="scroll-text" className="w-5 h-5"></i> <div className="text-left"><p className="font-semibold text-sm">特殊类招生简章速查</p><p className="text-xs opacity-70">精准定位该校官网发布的强基/综评通告</p></div></div>
+                                            <i data-lucide="external-link" className="w-4 h-4 opacity-50 group-hover:translate-x-1 transition-transform"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                {selectedSchoolProfile && (
+                                    <>
+                                    <div
+                                        className="lg:hidden fixed inset-0 bg-[rgba(15,23,42,0.16)] z-10"
+                                        onClick={() => setSelectedSchoolProfile(null)}
+                                    ></div>
+                                    <aside className="fixed lg:absolute left-3 right-3 bottom-3 top-[18%] lg:inset-y-0 lg:right-0 lg:left-auto lg:w-[26rem] z-20 overflow-hidden rounded-[28px] lg:rounded-none lg:rounded-l-[28px] border border-slate-200/90 lg:border-y-0 lg:border-r-0 bg-[linear-gradient(180deg,rgba(251,255,253,0.98)_0%,rgba(245,250,248,0.96)_100%)] min-h-0 flex flex-col shadow-[0_26px_70px_rgba(24,39,75,0.16)]">
+                                        <div className="lg:hidden px-5 pt-3 pb-1 shrink-0">
+                                            <div className="mx-auto h-1.5 w-14 rounded-full bg-[#cfe7df]"></div>
+                                        </div>
+                                        <div className="green-header-surface px-5 py-4 flex items-start justify-between gap-3 shrink-0">
+                                            <div>
+                                                <p className="editorial-kicker">School Profile</p>
+                                                <h4 className="mt-2 text-xl font-semibold text-slate-900">{selectedSchoolProfile.name}</h4>
+                                                <p className="text-xs text-slate-500 mt-1 leading-5">{selectedSchoolProfile.schoolType} · {selectedSchoolProfile.region}</p>
+                                            </div>
+                                            <button onClick={() => setSelectedSchoolProfile(null)} className="p-2 bg-white/75 rounded-full border border-[#cfe7df] text-slate-400 hover:text-slate-700">
+                                                <i data-lucide="x" className="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                        <div className="flex-1 overflow-y-auto custom-scrollbar p-5 space-y-5">
+                                            {selectedSchoolProfile.aliases?.length > 0 && (
+                                                <div>
+                                                    <p className="text-[11px] font-semibold text-slate-500 mb-2">别名 / 检索词</p>
+                                                    <div className="flex flex-wrap gap-2">
+                                                        {selectedSchoolProfile.aliases.map(alias => (
+                                                            <span key={alias} className="text-xs bg-white text-slate-600 border border-slate-200 px-2 py-1 rounded-full">{alias}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+                                            <div>
+                                                <p className="text-[11px] font-semibold text-slate-500 mb-2">院校层级与标签</p>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {(selectedSchoolProfile.levels || []).map(level => (
+                                                        <span key={level} className="text-xs bg-white text-slate-600 border border-slate-200 px-2 py-1 rounded-full">{level}</span>
+                                                    ))}
+                                                    {getMeaningfulTags(selectedSchoolProfile).map(tag => (
+                                                        <span key={tag} className="text-xs bg-[#f3fbf8] text-[#4f8d92] border border-[#d8ece5] px-2 py-1 rounded-full">{tag}</span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p className="text-[11px] font-semibold text-slate-500 mb-2">适配赛道</p>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {getMeaningfulPathways(selectedSchoolProfile).map(pathway => (
+                                                        <span key={pathway} className="text-xs bg-white text-slate-700 border border-slate-200 px-2 py-1 rounded-full">{pathway}</span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            {selectedSchoolRecommendation && (
+                                                <div className="rounded-2xl bg-[#f6fbfa] border border-[#dcece7] p-4">
+                                                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                                                        <span className="text-[11px] font-semibold text-[#4f8d92]">推荐判断</span>
+                                                        <span className="text-[11px] bg-white text-slate-600 border border-slate-200 px-2 py-1 rounded-full">{selectedSchoolRecommendation.label}</span>
+                                                        <span className="text-[11px] bg-white text-slate-600 border border-slate-200 px-2 py-1 rounded-full">推荐度 {selectedSchoolRecommendation.score}</span>
+                                                    </div>
+                                                    {selectedSchoolRecommendation.reasons.length > 0 && (
+                                                        <div className="flex flex-wrap gap-2">
+                                                            {selectedSchoolRecommendation.reasons.map(reason => (
+                                                                <span key={reason} className="text-xs bg-white text-slate-600 border border-slate-200 px-2 py-1 rounded-full">{reason}</span>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
+                                            {selectedSchoolProfile.pathwayDetails?.length > 0 && (
+                                                <div>
+                                                    <p className="text-[11px] font-semibold text-slate-500 mb-2">赛道说明</p>
+                                                    <div className="space-y-3">
+                                                        {selectedSchoolProfile.pathwayDetails.map((detail, idx) => (
+                                                            <div key={`${detail.name}-${idx}`} className="rounded-2xl bg-white border border-slate-200 p-3">
+                                                                <p className="text-sm font-semibold text-slate-900">{getDisplayPathwayLabel(detail.name) || detail.name}</p>
+                                                                <p className="text-xs text-slate-600 leading-6 mt-1">{detail.note}</p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+                                            {selectedSchoolAdvisor && (
+                                                <>
+                                                    <div>
+                                                        <p className="text-[11px] font-semibold text-slate-500 mb-2">更适合什么样的学生</p>
+                                                        <div className="space-y-2">
+                                                            {selectedSchoolAdvisor.fitStudents.map((item, idx) => (
+                                                                <div key={`${item}-${idx}`} className="text-sm text-slate-700 leading-6 rounded-2xl bg-white border border-slate-200 p-3">
+                                                                    {item}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-[11px] font-semibold text-slate-500 mb-2">决策时最要警惕的点</p>
+                                                        <div className="space-y-2">
+                                                            {selectedSchoolAdvisor.cautionPoints.map((item, idx) => (
+                                                                <div key={`${item}-${idx}`} className="text-sm text-slate-700 leading-6 rounded-2xl bg-white border border-slate-200 p-3">
+                                                                    {item}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                    <div className="rounded-2xl bg-[#f6fbfa] border border-[#dcece7] p-4">
+                                                        <p className="text-[11px] font-semibold text-[#4f8d92] mb-2">顾问视角建议</p>
+                                                        <p className="text-sm text-slate-700 leading-7">{selectedSchoolAdvisor.strategy}</p>
+                                                    </div>
+                                                </>
+                                            )}
+                                            <div>
+                                                <p className="text-[11px] font-semibold text-slate-500 mb-2">特色专业</p>
+                                                <p className="text-sm text-slate-700 leading-7">{(selectedSchoolProfile.majors || []).join('、')}</p>
+                                            </div>
+                                            {selectedSchoolProfile.specialNotes?.length > 0 && (
+                                                <div>
+                                                    <p className="text-[11px] font-semibold text-slate-500 mb-2">报考提醒</p>
+                                                    <div className="space-y-2">
+                                                        {selectedSchoolProfile.specialNotes.map((note, idx) => (
+                                                            <div key={`${note}-${idx}`} className="text-sm text-slate-700 leading-6 rounded-2xl bg-white border border-slate-200 p-3">
+                                                                {note}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="p-5 border-t border-slate-200 bg-white/92 backdrop-blur-xl grid grid-cols-1 gap-3 shrink-0">
+                                            <button
+                                                onClick={() => {
+                                                    setIsSearchModalOpen(false);
+                                                    setIsAIChatOpen(true);
+                                                    const advisorPathways = getMeaningfulPathways(selectedSchoolProfile);
+                                                    setInput(`请结合${selectedSchoolProfile.name}的${advisorPathways.slice(0, 2).join('、') || '多元升学'}招生路径，帮我分析适合什么样的学生，以及报考时最需要注意什么？`);
+                                                }}
+                                                className="w-full py-3 bg-[#4DA1A9] hover:bg-[#438f96] text-white rounded-[18px] text-sm font-medium transition-colors"
+                                            >
+                                                交给 AI 做院校赛道分析
+                                            </button>
+                                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                                {selectedSchoolProfile.officialAdmissionUrl && selectedSchoolProfile.officialAdmissionUrl !== '#' && (
+                                                    <a href={selectedSchoolProfile.officialAdmissionUrl} target="_blank" rel="noopener noreferrer" className="py-2.5 bg-white text-slate-700 text-center rounded-xl text-xs font-bold hover:bg-slate-50 transition-colors border border-slate-200">招生官网</a>
+                                                )}
+                                                {selectedSchoolProfile.officialSiteUrl && selectedSchoolProfile.officialSiteUrl !== '#' && (
+                                                    <a href={selectedSchoolProfile.officialSiteUrl} target="_blank" rel="noopener noreferrer" className="py-2.5 bg-white text-slate-700 text-center rounded-xl text-xs font-bold hover:bg-slate-50 transition-colors border border-slate-200">学校主页</a>
+                                                )}
+                                                {selectedSchoolProfile.contactPhone && (
+                                                    <a href={`tel:${selectedSchoolProfile.contactPhone}`} className="py-2.5 bg-white text-slate-700 text-center rounded-xl text-xs font-bold hover:bg-slate-50 transition-colors border border-slate-200">招生办</a>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </aside>
+                                    </>
+                                )}
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             );
         };
