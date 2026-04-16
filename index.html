@@ -781,6 +781,13 @@
             );
         };
 
+        const DEFAULT_API_BASE = 'https://codingforgood.onrender.com';
+
+        function getApiBase() {
+            const runtimeBase = window.__GAOKAO_API_BASE__ || DEFAULT_API_BASE;
+            return String(runtimeBase).replace(/\/+$/, '');
+        }
+
         const App = () => {
             const [zoom, setZoom] = useState(0.85);
             const [isAIChatOpen, setIsAIChatOpen] = useState(false);
@@ -1119,7 +1126,7 @@
                 const timeoutId = setTimeout(() => controller.abort(), 80000);
 
                 try {
-                    const response = await fetch('https://codingforgood.onrender.com/api/chat?stream=1', {
+                    const response = await fetch(`${getApiBase()}/api/chat?stream=1`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
